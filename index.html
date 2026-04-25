@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moonstream Tech</title>
+<meta name="description" content="Moonstream Tech — independent software studio building thoughtful mobile games and tools.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0b0f1a;
+    --bg-soft: #131a2b;
+    --text: #e8ecf5;
+    --text-soft: #9aa5bd;
+    --accent: #6ea8fe;
+    --border: #1f2940;
+    --card: #121a2e;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse at top, rgba(110, 168, 254, 0.12), transparent 60%),
+      radial-gradient(ellipse at bottom right, rgba(168, 110, 254, 0.08), transparent 50%),
+      var(--bg);
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-mark {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6ea8fe 0%, #a86efe 100%);
+    display: inline-block;
+    box-shadow: 0 0 24px rgba(110, 168, 254, 0.4);
+  }
+  .nav-links {
+    display: flex;
+    gap: 24px;
+  }
+  .nav-links a {
+    color: var(--text-soft);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* Hero */
+  .hero {
+    padding: 96px 0 64px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #9aa5bd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p {
+    font-size: 1.15rem;
+    color: var(--text-soft);
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-soft);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  /* Products */
+  .products {
+    padding: 48px 0 96px;
+  }
+  .product-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .product-card:hover {
+    border-color: rgba(110, 168, 254, 0.4);
+    transform: translateY(-2px);
+  }
+  .product-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .product-icon {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #6ea8fe 0%, #a86efe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: white;
+    flex-shrink: 0;
+  }
+  .product-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .product-tag {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+  }
+  .product-desc {
+    color: var(--text-soft);
+    margin-bottom: 20px;
+  }
+  .product-status {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(110, 168, 254, 0.12);
+    border: 1px solid rgba(110, 168, 254, 0.3);
+    color: var(--accent);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  /* About */
+  .about {
+    padding: 64px 0;
+    border-top: 1px solid var(--border);
+  }
+  .about p {
+    color: var(--text-soft);
+    max-width: 680px;
+    font-size: 1.05rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    color: var(--text-soft);
+    font-size: 0.9rem;
+  }
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+  .footer-links a {
+    color: var(--text-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-links a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 0.9rem; }
+    .hero { padding: 64px 0 48px; }
+    .product-card { padding: 24px; }
+    .footer-grid { justify-content: center; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"></span>
+        Moonstream Tech
+      </a>
+      <div class="nav-links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Quiet software,<br>built with care.</h1>
+    <p>Moonstream Tech is an independent studio crafting thoughtful mobile
+       games and tools. We focus on calm interfaces, lasting mechanics,
+       and respect for the people who use what we make.</p>
+  </div>
+</section>
+
+<section class="products">
+  <div class="container">
+    <div class="section-title">Our Apps</div>
+
+    <div class="product-card">
+      <div class="product-header">
+        <div class="product-icon">LT</div>
+        <div>
+          <div class="product-name">Last Tile</div>
+          <div class="product-tag">Merge · Survival · Puzzle</div>
+        </div>
+      </div>
+      <p class="product-desc">A calm but addictive merge puzzle. Start on a
+         small grid, merge matching tiles, and unlock a larger board.
+         Survive as long as you can while keeping your combo chain alive.
+         Fully offline, single-player.</p>
+      <span class="product-status">Coming soon to Google Play</span>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="section-title">About</div>
+    <p>Moonstream Tech is a small, independent software studio. Every app
+       we ship is built with the same principles: <strong>respect your
+       time, respect your data, respect your attention.</strong> No dark
+       patterns. No noise. Just software we'd want to use ourselves.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>© 2026 Moonstream Tech. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:moonstreamtech@gmail.com">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
