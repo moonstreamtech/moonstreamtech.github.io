@@ -1,43 +1,90 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Last Tile — Official Site</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Last Tile — Official Site</title>
+<meta name="description" content="Last Tile is a calm offline merge + survival puzzle for Android. Merge tiles, expand the board, and survive as long as you can.">
+<link rel="stylesheet" href="/LastTile/styles.css">
 </head>
 <body>
+
+<div class="container">
   <header>
-    <span class="badge">Official Website</span>
+    <span class="badge">Official Site</span>
     <h1>Last Tile</h1>
-    <p>Mobile merge + survival puzzle for Android. Merge, split, slide, and grow your board until no match remains.</p>
+    <p class="lead">A calm offline merge and survival puzzle. Merge tiles, open
+       new cells, and grow your board until no match remains.</p>
     <nav>
       <a href="/LastTile/">Home</a>
-      <a href="/LastTile/privacy-policy/">Privacy Policy</a>
-      <a href="/LastTile/terms/">Terms of Use</a>
+      <a href="/LastTile/privacy-policy/">Privacy</a>
+      <a href="/LastTile/terms/">Terms</a>
       <a href="/LastTile/support/">Support</a>
+      <a href="/">Moonstream Tech</a>
     </nav>
   </header>
+
   <main>
     <section class="card">
       <h2>About the game</h2>
-      <p>Last Tile is an English-language merge + survival game where every merge is a turn. The board starts as a small active region inside a locked frame and keeps growing as you climb tiers. Slides and swaps are free, splits recover from lockouts, and the run ends when no adjacent matching pair remains.</p>
-      <p><strong>Status:</strong> Coming soon to Google Play.</p>
+      <p>Last Tile is a single-player puzzle where every merge is a turn.
+         The board starts as a small active region inside a locked frame and
+         keeps growing as you climb tiers. Slides and swaps are free, splits
+         recover from lockouts, and the run ends when no adjacent matching
+         pair remains.</p>
+      <p>It is designed to be calm and focused — no timers, no ads, no
+         account, no internet required.</p>
+      <span class="status-pill">Coming soon to Google Play</span>
     </section>
+
     <section class="card">
-      <h2>Core Features</h2>
+      <h2>Core features</h2>
       <ul>
-        <li>Growing board: 5×5 active → 7×7 → 9×9 … inside a 7×7 viewport with edge pan</li>
-        <li>Four deliberate actions: tap-tap merge, drag-to-merge, double-tap split, one-step slide/swap</li>
-        <li>Value-tier frame unlocks that open 1–6 random cells at a time</li>
-        <li>Run autosave — resume the exact same board after a cold restart</li>
-        <li>On-device top-10 leaderboard</li>
-        <li>Offline-first single-player design, no account required</li>
+        <li><strong>Growing board.</strong> 5×5 active region opens up to
+            7×7, 9×9 and beyond as you reach value-tier milestones.</li>
+        <li><strong>Four deliberate actions.</strong> Tap-tap merge,
+            drag-to-merge, double-tap split, and one-step slide or swap.</li>
+        <li><strong>Frame unlocks.</strong> Hitting a milestone tile opens
+            new cells around the active area.</li>
+        <li><strong>Hazards.</strong> Fire, ice and poison can infect a tile
+            for a few turns. Burn them off with a high-tier merge nearby, or
+            wait them out — the tile returns when the hazard fades.</li>
+        <li><strong>Combo chain.</strong> Each merge adds to your multiplier;
+            a non-matching tap or a slide resets it.</li>
+        <li><strong>Run autosave.</strong> Resume the exact same board after
+            closing the app.</li>
+        <li><strong>On-device leaderboard.</strong> Your top ten runs, stored
+            locally.</li>
+        <li><strong>Offline-first.</strong> No account required, no data
+            collected, no internet needed.</li>
       </ul>
     </section>
+
+    <section class="card">
+      <h2>How to play</h2>
+      <ol>
+        <li>Two adjacent tiles with the same value can be merged. The result
+            is the next tier (e.g. two 4s become an 8).</li>
+        <li>Each merge counts as a turn; a new tile spawns somewhere on the
+            board.</li>
+        <li>Reach milestone values to unlock additional cells and eventually
+            grow the active region.</li>
+        <li>If no two adjacent tiles match anywhere on the board, the run
+            ends.</li>
+      </ol>
+    </section>
   </main>
+
   <footer>
-    <p>© Last Tile. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="/LastTile/privacy-policy/">Privacy Policy</a>
+      <a href="/LastTile/terms/">Terms of Use</a>
+      <a href="/LastTile/support/">Support</a>
+      <a href="mailto:moonstreamtech@gmail.com">Contact</a>
+    </div>
+    <p>© 2026 Moonstream Tech. All rights reserved.</p>
   </footer>
+</div>
+
 </body>
 </html>
