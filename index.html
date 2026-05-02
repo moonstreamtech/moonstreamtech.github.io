@@ -163,6 +163,11 @@
     color: var(--text-soft);
     margin-bottom: 20px;
   }
+  .product-status-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
   .product-status {
     display: inline-block;
     padding: 6px 12px;
@@ -172,6 +177,11 @@
     border-radius: 999px;
     font-size: 0.85rem;
     font-weight: 500;
+  }
+  .product-status--soon {
+    background: rgba(168, 110, 254, 0.12);
+    border-color: rgba(168, 110, 254, 0.3);
+    color: #c79bff;
   }
 
   /* About */
@@ -260,8 +270,11 @@
   <p class="product-desc">A calm but addictive merge puzzle. Start on a
      small grid, merge matching tiles, and unlock a larger board.
      Survive as long as you can while keeping your combo chain alive.
-     Fully offline, single-player.</p>
-  <span class="product-status">Visit Last Tile →</span>
+     Free to play, with optional rewarded ads and a global leaderboard.</p>
+  <div class="product-status-row">
+    <span class="product-status product-status--soon">Coming to Google Play</span>
+    <span class="product-status">Visit Last Tile →</span>
+  </div>
 </a>
   </div>
 </section>

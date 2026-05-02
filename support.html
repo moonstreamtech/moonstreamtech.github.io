@@ -4,92 +4,288 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Support — Moonstream Tech</title>
+<meta name="description" content="Help, feedback and contact for all Moonstream Tech apps.">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         max-width: 760px; margin: 40px auto; padding: 0 20px;
-         line-height: 1.6; color: #222; }
-  h1 { color: #1a1a1a; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-  h2 { color: #333; margin-top: 32px; }
-  a { color: #0366d6; }
-  .meta { color: #666; font-size: 0.9em; }
-  .contact-box { background: #f6f8fa; border: 1px solid #e1e4e8;
-                 border-radius: 6px; padding: 20px; margin: 20px 0; }
-  .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee;
-            color: #666; font-size: 0.9em; }
-  details { margin: 12px 0; padding: 12px; background: #fafbfc;
-            border: 1px solid #e1e4e8; border-radius: 6px; }
-  summary { cursor: pointer; font-weight: 600; }
-  details[open] summary { margin-bottom: 8px; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0b0f1a;
+    --bg-soft: #131a2b;
+    --text: #e8ecf5;
+    --text-soft: #9aa5bd;
+    --accent: #6ea8fe;
+    --border: #1f2940;
+    --card: #121a2e;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse at top, rgba(110, 168, 254, 0.10), transparent 60%),
+      var(--bg);
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-mark {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6ea8fe 0%, #a86efe 100%);
+    box-shadow: 0 0 24px rgba(110, 168, 254, 0.4);
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    color: var(--text-soft);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  main { padding: 48px 0 80px; }
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .lead {
+    color: var(--text-soft);
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  .card h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  .card p, .card ul {
+    color: var(--text-soft);
+    margin-bottom: 14px;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  .card ul { padding-left: 22px; }
+  .card li { margin-bottom: 6px; }
+  .card strong { color: var(--text); font-weight: 600; }
+  .card a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(110, 168, 254, 0.4);
+  }
+  .card a:hover { border-bottom-style: solid; }
+
+  details {
+    border-top: 1px solid var(--border);
+    padding: 14px 0;
+  }
+  details:first-of-type { border-top: none; padding-top: 0; }
+  details:last-of-type { padding-bottom: 0; }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text);
+    list-style: none;
+    position: relative;
+    padding-right: 28px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--text-soft);
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  details[open] summary::after { content: "–"; }
+  details[open] summary { margin-bottom: 10px; }
+  details p {
+    color: var(--text-soft);
+    margin: 8px 0 0 0 !important;
+  }
+
+  footer {
+    padding: 32px 0 48px;
+    border-top: 1px solid var(--border);
+    color: var(--text-soft);
+    font-size: 0.9rem;
+  }
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a {
+    color: var(--text-soft);
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    .card { padding: 22px; }
+    .footer-grid { justify-content: center; text-align: center; }
+  }
 </style>
 </head>
 <body>
 
-<h1>Support</h1>
-<p class="meta">We're here to help.</p>
+<header>
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"></span>
+        Moonstream Tech
+      </a>
+      <div class="nav-links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-<p>Welcome to the Moonstream Tech support page. If you have questions,
-feedback, bug reports, or feature requests for any of our applications —
-including <strong>Last Tile</strong> — we'd love to hear from you.</p>
+<main>
+  <div class="container">
+    <h1>Support</h1>
+    <p class="lead">Questions, bug reports, feedback — we read everything.</p>
 
-<div class="contact-box">
-  <h2 style="margin-top:0;">Contact Us</h2>
-  <p><strong>Email:</strong>
-     <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a></p>
-  <p>We aim to respond to all messages within 2–3 business days.</p>
-</div>
+    <section class="card">
+      <h2>Contact</h2>
+      <p>The fastest way to reach us is by email:</p>
+      <p><strong>Email:</strong>
+        <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a></p>
+      <p>We aim to respond within 2–3 business days.</p>
+    </section>
 
-<h2>How to Get the Best Help</h2>
-<p>When reporting an issue, please include the following so we can help you
-faster:</p>
-<ul>
-  <li>Your device model (e.g. Samsung Galaxy S22)</li>
-  <li>Your Android version (e.g. Android 14)</li>
-  <li>The app name and version</li>
-  <li>A short description of what happened, and what you expected to happen</li>
-  <li>Screenshots or a screen recording, if possible</li>
-</ul>
+    <section class="card">
+      <h2>How to get the best help</h2>
+      <p>When reporting an issue with one of our apps, please include:</p>
+      <ul>
+        <li>Your <strong>device model</strong> (e.g. Samsung Galaxy S22)</li>
+        <li>Your <strong>Android version</strong> (e.g. Android 14)</li>
+        <li>The <strong>app name and version</strong> (the version is
+            usually shown in the app’s settings or about screen)</li>
+        <li>A short description of what happened, and what you expected
+            to happen</li>
+        <li>Screenshots or a screen recording, if possible</li>
+      </ul>
+    </section>
 
-<h2>Frequently Asked Questions</h2>
+    <section class="card">
+      <h2>Frequently asked questions</h2>
 
-<details>
-  <summary>Does Last Tile work offline?</summary>
-  <p>Yes. Last Tile is a fully offline, single-player game. It does not
-  require an internet connection to play, and your progress is saved locally
-  on your device.</p>
-</details>
+      <details>
+        <summary>I have a feature suggestion. Where can I send it?</summary>
+        <p>Please email us at
+          <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a>
+          with the subject line “Feature Request”. Including the app name
+          and a short description helps us route the idea quickly.</p>
+      </details>
 
-<details>
-  <summary>Will my progress be lost if I uninstall the app?</summary>
-  <p>Yes. Because game progress is stored locally on your device, uninstalling
-  the app or clearing its data will remove your saved progress.</p>
-</details>
+      <details>
+        <summary>How do I report a bug?</summary>
+        <p>Email
+          <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a>
+          with the details listed above (device, Android version, app
+          version, what happened, screenshots/video if you have them). The
+          more we know, the faster we can reproduce and fix the issue.</p>
+      </details>
 
-<details>
-  <summary>Does Last Tile collect any personal data?</summary>
-  <p>No. We do not collect any personal information. For full details, please
-  see our <a href="privacy.html">Privacy Policy</a>.</p>
-</details>
+      <details>
+        <summary>Are your apps free?</summary>
+        <p>Last Tile is free to install and play, supported by optional
+          rewarded ads and a non-intrusive banner. Other apps may differ —
+          please check the listing for each app on Google Play.</p>
+      </details>
 
-<details>
-  <summary>How do I request a refund?</summary>
-  <p>Last Tile is currently free to download. If you ever make a purchase
-  through Google Play and need a refund, please follow Google's
-  <a href="https://support.google.com/googleplay/answer/2479637" target="_blank"
-     rel="noopener">refund process</a>.</p>
-</details>
+      <details>
+        <summary>Do your apps require an account or sign-in?</summary>
+        <p>None of our apps require an account to use. Some apps offer an
+          <em>optional</em> Google Play Games sign-in for online
+          leaderboards; the app continues to work fully without it.</p>
+      </details>
 
-<details>
-  <summary>I have a feature suggestion. Where can I send it?</summary>
-  <p>Please email us at
-  <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a>
-  with the subject line "Feature Request". We read every message.</p>
-</details>
+      <details>
+        <summary>How do I get a refund?</summary>
+        <p>For purchases made through Google Play, please follow Google’s
+          <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">refund process</a>.
+          If you need help with anything else, just email us.</p>
+      </details>
 
-<div class="footer">
-  © 2026 Moonstream Tech. All rights reserved. ·
-  <a href="index.html">Home</a> ·
-  <a href="privacy.html">Privacy Policy</a>
-</div>
+      <details>
+        <summary>I’m a journalist or content creator — can I write about your apps?</summary>
+        <p>Yes, please do. Email
+          <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a>
+          and let us know what you’re working on. We’re happy to share press
+          materials, screenshots and answer questions.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Per-app help</h2>
+      <p>For Last Tile-specific questions — hazards, the shield mechanic,
+         leaderboards, ads — see the
+         <a href="LastTile/support/">Last Tile FAQ</a>.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>© 2026 Moonstream Tech. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="LastTile/">Last Tile</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
