@@ -1,0 +1,99 @@
+name: Sync Mozai content
+
+# Pulls public/content/** from the Mozai game repo into /mozai-content/ here,
+# then commits + pushes so GitHub Pages republishes.
+#
+# Triggers:
+#   - workflow_dispatch: run manually from the Actions tab. Optional `source_ref`
+#     input lets you sync from a non-default branch (the game repo's `main` may
+#     be empty until the foundation branch is merged).
+#   - repository_dispatch (event_type: sync-mozai-content): the game repo can
+#     fire this from its own workflow after content changes land.
+#
+# Required secret:
+#   MOZAI_CONTENT_TOKEN — a fine-grained Personal Access Token (or classic PAT)
+#   with read access ("Contents: read") on moonstreamtech/Mozai. Create it at
+#   https://github.com/settings/tokens and store as a repository secret named
+#   MOZAI_CONTENT_TOKEN under Settings → Secrets and variables → Actions.
+#   (Not needed if the Mozai repo is public — but configuring it makes the
+#   workflow work either way and avoids unauthenticated rate limits.)
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: "Branch/tag/SHA in moonstreamtech/Mozai to pull content from"
+        required: false
+        default: "main"
+  repository_dispatch:
+    types: [sync-mozai-content]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-mozai-content
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website repo
+        uses: actions/checkout@v4
+
+      - name: Resolve source ref
+        id: src
+        run: |
+          REF="${{ github.event.inputs.source_ref }}"
+          if [ -z "$REF" ]; then
+            REF="${{ github.event.client_payload.source_ref }}"
+          fi
+          if [ -z "$REF" ]; then
+            REF="main"
+          fi
+          echo "ref=$REF" >> "$GITHUB_OUTPUT"
+          echo "Using source ref: $REF"
+
+      - name: Sparse-checkout Mozai game repo content
+        env:
+          TOKEN: ${{ secrets.MOZAI_CONTENT_TOKEN }}
+        run: |
+          set -euo pipefail
+          AUTH=""
+          if [ -n "${TOKEN:-}" ]; then
+            AUTH="https://x-access-token:${TOKEN}@github.com/moonstreamtech/Mozai.git"
+          else
+            AUTH="https://github.com/moonstreamtech/Mozai.git"
+          fi
+          git clone --depth 1 --filter=blob:none --sparse \
+            --branch "${{ steps.src.outputs.ref }}" \
+            "$AUTH" mozai-src
+          cd mozai-src
+          git sparse-checkout set public/content
+          ls -la public/content || (echo "::error::public/content not found on ref ${{ steps.src.outputs.ref }}" && exit 1)
+
+      - name: Replace mozai-content/
+        run: |
+          set -euo pipefail
+          rm -rf mozai-content
+          mkdir -p mozai-content
+          # Copy contents (not the directory itself) to preserve layout 1:1.
+          cp -a mozai-src/public/content/. mozai-content/
+          rm -rf mozai-src
+          echo "Synced files:"
+          find mozai-content -type f | sort
+
+      - name: Commit and push if changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mozai-content
+          if git diff --cached --quiet; then
+            echo "No content changes — nothing to commit."
+            exit 0
+          fi
+          SHORT_REF="${{ steps.src.outputs.ref }}"
+          git commit -m "chore(mozai-content): sync from moonstreamtech/Mozai@${SHORT_REF}"
+          git push origin HEAD:${{ github.ref_name }}
