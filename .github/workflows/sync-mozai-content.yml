@@ -44,34 +44,60 @@ jobs:
 
       - name: Resolve source ref
         id: src
+        env:
+          INPUT_REF: ${{ github.event.inputs.source_ref }}
+          PAYLOAD_SOURCE_REF: ${{ github.event.client_payload.source_ref }}
+          PAYLOAD_REF: ${{ github.event.client_payload.ref }}
+          EVENT_NAME: ${{ github.event_name }}
+          PAYLOAD_JSON: ${{ toJSON(github.event.client_payload) }}
         run: |
-          REF="${{ github.event.inputs.source_ref }}"
-          if [ -z "$REF" ]; then
-            REF="${{ github.event.client_payload.source_ref }}"
-          fi
-          if [ -z "$REF" ]; then
-            REF="main"
-          fi
+          set -euo pipefail
+          echo "Trigger event: ${EVENT_NAME}"
+          echo "client_payload: ${PAYLOAD_JSON}"
+
+          # Precedence:
+          #   1. workflow_dispatch input (manual run)
+          #   2. client_payload.source_ref (explicit key)
+          #   3. client_payload.ref (the Mozai trigger sends this, e.g. refs/heads/main)
+          #   4. fallback to main
+          REF="${INPUT_REF:-}"
+          if [ -z "$REF" ]; then REF="${PAYLOAD_SOURCE_REF:-}"; fi
+          if [ -z "$REF" ]; then REF="${PAYLOAD_REF:-}"; fi
+
+          # `git clone --branch` wants a short name (main), not a fully
+          # qualified ref (refs/heads/main) — strip the prefix if present.
+          REF="${REF#refs/heads/}"
+          REF="${REF#refs/tags/}"
+
+          if [ -z "$REF" ]; then REF="main"; fi
           echo "ref=$REF" >> "$GITHUB_OUTPUT"
-          echo "Using source ref: $REF"
+          echo "Resolved source ref: $REF"
 
       - name: Sparse-checkout Mozai game repo content
         env:
           TOKEN: ${{ secrets.MOZAI_CONTENT_TOKEN }}
+          REF: ${{ steps.src.outputs.ref }}
         run: |
           set -euo pipefail
-          AUTH=""
           if [ -n "${TOKEN:-}" ]; then
+            echo "Using authenticated clone (MOZAI_CONTENT_TOKEN is set, length=${#TOKEN})."
             AUTH="https://x-access-token:${TOKEN}@github.com/moonstreamtech/Mozai.git"
           else
+            echo "::warning::MOZAI_CONTENT_TOKEN secret is NOT set; falling back to anonymous clone. This works for a public Mozai repo but is rate-limited, and a private/unreadable repo will surface as a misleading 'branch not found' error."
             AUTH="https://github.com/moonstreamtech/Mozai.git"
           fi
+          echo "Cloning ref: ${REF}"
           git clone --depth 1 --filter=blob:none --sparse \
-            --branch "${{ steps.src.outputs.ref }}" \
+            --branch "${REF}" \
             "$AUTH" mozai-src
           cd mozai-src
           git sparse-checkout set public/content
-          ls -la public/content || (echo "::error::public/content not found on ref ${{ steps.src.outputs.ref }}" && exit 1)
+          if [ ! -d public/content ]; then
+            echo "::error::public/content directory not present on ref ${REF}"
+            exit 1
+          fi
+          echo "Sparse-checkout succeeded. Files:"
+          find public/content -type f | head -20
 
       - name: Replace mozai-content/
         run: |
