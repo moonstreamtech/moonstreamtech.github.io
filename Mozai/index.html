@@ -16,69 +16,73 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=c582ce80">
+<link rel="stylesheet" href="/assets/css/site.css?v=acece17f">
 <script>document.documentElement.classList.add('js')</script>
-<script src="/assets/js/site.js?v=c582ce80" defer></script>
+<script src="/assets/js/site.js?v=acece17f" defer></script>
 </head>
 <body>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
 
-<header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl backdrop-saturate-150">
-  <div class="shell flex h-16 items-center justify-between gap-6">
-    <a href="/" class="text-[19px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
-    <nav class="hidden items-center md:flex" aria-label="Main">
+<header class="fixed inset-x-0 top-0 z-50">
+  <div class="shell pt-3">
+    <nav class="flex h-14 items-center justify-between rounded-full border border-white/10 bg-black/70 pr-2 pl-5 backdrop-blur-xl backdrop-saturate-150" aria-label="Main">
+      <a href="/" class="text-[20px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+      <div class="hidden items-center md:flex">
         <a class="nav-link" href="/#games" aria-current="page">Games</a>
         <a class="nav-link" href="/#studio">Studio</a>
         <a class="nav-link" href="/support.html">Support</a>
         <a class="nav-link" href="/privacy.html">Privacy</a>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <a href="mailto:moonstreamtech@gmail.com" class="btn-brand btn-sm hidden sm:inline-flex">Contact</a>
+        <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
     </nav>
-    <div class="flex items-center gap-1">
-      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand btn-sm hidden sm:inline-flex">Contact</a>
-      <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-  </div>
-  <div id="mobile-menu" class="hidden border-t border-white/10 md:hidden">
-    <div class="shell py-3">
-        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/#games" aria-current="page">Games<span class="text-white/30" aria-hidden="true">→</span></a>
-        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/#studio">Studio<span class="text-white/30" aria-hidden="true">→</span></a>
-        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/support.html">Support<span class="text-white/30" aria-hidden="true">→</span></a>
-        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/privacy.html">Privacy<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-3 mb-2 w-full">Contact us</a>
+    <div id="mobile-menu" class="mt-2 hidden rounded-[28px] border border-white/10 bg-black/90 p-2 backdrop-blur-xl md:hidden">
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#games" aria-current="page">Games<span class="text-white/30" aria-hidden="true">→</span></a>
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#studio">Studio<span class="text-white/30" aria-hidden="true">→</span></a>
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/support.html">Support<span class="text-white/30" aria-hidden="true">→</span></a>
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/privacy.html">Privacy<span class="text-white/30" aria-hidden="true">→</span></a>
+      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-2 w-full">Contact us</a>
     </div>
   </div>
 </header>
 
-<div class="sticky top-16 z-40 mt-16 border-b border-white/10 bg-black/80 backdrop-blur-xl backdrop-saturate-150">
-  <div class="shell flex h-12 items-center justify-between gap-6">
-    <a href="/Mozai/" class="shrink-0 text-[17px] font-medium tracking-tight">Mozai</a>
-    <nav aria-label="Mozai" class="-mr-3 flex items-center overflow-x-auto">
-        <a class="subnav-link" href="/Mozai/" aria-current="page">Overview</a>
-        <a class="subnav-link" href="/Mozai/support/">Support</a>
-        <a class="subnav-link" href="/Mozai/privacy-policy/">Privacy</a>
-        <a class="subnav-link" href="/Mozai/terms/">Terms</a>
-    </nav>
-  </div>
-</div>
-
 <main id="main">
   <!-- Hero -->
-  <section class="pt-16 pb-24 text-center sm:pt-24 sm:pb-32">
+  <section class="relative isolate overflow-hidden pt-28 pb-20 sm:pt-32 sm:pb-28">
     <div class="shell">
-      <p class="eyebrow text-white/55">Color · Pixel · Calm</p>
-      <h1 class="display mt-4">Mozai</h1>
-      <p class="lede mx-auto mt-5 max-w-2xl text-white/60">A calm pixel coloring game. Pick a color and discover
+      <nav aria-label="Mozai" class="inline-flex max-w-full items-center gap-1 overflow-x-auto rounded-full border border-white/15 p-1">
+        <a href="/Mozai/" aria-current="page" class="shrink-0 rounded-full bg-white px-4 py-2 text-[14px] font-medium text-black">Overview</a>
+        <a href="/Mozai/support/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/65 transition-colors hover:text-white">Support</a>
+        <a href="/Mozai/privacy-policy/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/65 transition-colors hover:text-white">Privacy</a>
+        <a href="/Mozai/terms/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/65 transition-colors hover:text-white">Terms</a>
+      </nav>
+      <div class="mt-14 grid items-center gap-16 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="chip border-brand/40 text-brand">Official Site</span>
+            <span class="chip text-white/60">Color · Pixel · Calm</span>
+          </div>
+          <h1 class="mt-7 text-[clamp(3.5rem,9.5vw,8rem)] leading-[0.9] font-medium tracking-[-0.055em]">Mozai</h1>
+          <p class="lede mt-7 max-w-xl text-white/60">A calm pixel coloring game. Pick a color and discover
           the picture — correct cells fill in, wrong taps do nothing. No
           numbers, no pressure.</p>
-      <div class="mt-9 flex flex-wrap justify-center gap-3">
-        <span class="btn-brand">Coming to Google Play</span>
-        <a href="#how-to-play" class="btn-ghost text-white">How to play</a>
-      </div>
-      <div class="mt-16 sm:mt-20">
-        <div class="mx-auto w-[260px] rounded-[48px] border border-white/15 bg-white/[0.04] p-2.5 sm:w-[300px]" aria-hidden="true">
-          <div class="flex aspect-[9/19] flex-col items-center justify-center rounded-[40px] bg-black px-5">
-            <div class="w-full"><div class="grid aspect-square grid-cols-20 gap-[1.5%]" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="mt-9 flex flex-wrap items-center gap-3">
+            <span class="btn-brand">Coming to Google Play</span>
+            <a href="#how-to-play" class="btn-ghost text-white">How to play</a>
+          </div>
+        </div>
+        <div class="relative isolate lg:col-span-5">
+          <div class="absolute inset-[12%] -z-10 rounded-full bg-brand/15 blur-3xl" aria-hidden="true"></div>
+          <div class="animate-float">
+            <div class="rotate-6">
+            <div class="mx-auto w-[240px] rounded-[46px] border border-white/15 bg-white/[0.04] p-2.5 sm:w-[280px]" aria-hidden="true">
+              <div class="flex aspect-[9/19] items-center rounded-[38px] bg-black px-5"><div class="w-full"><div class="grid aspect-square grid-cols-20 gap-[1.5%]" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -86,12 +90,12 @@
   </section>
 
   <!-- About + features -->
-  <section class="bg-white py-24 text-black sm:py-32">
+  <section class="rounded-t-[40px] bg-white py-24 text-black sm:rounded-t-[56px] sm:py-32">
     <div class="shell">
-      <div class="grid gap-8 lg:grid-cols-12">
-        <p class="eyebrow text-black/45 lg:col-span-4">About the game</p>
+      <div class="reveal grid gap-8 lg:grid-cols-12">
+        <p class="eyebrow inline-flex items-center gap-2 self-start text-black/50 lg:col-span-4"><span class="size-2 rounded-full bg-black"></span>About the game</p>
         <div class="space-y-6 lg:col-span-8">
-          <p class="text-[clamp(1.4rem,2.4vw,1.9rem)] leading-[1.35] font-medium tracking-[-0.02em]">Mozai is a pixel-art coloring game built around discovery. There
+          <p class="text-[clamp(1.5rem,2.6vw,2.1rem)] leading-[1.3] font-medium tracking-[-0.02em]">Mozai is a pixel-art coloring game built around discovery. There
           are no numbers on the cells — you pick a color from the palette,
           and the picture tells you where it belongs. Correct cells fill in
           instantly; wrong taps are simply ignored, so the picture always
@@ -103,40 +107,40 @@
         </div>
       </div>
 
-      <div class="mt-24 flex flex-wrap items-end justify-between gap-4 sm:mt-32">
-        <h2 class="title">Core features</h2>
+      <div class="reveal mt-24 flex flex-wrap items-end justify-between gap-4 sm:mt-32">
+        <h2 class="text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">Core features</h2>
         <p class="text-[15px] text-black/45">6 reasons to play</p>
       </div>
       <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <li class="rounded-3xl bg-black/[0.04] p-7">
-          <p class="text-[13px] font-medium text-black/40 tabular-nums">01</p>
-          <p class="mt-8 text-[20px] leading-snug font-medium tracking-[-0.015em]">Color by discovery.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60">No numbers shown — select a color and find where it belongs. Correct cells fill; wrong taps are simply ignored, so the picture always comes out right.</p>
+        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">01</span>
+          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Color by discovery.</p>
+          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">No numbers shown — select a color and find where it belongs. Correct cells fill; wrong taps are simply ignored, so the picture always comes out right.</p>
         </li>
-        <li class="rounded-3xl bg-black/[0.04] p-7">
-          <p class="text-[13px] font-medium text-black/40 tabular-nums">02</p>
-          <p class="mt-8 text-[20px] leading-snug font-medium tracking-[-0.015em]">Rooms that open up.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60">Pictures are grouped into numbered rooms; finishing pictures unlocks the next room.</p>
+        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">02</span>
+          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Rooms that open up.</p>
+          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Pictures are grouped into numbered rooms; finishing pictures unlocks the next room.</p>
         </li>
-        <li class="rounded-3xl bg-black/[0.04] p-7">
-          <p class="text-[13px] font-medium text-black/40 tabular-nums">03</p>
-          <p class="mt-8 text-[20px] leading-snug font-medium tracking-[-0.015em]">Pinch to zoom, drag to paint.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60">Paint single cells or drag along a path; pinch-zoom and pan on large pictures.</p>
+        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">03</span>
+          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Pinch to zoom, drag to paint.</p>
+          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Paint single cells or drag along a path; pinch-zoom and pan on large pictures.</p>
         </li>
-        <li class="rounded-3xl bg-black/[0.04] p-7">
-          <p class="text-[13px] font-medium text-black/40 tabular-nums">04</p>
-          <p class="mt-8 text-[20px] leading-snug font-medium tracking-[-0.015em]">Optional hints.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60">Stuck on a color? Watch an optional rewarded ad to reveal where that color goes.</p>
+        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">04</span>
+          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Optional hints.</p>
+          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Stuck on a color? Watch an optional rewarded ad to reveal where that color goes.</p>
         </li>
-        <li class="rounded-3xl bg-black/[0.04] p-7">
-          <p class="text-[13px] font-medium text-black/40 tabular-nums">05</p>
-          <p class="mt-8 text-[20px] leading-snug font-medium tracking-[-0.015em]">Offline-first.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60">No account required; your progress is saved on your device.</p>
+        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">05</span>
+          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Offline-first.</p>
+          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">No account required; your progress is saved on your device.</p>
         </li>
-        <li class="rounded-3xl bg-black/[0.04] p-7">
-          <p class="text-[13px] font-medium text-black/40 tabular-nums">06</p>
-          <p class="mt-8 text-[20px] leading-snug font-medium tracking-[-0.015em]">Free to play</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60">with optional rewarded ads.</p>
+        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">06</span>
+          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Free to play</p>
+          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">with optional rewarded ads.</p>
         </li>
       </ul>
     </div>
@@ -145,27 +149,27 @@
   <!-- How to play -->
   <section id="how-to-play" class="py-24 sm:py-32">
     <div class="shell">
-      <p class="eyebrow text-white/55">How to play</p>
-      <h2 class="title mt-4">Easy to learn.<br><span class="text-white/40">Hard to put down.</span></h2>
-      <ol class="mt-14 divide-y divide-white/10 border-y border-white/10">
-        <li class="grid gap-3 py-7 sm:grid-cols-12 sm:gap-8">
-          <span class="text-[15px] font-medium text-brand tabular-nums sm:col-span-2">01</span>
-          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-10 sm:text-[20px] [&_strong]:font-medium [&_strong]:text-white">Pick a color from the palette at the bottom of the screen.</p>
+      <p class="eyebrow inline-flex items-center gap-2 text-white/60"><span class="size-2 rounded-full bg-brand"></span>How to play</p>
+      <h2 class="reveal mt-5 text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">Easy to learn.<br><span class="text-white/40">Hard to put down.</span></h2>
+      <ol class="mt-14 divide-y divide-white/10 border-y border-white/10 sm:mt-20">
+        <li class="reveal grid gap-3 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+          <span class="text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">01</span>
+          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-9 sm:text-[21px] [&_strong]:font-medium [&_strong]:text-white">Pick a color from the palette at the bottom of the screen.</p>
         </li>
-        <li class="grid gap-3 py-7 sm:grid-cols-12 sm:gap-8">
-          <span class="text-[15px] font-medium text-brand tabular-nums sm:col-span-2">02</span>
-          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-10 sm:text-[20px] [&_strong]:font-medium [&_strong]:text-white">Tap on a matching cell, or drag along a path to paint several
+        <li class="reveal grid gap-3 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+          <span class="text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">02</span>
+          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-9 sm:text-[21px] [&_strong]:font-medium [&_strong]:text-white">Tap on a matching cell, or drag along a path to paint several
             cells at once. Wrong taps do nothing — the picture can't go
             wrong.</p>
         </li>
-        <li class="grid gap-3 py-7 sm:grid-cols-12 sm:gap-8">
-          <span class="text-[15px] font-medium text-brand tabular-nums sm:col-span-2">03</span>
-          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-10 sm:text-[20px] [&_strong]:font-medium [&_strong]:text-white">When every cell of a color is filled, that color leaves the
+        <li class="reveal grid gap-3 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+          <span class="text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">03</span>
+          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-9 sm:text-[21px] [&_strong]:font-medium [&_strong]:text-white">When every cell of a color is filled, that color leaves the
             palette so you always know what's left.</p>
         </li>
-        <li class="grid gap-3 py-7 sm:grid-cols-12 sm:gap-8">
-          <span class="text-[15px] font-medium text-brand tabular-nums sm:col-span-2">04</span>
-          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-10 sm:text-[20px] [&_strong]:font-medium [&_strong]:text-white">Complete every cell to finish the picture, then unlock new
+        <li class="reveal grid gap-3 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+          <span class="text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">04</span>
+          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-9 sm:text-[21px] [&_strong]:font-medium [&_strong]:text-white">Complete every cell to finish the picture, then unlock new
             pictures and new rooms as you go.</p>
         </li>
       </ol>
@@ -175,54 +179,53 @@
   <!-- Screenshots -->
   <section class="border-t border-white/10 py-20 sm:py-24">
     <div class="shell flex flex-wrap items-end justify-between gap-4">
-      <h2 class="title">Screenshots</h2>
-      <p class="text-[16px] text-white/50">Coming soon, alongside the Google Play release.</p>
+      <h2 class="text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">Screenshots</h2>
+      <p class="chip text-white/60">Coming soon, alongside the Google Play release.</p>
     </div>
   </section>
 
   <!-- More -->
   <section class="border-t border-white/10 py-20 sm:py-24">
     <div class="shell">
-      <h2 class="title">Everything about Mozai.</h2>
+      <h2 class="text-[clamp(2rem,4.5vw,3.5rem)] leading-none font-medium tracking-[-0.045em]">Everything about Mozai.</h2>
       <div class="mt-10 grid gap-4 md:grid-cols-3">
-        <a href="/Mozai/support/" class="group flex flex-col rounded-3xl border border-white/10 p-7 transition-colors hover:bg-white/[0.04]">
-          <p class="text-[22px] font-medium tracking-tight">Support</p>
+        <a href="/Mozai/support/" class="group flex min-h-[190px] flex-col rounded-[28px] border border-white/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-white/25">
+          <p class="text-[24px] font-medium tracking-tight">Support</p>
           <p class="mt-2 text-[15px] text-white/55">FAQ, bug reports and contact.</p>
-          <span class="link-arrow mt-8 text-[15px] text-brand">Open</span>
+          <span class="link-arrow mt-auto pt-8 text-[15px] text-brand">Open</span>
         </a>
-        <a href="/Mozai/privacy-policy/" class="group flex flex-col rounded-3xl border border-white/10 p-7 transition-colors hover:bg-white/[0.04]">
-          <p class="text-[22px] font-medium tracking-tight">Privacy Policy</p>
+        <a href="/Mozai/privacy-policy/" class="group flex min-h-[190px] flex-col rounded-[28px] border border-white/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-white/25">
+          <p class="text-[24px] font-medium tracking-tight">Privacy Policy</p>
           <p class="mt-2 text-[15px] text-white/55">How Mozai handles your information.</p>
-          <span class="link-arrow mt-8 text-[15px] text-brand">Open</span>
+          <span class="link-arrow mt-auto pt-8 text-[15px] text-brand">Open</span>
         </a>
-        <a href="/Mozai/terms/" class="group flex flex-col rounded-3xl border border-white/10 p-7 transition-colors hover:bg-white/[0.04]">
-          <p class="text-[22px] font-medium tracking-tight">Terms of Use</p>
+        <a href="/Mozai/terms/" class="group flex min-h-[190px] flex-col rounded-[28px] border border-white/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-white/25">
+          <p class="text-[24px] font-medium tracking-tight">Terms of Use</p>
           <p class="mt-2 text-[15px] text-white/55">The simple rules for using Mozai.</p>
-          <span class="link-arrow mt-8 text-[15px] text-brand">Open</span>
+          <span class="link-arrow mt-auto pt-8 text-[15px] text-brand">Open</span>
         </a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="border-t border-white/10 bg-black text-white">
-  <div class="shell py-16 sm:py-20">
+<footer class="relative overflow-hidden border-t border-white/10 bg-black pt-16 text-white sm:pt-20">
+  <div class="shell">
     <div class="grid gap-12 lg:grid-cols-12">
       <div class="lg:col-span-5">
-        <a href="/" class="text-[19px]" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
-        <p class="mt-5 max-w-xs text-[15px] leading-relaxed text-white/50">Games without edges. Built with care by a small, independent studio.</p>
+        <p class="max-w-sm text-[24px] leading-[1.2] font-medium tracking-[-0.02em]">Games without edges.<br><span class="text-white/40">Built with care by a small, independent studio.</span></p>
       </div>
       <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7">
         <div>
           <p class="text-[13px] font-medium text-white/40">Games</p>
-          <ul class="mt-4 space-y-3 text-[14px]">
+          <ul class="mt-4 space-y-3 text-[15px]">
             <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/">Last Tile</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/">Mozai</a></li>
           </ul>
         </div>
         <div>
           <p class="text-[13px] font-medium text-white/40">Studio</p>
-          <ul class="mt-4 space-y-3 text-[14px]">
+          <ul class="mt-4 space-y-3 text-[15px]">
             <li><a class="text-white/70 transition-colors hover:text-white" href="/">Home</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/#games">Games</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/#studio">About</a></li>
@@ -231,7 +234,7 @@
         </div>
         <div>
           <p class="text-[13px] font-medium text-white/40">Help</p>
-          <ul class="mt-4 space-y-3 text-[14px]">
+          <ul class="mt-4 space-y-3 text-[15px]">
             <li><a class="text-white/70 transition-colors hover:text-white" href="/support.html">Support</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/privacy.html">Privacy Policy</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/support/">Last Tile support</a></li>
@@ -244,6 +247,10 @@
       <p>© 2026 Moonstream Tech. All rights reserved.</p>
       <p class="flex gap-5"><a class="hover:text-white" href="/privacy.html">Privacy Policy</a><a class="hover:text-white" href="/support.html">Support</a></p>
     </div>
+  </div>
+  <!-- the signature: moonstream + a module that keeps changing -->
+  <div class="pointer-events-none mt-12 -mb-[1.8vw] flex justify-center text-[10.5vw] leading-none text-white select-none sm:mt-16" aria-hidden="true">
+    <span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod" data-cycle="tech,studio,games">tech</span></span>
   </div>
 </footer>
 </body>

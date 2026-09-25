@@ -16,51 +16,52 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=c582ce80">
+<link rel="stylesheet" href="/assets/css/site.css?v=acece17f">
 <script>document.documentElement.classList.add('js')</script>
-<script src="/assets/js/site.js?v=c582ce80" defer></script>
+<script src="/assets/js/site.js?v=acece17f" defer></script>
 </head>
 <body>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
 
-<header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl backdrop-saturate-150">
-  <div class="shell flex h-16 items-center justify-between gap-6">
-    <a href="/" class="text-[19px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
-    <nav class="hidden items-center md:flex" aria-label="Main">
+<header class="fixed inset-x-0 top-0 z-50">
+  <div class="shell pt-3">
+    <nav class="flex h-14 items-center justify-between rounded-full border border-white/10 bg-black/70 pr-2 pl-5 backdrop-blur-xl backdrop-saturate-150" aria-label="Main">
+      <a href="/" class="text-[20px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+      <div class="hidden items-center md:flex">
         <a class="nav-link" href="/#games">Games</a>
         <a class="nav-link" href="/#studio">Studio</a>
         <a class="nav-link" href="/support.html">Support</a>
         <a class="nav-link" href="/privacy.html" aria-current="page">Privacy</a>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <a href="mailto:moonstreamtech@gmail.com" class="btn-brand btn-sm hidden sm:inline-flex">Contact</a>
+        <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
     </nav>
-    <div class="flex items-center gap-1">
-      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand btn-sm hidden sm:inline-flex">Contact</a>
-      <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-  </div>
-  <div id="mobile-menu" class="hidden border-t border-white/10 md:hidden">
-    <div class="shell py-3">
-        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/#games">Games<span class="text-white/30" aria-hidden="true">→</span></a>
-        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/#studio">Studio<span class="text-white/30" aria-hidden="true">→</span></a>
-        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/support.html">Support<span class="text-white/30" aria-hidden="true">→</span></a>
-        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/privacy.html" aria-current="page">Privacy<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-3 mb-2 w-full">Contact us</a>
+    <div id="mobile-menu" class="mt-2 hidden rounded-[28px] border border-white/10 bg-black/90 p-2 backdrop-blur-xl md:hidden">
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#games">Games<span class="text-white/30" aria-hidden="true">→</span></a>
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#studio">Studio<span class="text-white/30" aria-hidden="true">→</span></a>
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/support.html">Support<span class="text-white/30" aria-hidden="true">→</span></a>
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/privacy.html" aria-current="page">Privacy<span class="text-white/30" aria-hidden="true">→</span></a>
+      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-2 w-full">Contact us</a>
     </div>
   </div>
 </header>
 
 <main id="main">
-  <section class="pt-36 sm:pt-44 pb-16 sm:pb-20">
+  <section class="relative isolate overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
+    <div class="pointer-events-none absolute top-[30%] -right-[9vw] -z-10 hidden size-[26vw] animate-float rounded-full bg-white md:block" aria-hidden="true"></div>
     <div class="shell">
-      <p class="flex flex-wrap items-center gap-2 text-[14px] text-white/45"><a class="hover:text-white" href="/">Moonstream Tech</a><span aria-hidden="true">/</span><span class="text-white/80">Privacy Policy</span></p>
-      <h1 class="display mt-5">Privacy Policy</h1>
-      <p class="mt-6 text-[14px] text-white/40">Last updated: 7 May 2026</p>
+      <p class="flex flex-wrap items-center gap-2 text-[14px] text-white/50"><a class="hover:text-white" href="/">Moonstream Tech</a><span aria-hidden="true">/</span><span class="text-white">Privacy Policy</span></p>
+      <h1 class="mt-5 max-w-3xl text-[clamp(3rem,7.5vw,6.25rem)] leading-[0.95] font-medium tracking-[-0.05em]">Privacy Policy</h1>
+      <p class="mt-8 inline-flex rounded-full border border-white/15 px-4 py-2 text-[14px] text-white/60">Last updated: 7 May 2026</p>
     </div>
   </section>
 
-  <section class="bg-white text-black">
-    <div class="shell grid gap-12 py-16 sm:py-24 lg:grid-cols-12">
+  <section class="rounded-t-[40px] bg-white py-16 text-black sm:rounded-t-[56px] sm:py-24">
+    <div class="shell grid gap-12 lg:grid-cols-12">
       <aside class="hidden lg:col-span-3 lg:block">
         <nav class="toc sticky top-28" aria-label="On this page">
           <p class="mb-3 text-[13px] font-medium text-black/40">On this page</p>
@@ -162,24 +163,23 @@
   </section>
 </main>
 
-<footer class="border-t border-white/10 bg-black text-white">
-  <div class="shell py-16 sm:py-20">
+<footer class="relative overflow-hidden border-t border-white/10 bg-black pt-16 text-white sm:pt-20">
+  <div class="shell">
     <div class="grid gap-12 lg:grid-cols-12">
       <div class="lg:col-span-5">
-        <a href="/" class="text-[19px]" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
-        <p class="mt-5 max-w-xs text-[15px] leading-relaxed text-white/50">Games without edges. Built with care by a small, independent studio.</p>
+        <p class="max-w-sm text-[24px] leading-[1.2] font-medium tracking-[-0.02em]">Games without edges.<br><span class="text-white/40">Built with care by a small, independent studio.</span></p>
       </div>
       <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7">
         <div>
           <p class="text-[13px] font-medium text-white/40">Games</p>
-          <ul class="mt-4 space-y-3 text-[14px]">
+          <ul class="mt-4 space-y-3 text-[15px]">
             <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/">Last Tile</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/">Mozai</a></li>
           </ul>
         </div>
         <div>
           <p class="text-[13px] font-medium text-white/40">Studio</p>
-          <ul class="mt-4 space-y-3 text-[14px]">
+          <ul class="mt-4 space-y-3 text-[15px]">
             <li><a class="text-white/70 transition-colors hover:text-white" href="/">Home</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/#games">Games</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/#studio">About</a></li>
@@ -188,7 +188,7 @@
         </div>
         <div>
           <p class="text-[13px] font-medium text-white/40">Help</p>
-          <ul class="mt-4 space-y-3 text-[14px]">
+          <ul class="mt-4 space-y-3 text-[15px]">
             <li><a class="text-white/70 transition-colors hover:text-white" href="/support.html">Support</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/privacy.html">Privacy Policy</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/support/">Last Tile support</a></li>
@@ -201,6 +201,10 @@
       <p>© 2026 Moonstream Tech. All rights reserved.</p>
       <p class="flex gap-5"><a class="hover:text-white" href="/privacy.html">Privacy Policy</a><a class="hover:text-white" href="/support.html">Support</a></p>
     </div>
+  </div>
+  <!-- the signature: moonstream + a module that keeps changing -->
+  <div class="pointer-events-none mt-12 -mb-[1.8vw] flex justify-center text-[10.5vw] leading-none text-white select-none sm:mt-16" aria-hidden="true">
+    <span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod" data-cycle="tech,studio,games">tech</span></span>
   </div>
 </footer>
 </body>
