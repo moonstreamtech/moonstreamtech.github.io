@@ -1,9 +1,9 @@
 {
   "name": "moonstreamtech-site",
   "private": true,
-  "description": "moonstreamtech.com — static site built with Tailwind CSS",
+  "description": "moonstreamtech.com \u2014 static site built with Tailwind CSS",
   "scripts": {
-    "build": "tailwindcss -i ./src/site.css -o ./assets/css/site.css --minify",
+    "build": "tailwindcss -i ./src/site.css -o ./assets/css/site.css --minify && node scripts/bust-cache.mjs",
     "dev": "tailwindcss -i ./src/site.css -o ./assets/css/site.css --watch"
   },
   "devDependencies": {

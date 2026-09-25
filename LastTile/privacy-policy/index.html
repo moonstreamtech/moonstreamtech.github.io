@@ -16,61 +16,67 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/site.css?v=c582ce80">
 <script>document.documentElement.classList.add('js')</script>
-<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/site.js?v=c582ce80" defer></script>
 </head>
 <body>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
 
-<header class="fixed inset-x-0 top-0 z-50">
-  <div class="shell pt-3">
-    <nav class="flex h-14 items-center justify-between rounded-full border border-white/10 bg-black/70 pr-2 pl-5 backdrop-blur-xl backdrop-saturate-150" aria-label="Main">
-      <a href="/" class="text-[21px] text-white" aria-label="Moonstream Tech — home"><span class="brand "><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
-      <div class="hidden items-center md:flex">
-        <a class="nav-link" href="/#games">Games</a>
+<header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl backdrop-saturate-150">
+  <div class="shell flex h-16 items-center justify-between gap-6">
+    <a href="/" class="text-[19px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+    <nav class="hidden items-center md:flex" aria-label="Main">
+        <a class="nav-link" href="/#games" aria-current="page">Games</a>
         <a class="nav-link" href="/#studio">Studio</a>
         <a class="nav-link" href="/support.html">Support</a>
         <a class="nav-link" href="/privacy.html">Privacy</a>
-      </div>
-      <div class="flex items-center gap-1.5">
-        <a href="mailto:moonstreamtech@gmail.com" class="btn-brand hidden !px-5 !py-2 !text-[14px] sm:inline-flex">Contact</a>
-        <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path class="origin-center transition" d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </button>
-      </div>
     </nav>
-    <div id="mobile-menu" class="mt-2 hidden rounded-[28px] border border-white/10 bg-black/90 p-2 backdrop-blur-xl md:hidden">
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[22px] font-medium tracking-tight hover:bg-white/5" href="/#games">Games<span class="text-white/30">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[22px] font-medium tracking-tight hover:bg-white/5" href="/#studio">Studio<span class="text-white/30">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[22px] font-medium tracking-tight hover:bg-white/5" href="/support.html">Support<span class="text-white/30">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[22px] font-medium tracking-tight hover:bg-white/5" href="/privacy.html">Privacy<span class="text-white/30">→</span></a>
-      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-2 w-full">Contact us</a>
+    <div class="flex items-center gap-1">
+      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand btn-sm hidden sm:inline-flex">Contact</a>
+      <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden border-t border-white/10 md:hidden">
+    <div class="shell py-3">
+        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/#games" aria-current="page">Games<span class="text-white/30" aria-hidden="true">→</span></a>
+        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/#studio">Studio<span class="text-white/30" aria-hidden="true">→</span></a>
+        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/support.html">Support<span class="text-white/30" aria-hidden="true">→</span></a>
+        <a class="flex items-center justify-between py-3 text-[20px] font-medium tracking-tight text-white/85 hover:text-white" href="/privacy.html">Privacy<span class="text-white/30" aria-hidden="true">→</span></a>
+      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-3 mb-2 w-full">Contact us</a>
     </div>
   </div>
 </header>
 
+<div class="sticky top-16 z-40 mt-16 border-b border-white/10 bg-black/80 backdrop-blur-xl backdrop-saturate-150">
+  <div class="shell flex h-12 items-center justify-between gap-6">
+    <a href="/LastTile/" class="shrink-0 text-[17px] font-medium tracking-tight">Last Tile</a>
+    <nav aria-label="Last Tile" class="-mr-3 flex items-center overflow-x-auto">
+        <a class="subnav-link" href="/LastTile/">Overview</a>
+        <a class="subnav-link" href="/LastTile/support/">Support</a>
+        <a class="subnav-link" href="/LastTile/privacy-policy/" aria-current="page">Privacy</a>
+        <a class="subnav-link" href="/LastTile/terms/">Terms</a>
+    </nav>
+  </div>
+</div>
+
 <main id="main">
-  <section class="relative isolate overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
+  <section class="pt-16 sm:pt-20 pb-16 sm:pb-20">
     <div class="shell">
-      <div class="mb-12"><nav aria-label="Last Tile" class="inline-flex max-w-full items-center gap-1 overflow-x-auto rounded-full border border-white/15 bg-black/60 p-1 backdrop-blur-xl">
-        <a href="/LastTile/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/70 transition-colors hover:text-white">Overview</a>
-        <a href="/LastTile/support/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/70 transition-colors hover:text-white">Support</a>
-        <a href="/LastTile/privacy-policy/" aria-current="page" class="shrink-0 rounded-full bg-white px-4 py-2 text-[14px] font-medium text-black">Privacy</a>
-        <a href="/LastTile/terms/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/70 transition-colors hover:text-white">Terms</a>
-      </nav></div>
-      <p class="flex flex-wrap items-center gap-2 text-[14px] text-white/50"><a class="hover:text-white" href="/">Moonstream Tech</a><span aria-hidden="true">/</span><a class="hover:text-white" href="/LastTile/">Last Tile</a><span aria-hidden="true">/</span><span class="text-white">Privacy Policy</span></p>
-      <h1 class="mt-5 max-w-5xl text-[clamp(3.2rem,10vw,9rem)] leading-[0.9] font-medium tracking-[-0.055em]">Privacy Policy</h1>
-      <p class="mt-8 max-w-2xl text-[19px] leading-relaxed text-white/65 sm:text-[21px]">How Last Tile handles your information.</p>
-      <p class="mt-8 inline-flex rounded-full border border-white/15 bg-black px-4 py-2 text-[14px] text-white/70">Last updated: 7 May 2026</p>
+      <p class="flex flex-wrap items-center gap-2 text-[14px] text-white/45"><a class="hover:text-white" href="/">Moonstream Tech</a><span aria-hidden="true">/</span><a class="hover:text-white" href="/LastTile/">Last Tile</a><span aria-hidden="true">/</span><span class="text-white/80">Privacy Policy</span></p>
+      <h1 class="display mt-5">Privacy Policy</h1>
+      <p class="lede mt-5 max-w-2xl text-white/60">How Last Tile handles your information.</p>
+      <p class="mt-6 text-[14px] text-white/40">Last updated: 7 May 2026</p>
     </div>
   </section>
 
-  <section class="rounded-t-[40px] bg-white py-20 text-black sm:rounded-t-[64px] sm:py-28">
-    <div class="shell grid gap-12 lg:grid-cols-12">
+  <section class="bg-white text-black">
+    <div class="shell grid gap-12 py-16 sm:py-24 lg:grid-cols-12">
       <aside class="hidden lg:col-span-3 lg:block">
-        <nav class="toc sticky top-28" aria-label="On this page">
-          <p class="mb-4 text-[13px] font-medium tracking-[0.14em] text-black/40 uppercase">On this page</p>
+        <nav class="toc sticky top-36" aria-label="On this page">
+          <p class="mb-3 text-[13px] font-medium text-black/40">On this page</p>
           <a href="#local">Collected locally</a>
           <a href="#firebase">Sent to Firebase</a>
           <a href="#storage">Where data is stored</a>
@@ -218,47 +224,45 @@
   </section>
 </main>
 
-<footer class="relative overflow-hidden border-t border-white/10 bg-black pt-20 text-white sm:pt-28">
-  <div class="shell">
-    <div class="grid gap-14 lg:grid-cols-12">
+<footer class="border-t border-white/10 bg-black text-white">
+  <div class="shell py-16 sm:py-20">
+    <div class="grid gap-12 lg:grid-cols-12">
       <div class="lg:col-span-5">
-        <p class="max-w-xs text-[15px] leading-relaxed text-white/50">Games without edges. Built with care by a small, independent studio.</p>
+        <a href="/" class="text-[19px]" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+        <p class="mt-5 max-w-xs text-[15px] leading-relaxed text-white/50">Games without edges. Built with care by a small, independent studio.</p>
       </div>
       <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7">
         <div>
-          <p class="text-[13px] font-medium tracking-[0.14em] text-white/40 uppercase">Games</p>
-          <ul class="mt-5 space-y-3 text-[15px]">
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="/LastTile/">Last Tile</a></li>
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="/Mozai/">Mozai</a></li>
+          <p class="text-[13px] font-medium text-white/40">Games</p>
+          <ul class="mt-4 space-y-3 text-[14px]">
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/">Last Tile</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/">Mozai</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium tracking-[0.14em] text-white/40 uppercase">Studio</p>
-          <ul class="mt-5 space-y-3 text-[15px]">
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="/">Home</a></li>
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="/#games">Games</a></li>
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="/#studio">About</a></li>
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
+          <p class="text-[13px] font-medium text-white/40">Studio</p>
+          <ul class="mt-4 space-y-3 text-[14px]">
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/">Home</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/#games">Games</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/#studio">About</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium tracking-[0.14em] text-white/40 uppercase">Help</p>
-          <ul class="mt-5 space-y-3 text-[15px]">
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="/support.html">Support</a></li>
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="/privacy.html">Privacy Policy</a></li>
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="/LastTile/support/">Last Tile support</a></li>
-            <li><a class="text-white/75 transition-colors hover:text-brand" href="/Mozai/support/">Mozai support</a></li>
+          <p class="text-[13px] font-medium text-white/40">Help</p>
+          <ul class="mt-4 space-y-3 text-[14px]">
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/support.html">Support</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/privacy.html">Privacy Policy</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/support/">Last Tile support</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/support/">Mozai support</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="mt-20 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-16 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
       <p>© 2026 Moonstream Tech. All rights reserved.</p>
       <p class="flex gap-5"><a class="hover:text-white" href="/privacy.html">Privacy Policy</a><a class="hover:text-white" href="/support.html">Support</a></p>
     </div>
-  </div>
-  <div class="pointer-events-none mt-10 -mb-[3.2vw] pl-[2vw] text-[15vw] text-white sm:mt-14" aria-hidden="true">
-    <span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod" data-cycle="tech,studio,games">tech</span></span>
   </div>
 </footer>
 </body>

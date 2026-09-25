@@ -1,9 +1,12 @@
 /*
  * moonstreamtech.com — design system
  *
- * Palette is intentionally locked to three colors: black, white and the
- * brand lime (#A0F34C). Tailwind's default palette is removed so nothing
- * else can sneak in; use opacity modifiers (white/60, black/10…) for tints.
+ * Palette is locked to three colors, used 60 / 30 / 10:
+ *   black  — the page (60%)
+ *   white  — reading surfaces, cards and type (30%)
+ *   lime   — #A0F34C, accents only: primary buttons, the brand pill (10%)
+ * Tailwind's default palette is removed so nothing else can sneak in; use
+ * opacity modifiers (white/60, black/10…) for tints.
  *
  * Build:  npm run build   (writes assets/css/site.css — commit the output)
  */
@@ -28,14 +31,13 @@
 
 @layer base {
   html {
-    @apply bg-black text-white antialiased overflow-x-clip;
+    @apply bg-black text-white antialiased;
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 7rem;
     -webkit-tap-highlight-color: transparent;
   }
   body {
-    @apply bg-black font-sans text-white overflow-x-clip;
-    font-feature-settings: "ss01";
+    @apply bg-black font-sans text-white;
   }
   ::selection {
     @apply bg-brand text-black;
@@ -47,15 +49,13 @@
     html { scroll-behavior: auto; }
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
   }
 }
 
 @layer components {
-  /* ── Brand lockup: "moonstream" is the fixed core, the pill is a
-     swappable module (tech · studio · games). Always one line. */
+  /* ── Brand lockup: "moonstream" + the module pill. Always one line. */
   .brand {
     @apply inline-flex items-center gap-1.5 whitespace-nowrap leading-none select-none;
   }
@@ -68,7 +68,21 @@
 
   /* ── Layout */
   .shell {
-    @apply mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-10;
+    @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8;
+  }
+
+  /* ── Type */
+  .eyebrow {
+    @apply text-[14px] font-medium tracking-[0.02em];
+  }
+  .display {
+    @apply text-[clamp(2.75rem,7vw,5.5rem)] leading-[1.02] font-medium tracking-[-0.045em] text-balance;
+  }
+  .title {
+    @apply text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.06] font-medium tracking-[-0.035em] text-balance;
+  }
+  .lede {
+    @apply text-[18px] leading-relaxed sm:text-[20px];
   }
 
   /* ── Buttons */
@@ -76,88 +90,96 @@
   .btn-light,
   .btn-dark,
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-medium whitespace-nowrap transition duration-300;
+    @apply inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-[15px] font-medium whitespace-nowrap transition-colors duration-200;
+  }
+  .btn-sm {
+    @apply h-9 px-4 text-[14px];
   }
   .btn-brand {
     @apply bg-brand text-black hover:bg-white;
   }
   .btn-light {
-    @apply bg-white text-black hover:bg-brand;
+    @apply bg-white text-black hover:bg-white/85;
   }
   .btn-dark {
-    @apply bg-black text-white hover:bg-brand hover:text-black;
+    @apply bg-black text-white hover:bg-black/80;
   }
   .btn-ghost {
-    @apply border border-current/25 hover:border-current;
-  }
-
-  .eyebrow {
-    @apply inline-flex items-center text-[13px] font-medium tracking-[0.14em] uppercase;
-  }
-
-  .chip {
-    @apply inline-flex items-center gap-2 rounded-full border border-current/20 px-3.5 py-1.5 text-[13px] font-medium;
+    @apply border border-current/20 hover:border-current/60;
   }
 
   .link-arrow {
-    @apply inline-flex items-center gap-2 font-medium;
+    @apply inline-flex items-center gap-1.5 font-medium;
   }
   .link-arrow::after {
     content: "→";
-    @apply transition-transform duration-300;
+    @apply transition-transform duration-200;
   }
   .link-arrow:hover::after,
   .group:hover .link-arrow::after {
-    @apply translate-x-1;
+    @apply translate-x-0.5;
   }
 
+  /* ── Header */
+  .nav-link {
+    @apply rounded-full px-3.5 py-2 text-[14px] text-white/65 transition-colors hover:text-white;
+  }
+  .nav-link[aria-current="page"] {
+    @apply text-white;
+  }
+  .subnav-link {
+    @apply shrink-0 rounded-full px-3 py-1.5 text-[13px] text-white/60 transition-colors hover:text-white;
+  }
+  .subnav-link[aria-current="page"] {
+    @apply bg-white/10 text-white;
+  }
 
   /* ── Document pages (support / privacy / terms) */
   .doc {
-    @apply text-[17px] leading-[1.75] text-black/75;
+    @apply text-[17px] leading-[1.7] text-black/75;
   }
   .doc > * + * {
     @apply mt-5;
   }
   .doc h2 {
-    @apply mt-16 scroll-mt-28 text-[28px] leading-tight font-medium tracking-[-0.02em] text-black first:mt-0 sm:text-[32px];
+    @apply mt-16 scroll-mt-32 border-t border-black/10 pt-10 text-[26px] leading-tight font-medium tracking-[-0.02em] text-black first:mt-0 first:border-0 first:pt-0 sm:text-[30px];
   }
   .doc h3 {
     @apply mt-10 text-[19px] font-medium tracking-[-0.01em] text-black;
   }
   .doc h2 + *,
   .doc h3 + * {
-    @apply mt-3;
+    @apply mt-4;
   }
   .doc strong {
     @apply font-medium text-black;
   }
   .doc a {
-    @apply font-medium text-black underline decoration-black/25 decoration-2 underline-offset-4 transition-colors hover:decoration-brand;
+    @apply font-medium text-black underline decoration-black/25 decoration-1 underline-offset-4 transition-colors hover:decoration-black;
   }
   .doc ul,
   .doc ol {
-    @apply space-y-3 pl-0;
+    @apply space-y-2.5 pl-0;
   }
   .doc ul > li {
-    @apply relative pl-7;
+    @apply relative pl-6;
   }
   .doc ul > li::before {
     content: "";
-    @apply absolute top-[0.72em] left-1 size-2 rounded-full bg-brand ring-1 ring-black/20;
+    @apply absolute top-[0.72em] left-1 size-1.5 rounded-full bg-black/40;
   }
   .doc code {
     @apply rounded-md bg-black/[0.06] px-1.5 py-0.5 font-mono text-[0.86em] text-black;
   }
   .doc .callout {
-    @apply rounded-3xl bg-black p-7 text-white/75 sm:p-9;
+    @apply rounded-3xl bg-black p-7 text-white/70 sm:p-9;
   }
   .doc .callout strong,
   .doc .callout a {
     @apply text-white;
   }
   .doc .callout a {
-    @apply decoration-white/30;
+    @apply decoration-white/30 hover:decoration-brand;
   }
 
   /* ── FAQ accordion */
@@ -168,29 +190,29 @@
     @apply border-b;
   }
   .faq > summary {
-    @apply flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[18px] font-medium tracking-[-0.01em] text-black sm:text-[20px];
+    @apply flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[17px] font-medium text-black sm:text-[18px];
   }
   .faq > summary::-webkit-details-marker {
     display: none;
   }
   .faq > summary::after {
     content: "";
-    @apply size-9 shrink-0 rounded-full bg-black/[0.06] transition duration-300;
+    @apply size-8 shrink-0 rounded-full bg-black/[0.05] transition duration-300;
     background-image:
       linear-gradient(currentColor, currentColor),
       linear-gradient(currentColor, currentColor);
-    background-size: 12px 1.5px, 1.5px 12px;
+    background-size: 11px 1.5px, 1.5px 11px;
     background-position: center;
     background-repeat: no-repeat;
   }
-  .faq[open] > summary::after {
-    @apply rotate-45 bg-brand;
-  }
   .faq > summary:hover::after {
-    @apply bg-brand;
+    @apply bg-black/10;
+  }
+  .faq[open] > summary::after {
+    @apply rotate-45 bg-black text-white;
   }
   .faq > .faq-body {
-    @apply pb-7 sm:pr-16;
+    @apply pb-6 sm:pr-14;
   }
   .faq > .faq-body > * + * {
     @apply mt-4;
@@ -198,25 +220,17 @@
 
   /* ── Table of contents (doc pages) */
   .toc a {
-    @apply block border-l-2 border-black/10 py-1.5 pl-4 text-[14px] text-black/55 transition-colors hover:border-black hover:text-black;
+    @apply block border-l border-black/10 py-1.5 pl-4 text-[14px] text-black/50 transition-colors hover:text-black;
   }
   .toc a.is-active {
-    @apply border-brand font-medium text-black;
+    @apply border-black font-medium text-black;
   }
 
   /* ── Scroll reveal. Hidden only when JS is running, so no-JS stays readable. */
   .js .reveal {
-    @apply translate-y-8 opacity-0 transition duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)];
+    @apply translate-y-4 opacity-0 transition duration-700 ease-out;
   }
   .js .reveal.is-visible {
     @apply translate-y-0 opacity-100;
-  }
-
-  /* ── Nav */
-  .nav-link {
-    @apply rounded-full px-4 py-2 text-[14px] text-white/70 transition-colors hover:text-white;
-  }
-  .nav-link[aria-current="page"] {
-    @apply text-white;
   }
 }

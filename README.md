@@ -8,11 +8,12 @@ Static HTML served by GitHub Pages, styled with Tailwind CSS v4.
 ```sh
 npm install
 npm run dev     # watch mode, rebuilds assets/css/site.css
-npm run build   # minified build — commit assets/css/site.css
+npm run build   # minified build + cache-bust links — commit the results
 ```
 
 Design tokens live in `src/site.css`. The palette is locked to black, white
-and brand lime `#A0F34C`; font is Google Sans.
+and brand lime `#A0F34C`, used 60 / 30 / 10 (black page, white surfaces,
+lime accents only); font is Google Sans.
 
 ## Do not move or rename
 
