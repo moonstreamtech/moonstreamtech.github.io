@@ -1,0 +1,13 @@
+{
+  "name": "moonstreamtech-site",
+  "private": true,
+  "description": "moonstreamtech.com — static site built with Tailwind CSS",
+  "scripts": {
+    "build": "tailwindcss -i ./src/site.css -o ./assets/css/site.css --minify",
+    "dev": "tailwindcss -i ./src/site.css -o ./assets/css/site.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

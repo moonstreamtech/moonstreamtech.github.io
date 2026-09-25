@@ -1,95 +1,267 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mozai — Official Site</title>
 <meta name="description" content="Mozai is a calm pixel-art color-by-discovery game for Android. Pick a color, discover the picture, and unlock new rooms — no numbers, no pressure.">
-<link rel="stylesheet" href="/Mozai/styles.css">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://moonstreamtech.com/Mozai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Moonstream Tech">
+<meta property="og:title" content="Mozai — Official Site">
+<meta property="og:description" content="Mozai is a calm pixel-art color-by-discovery game for Android. Pick a color, discover the picture, and unlock new rooms — no numbers, no pressure.">
+<meta property="og:url" content="https://moonstreamtech.com/Mozai/">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/assets/js/site.js" defer></script>
 </head>
 <body>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
 
-<div class="container">
-  <header>
-    <span class="badge">Official Site</span>
-    <h1>Mozai</h1>
-    <p class="lead">A calm pixel coloring game. Pick a color and discover
-       the picture — correct cells fill in, wrong taps do nothing. No
-       numbers, no pressure.</p>
-    <nav>
-      <a href="/Mozai/">Home</a>
-      <a href="/Mozai/privacy-policy/">Privacy</a>
-      <a href="/Mozai/terms/">Terms</a>
-      <a href="/Mozai/support/">Support</a>
-      <a href="/">Moonstream Tech</a>
+<header class="fixed inset-x-0 top-0 z-50">
+  <div class="shell pt-3">
+    <nav class="flex h-14 items-center justify-between rounded-full border border-white/10 bg-black/70 pr-2 pl-5 backdrop-blur-xl backdrop-saturate-150" aria-label="Main">
+      <a href="/" class="text-[21px] text-white" aria-label="Moonstream Tech — home"><span class="brand "><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+      <div class="hidden items-center md:flex">
+        <a class="nav-link" href="/#games" aria-current="page">Games</a>
+        <a class="nav-link" href="/#studio">Studio</a>
+        <a class="nav-link" href="/support.html">Support</a>
+        <a class="nav-link" href="/privacy.html">Privacy</a>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <a href="mailto:moonstreamtech@gmail.com" class="btn-brand hidden !px-5 !py-2 !text-[14px] sm:inline-flex">Contact</a>
+        <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path class="origin-center transition" d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
     </nav>
-  </header>
-
-  <main>
-    <section class="card">
-      <h2>About the game</h2>
-      <p>Mozai is a pixel-art coloring game built around discovery. There
-         are no numbers on the cells — you pick a color from the palette,
-         and the picture tells you where it belongs. Correct cells fill in
-         instantly; wrong taps are simply ignored, so the picture always
-         comes out right.</p>
-      <p>Pictures are grouped into numbered rooms. Finish the pictures in
-         a room to unlock the next one. It is designed to be calm and
-         focused — no timers, no streaks, no required accounts. Free to
-         play, supported by optional rewarded ads.</p>
-      <span class="status-pill">Coming to Google Play</span>
-    </section>
-
-    <section class="card">
-      <h2>Core features</h2>
-      <ul>
-        <li><strong>Color by discovery.</strong> No numbers shown — select
-            a color and find where it belongs. Correct cells fill; wrong
-            taps are simply ignored, so the picture always comes out
-            right.</li>
-        <li><strong>Rooms that open up.</strong> Pictures are grouped into
-            numbered rooms; finishing pictures unlocks the next room.</li>
-        <li><strong>Pinch to zoom, drag to paint.</strong> Paint single
-            cells or drag along a path; pinch-zoom and pan on large
-            pictures.</li>
-        <li><strong>Optional hints.</strong> Stuck on a color? Watch an
-            optional rewarded ad to reveal where that color goes.</li>
-        <li><strong>Offline-first.</strong> No account required; your
-            progress is saved on your device.</li>
-        <li><strong>Free to play</strong> with optional rewarded ads.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>How to play</h2>
-      <ol>
-        <li>Pick a color from the palette at the bottom of the screen.</li>
-        <li>Tap on a matching cell, or drag along a path to paint several
-            cells at once. Wrong taps do nothing — the picture can't go
-            wrong.</li>
-        <li>When every cell of a color is filled, that color leaves the
-            palette so you always know what's left.</li>
-        <li>Complete every cell to finish the picture, then unlock new
-            pictures and new rooms as you go.</li>
-      </ol>
-    </section>
-
-    <section class="card">
-      <h2>Screenshots</h2>
-      <p>Coming soon, alongside the Google Play release.</p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-links">
-      <a href="/Mozai/privacy-policy/">Privacy Policy</a>
-      <a href="/Mozai/terms/">Terms of Use</a>
-      <a href="/Mozai/support/">Support</a>
-      <a href="mailto:moonstreamtech@gmail.com">Contact</a>
+    <div id="mobile-menu" class="mt-2 hidden rounded-[28px] border border-white/10 bg-black/90 p-2 backdrop-blur-xl md:hidden">
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[22px] font-medium tracking-tight hover:bg-white/5" href="/#games" aria-current="page">Games<span class="text-white/30">→</span></a>
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[22px] font-medium tracking-tight hover:bg-white/5" href="/#studio">Studio<span class="text-white/30">→</span></a>
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[22px] font-medium tracking-tight hover:bg-white/5" href="/support.html">Support<span class="text-white/30">→</span></a>
+      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[22px] font-medium tracking-tight hover:bg-white/5" href="/privacy.html">Privacy<span class="text-white/30">→</span></a>
+      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-2 w-full">Contact us</a>
     </div>
-    <p>© 2026 Moonstream Tech. All rights reserved.</p>
-  </footer>
-</div>
+  </div>
+</header>
 
+<main id="main">
+  <section class="relative isolate overflow-hidden pt-32 sm:pt-40">
+    <div class="grid-lines absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,black_30%,transparent)]" aria-hidden="true"></div>
+    <div class="shell">
+      <nav aria-label="Mozai" class="inline-flex max-w-full items-center gap-1 overflow-x-auto rounded-full border border-white/15 bg-black/60 p-1 backdrop-blur-xl">
+        <a href="/Mozai/" aria-current="page" class="shrink-0 rounded-full bg-white px-4 py-2 text-[14px] font-medium text-black">Overview</a>
+        <a href="/Mozai/support/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/70 transition-colors hover:text-white">Support</a>
+        <a href="/Mozai/privacy-policy/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/70 transition-colors hover:text-white">Privacy</a>
+        <a href="/Mozai/terms/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/70 transition-colors hover:text-white">Terms</a>
+      </nav>
+      <div class="mt-14 grid items-center gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="chip border-brand/40 text-brand">Official Site</span>
+            <span class="chip text-white/60">Color · Pixel · Calm</span>
+          </div>
+          <h1 class="mt-8 text-[clamp(4rem,14vw,12rem)] leading-[0.85] font-medium tracking-[-0.06em]">Mozai</h1>
+          <p class="mt-8 max-w-xl text-[19px] leading-relaxed text-white/70 sm:text-[22px]">A calm pixel coloring game. Pick a color and discover
+          the picture — correct cells fill in, wrong taps do nothing. No
+          numbers, no pressure.</p>
+          <div class="mt-10 flex flex-wrap items-center gap-3">
+            <span class="btn-brand pointer-events-none">Coming to Google Play</span>
+            <a href="#how-to-play" class="btn-ghost text-white">How to play</a>
+          </div>
+        </div>
+        <!-- visual bleeds past the right edge of the page -->
+        <div class="relative lg:col-span-5">
+          <div class="absolute top-1/2 left-1/2 -z-10 size-[120%] -translate-1/2 rounded-full bg-brand/10 blur-3xl" aria-hidden="true"></div>
+          <div class="-mr-[20vw] w-[115%] sm:w-[90%] lg:-mr-[14vw] lg:w-[130%]">
+            <div class="grid aspect-square grid-cols-20 gap-[1.5%] rotate-6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-24 sm:h-32"></div>
+  </section>
+
+  <!-- About -->
+  <section class="rounded-t-[40px] bg-white py-24 text-black sm:rounded-t-[64px] sm:py-32">
+    <div class="shell grid gap-10 lg:grid-cols-12">
+      <p class="eyebrow lg:col-span-4">About the game</p>
+      <div class="reveal space-y-6 lg:col-span-8">
+        <p class="text-[clamp(1.6rem,3vw,2.5rem)] leading-[1.2] font-medium tracking-[-0.025em]">Mozai is a pixel-art coloring game built around discovery. There
+          are no numbers on the cells — you pick a color from the palette,
+          and the picture tells you where it belongs. Correct cells fill in
+          instantly; wrong taps are simply ignored, so the picture always
+          comes out right.</p>
+        <p class="text-[19px] leading-relaxed text-black/60 sm:text-[21px]">Pictures are grouped into numbered rooms. Finish the pictures in
+          a room to unlock the next one. It is designed to be calm and
+          focused — no timers, no streaks, no required accounts. Free to
+          play, supported by optional rewarded ads.</p>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="shell mt-28 sm:mt-36">
+      <div class="reveal flex flex-wrap items-end justify-between gap-6">
+        <h2 class="text-[clamp(2.75rem,7vw,6rem)] leading-[0.92] font-medium tracking-[-0.045em]">Core features</h2>
+        <p class="text-[15px] text-black/50">6 reasons to play</p>
+      </div>
+      <ul class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <li class="reveal group flex min-h-[240px] flex-col rounded-[32px] bg-black/[0.04] p-8 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-11 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">01</span>
+          <p class="mt-auto pt-10 text-[22px] leading-tight font-medium tracking-[-0.02em]">Color by discovery.</p>
+          <p class="mt-3 text-[16px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">No numbers shown — select a color and find where it belongs. Correct cells fill; wrong taps are simply ignored, so the picture always comes out right.</p>
+        </li>
+        <li class="reveal group flex min-h-[240px] flex-col rounded-[32px] bg-black/[0.04] p-8 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-11 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">02</span>
+          <p class="mt-auto pt-10 text-[22px] leading-tight font-medium tracking-[-0.02em]">Rooms that open up.</p>
+          <p class="mt-3 text-[16px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Pictures are grouped into numbered rooms; finishing pictures unlocks the next room.</p>
+        </li>
+        <li class="reveal group flex min-h-[240px] flex-col rounded-[32px] bg-black/[0.04] p-8 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-11 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">03</span>
+          <p class="mt-auto pt-10 text-[22px] leading-tight font-medium tracking-[-0.02em]">Pinch to zoom, drag to paint.</p>
+          <p class="mt-3 text-[16px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Paint single cells or drag along a path; pinch-zoom and pan on large pictures.</p>
+        </li>
+        <li class="reveal group flex min-h-[240px] flex-col rounded-[32px] bg-black/[0.04] p-8 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-11 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">04</span>
+          <p class="mt-auto pt-10 text-[22px] leading-tight font-medium tracking-[-0.02em]">Optional hints.</p>
+          <p class="mt-3 text-[16px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Stuck on a color? Watch an optional rewarded ad to reveal where that color goes.</p>
+        </li>
+        <li class="reveal group flex min-h-[240px] flex-col rounded-[32px] bg-black/[0.04] p-8 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-11 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">05</span>
+          <p class="mt-auto pt-10 text-[22px] leading-tight font-medium tracking-[-0.02em]">Offline-first.</p>
+          <p class="mt-3 text-[16px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">No account required; your progress is saved on your device.</p>
+        </li>
+        <li class="reveal group flex min-h-[240px] flex-col rounded-[32px] bg-black/[0.04] p-8 transition-colors duration-500 hover:bg-black hover:text-white">
+          <span class="grid size-11 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">06</span>
+          <p class="mt-auto pt-10 text-[22px] leading-tight font-medium tracking-[-0.02em]">Free to play</p>
+          <p class="mt-3 text-[16px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">with optional rewarded ads.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How to play -->
+  <section id="how-to-play" class="relative overflow-hidden py-28 sm:py-40">
+    <div class="shell">
+      <p class="eyebrow text-brand">How to play</p>
+      <h2 class="reveal mt-6 max-w-4xl text-[clamp(2.75rem,7vw,6rem)] leading-[0.92] font-medium tracking-[-0.045em]">Easy to learn.<br><span class="text-white/40">Hard to put down.</span></h2>
+      <ol class="mt-16 border-t border-white/15 sm:mt-24">
+        <li class="reveal grid gap-4 border-b border-white/15 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+          <span class="text-[clamp(2.5rem,5vw,4.5rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">01</span>
+          <p class="text-[20px] leading-relaxed text-white/80 sm:col-span-9 sm:text-[24px] [&_strong]:font-medium [&_strong]:text-white">Pick a color from the palette at the bottom of the screen.</p>
+        </li>
+        <li class="reveal grid gap-4 border-b border-white/15 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+          <span class="text-[clamp(2.5rem,5vw,4.5rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">02</span>
+          <p class="text-[20px] leading-relaxed text-white/80 sm:col-span-9 sm:text-[24px] [&_strong]:font-medium [&_strong]:text-white">Tap on a matching cell, or drag along a path to paint several
+            cells at once. Wrong taps do nothing — the picture can't go
+            wrong.</p>
+        </li>
+        <li class="reveal grid gap-4 border-b border-white/15 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+          <span class="text-[clamp(2.5rem,5vw,4.5rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">03</span>
+          <p class="text-[20px] leading-relaxed text-white/80 sm:col-span-9 sm:text-[24px] [&_strong]:font-medium [&_strong]:text-white">When every cell of a color is filled, that color leaves the
+            palette so you always know what's left.</p>
+        </li>
+        <li class="reveal grid gap-4 border-b border-white/15 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+          <span class="text-[clamp(2.5rem,5vw,4.5rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">04</span>
+          <p class="text-[20px] leading-relaxed text-white/80 sm:col-span-9 sm:text-[24px] [&_strong]:font-medium [&_strong]:text-white">Complete every cell to finish the picture, then unlock new
+            pictures and new rooms as you go.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="relative overflow-hidden border-t border-white/10 py-28 sm:py-36">
+    <div class="shell">
+      <div class="reveal flex flex-wrap items-end justify-between gap-6">
+        <h2 class="text-[clamp(2.75rem,7vw,6rem)] leading-[0.92] font-medium tracking-[-0.045em]">Screenshots</h2>
+        <p class="max-w-sm text-[17px] text-white/60">Coming soon, alongside the Google Play release.</p>
+      </div>
+      <div class="reveal mt-16 flex items-end justify-center gap-4 sm:gap-8" aria-hidden="true">
+        <div class="hidden aspect-[9/19.5] w-[26%] max-w-[260px] translate-y-10 rounded-[2.4rem] border border-white/15 bg-white/[0.03] sm:block"></div>
+        <div class="relative flex aspect-[9/19.5] w-[70%] max-w-[300px] flex-col items-center justify-center gap-8 overflow-hidden rounded-[2.6rem] border border-white/25 bg-black p-6 shadow-[0_0_120px_-30px_#a0f34c]">
+          <div class="absolute top-3 h-6 w-24 rounded-full bg-white/10"></div>
+          <div class="w-full"><div class="grid aspect-square grid-cols-20 gap-[1.5%] " aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] border border-white/25"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-white"></i><i class="rounded-[20%] bg-white"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <span class="chip text-white/60">Coming soon</span>
+        </div>
+        <div class="hidden aspect-[9/19.5] w-[26%] max-w-[260px] translate-y-10 rounded-[2.4rem] border border-white/15 bg-white/[0.03] sm:block"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More -->
+  <section class="bg-brand py-20 text-black sm:py-28">
+    <div class="shell">
+      <h2 class="text-[clamp(2.25rem,5vw,4rem)] leading-none font-medium tracking-[-0.045em]">Everything about Mozai.</h2>
+      <div class="mt-12 grid gap-4 md:grid-cols-3">
+        <a href="/Mozai/support/" class="group flex min-h-[200px] flex-col rounded-[28px] bg-black p-8 text-white transition hover:-translate-y-1">
+          <p class="text-[26px] font-medium tracking-tight">Support</p>
+          <p class="mt-2 text-[15px] text-white/60">FAQ, bug reports and contact.</p>
+          <span class="link-arrow mt-auto pt-8 text-[15px] text-brand">Open</span>
+        </a>
+        <a href="/Mozai/privacy-policy/" class="group flex min-h-[200px] flex-col rounded-[28px] bg-black p-8 text-white transition hover:-translate-y-1">
+          <p class="text-[26px] font-medium tracking-tight">Privacy Policy</p>
+          <p class="mt-2 text-[15px] text-white/60">How Mozai handles your information.</p>
+          <span class="link-arrow mt-auto pt-8 text-[15px] text-brand">Open</span>
+        </a>
+        <a href="/Mozai/terms/" class="group flex min-h-[200px] flex-col rounded-[28px] bg-black p-8 text-white transition hover:-translate-y-1">
+          <p class="text-[26px] font-medium tracking-tight">Terms of Use</p>
+          <p class="mt-2 text-[15px] text-white/60">The simple rules for using Mozai.</p>
+          <span class="link-arrow mt-auto pt-8 text-[15px] text-brand">Open</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="relative overflow-hidden border-t border-white/10 bg-black pt-20 text-white sm:pt-28">
+  <div class="shell">
+    <div class="grid gap-14 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <p class="max-w-md text-[28px] leading-[1.15] font-medium tracking-[-0.02em] sm:text-[34px]">Games without edges.<br><span class="text-white/40">Built with care by a small, independent studio.</span></p>
+        <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-8">moonstreamtech@gmail.com</a>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7">
+        <div>
+          <p class="text-[13px] font-medium tracking-[0.14em] text-white/40 uppercase">Games</p>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="/LastTile/">Last Tile</a></li>
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="/Mozai/">Mozai</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[13px] font-medium tracking-[0.14em] text-white/40 uppercase">Studio</p>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="/">Home</a></li>
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="/#games">Games</a></li>
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="/#studio">About</a></li>
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[13px] font-medium tracking-[0.14em] text-white/40 uppercase">Help</p>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="/support.html">Support</a></li>
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="/privacy.html">Privacy Policy</a></li>
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="/LastTile/support/">Last Tile support</a></li>
+            <li><a class="text-white/75 transition-colors hover:text-brand" href="/Mozai/support/">Mozai support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-20 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 Moonstream Tech. All rights reserved.</p>
+      <p class="flex gap-5"><a class="hover:text-white" href="/privacy.html">Privacy Policy</a><a class="hover:text-white" href="/support.html">Support</a></p>
+    </div>
+  </div>
+  <div class="pointer-events-none mt-10 -mb-[3.2vw] pl-[2vw] text-[15vw] text-white sm:mt-14" aria-hidden="true">
+    <span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod" data-cycle="tech,studio,games">tech</span></span>
+  </div>
+</footer>
 </body>
 </html>
