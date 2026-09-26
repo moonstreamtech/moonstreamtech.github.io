@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ribbo the frog hopping between lily pads">
+  <circle cx="120" cy="290" r="92" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1.5"/><circle cx="120" cy="290" r="118" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1.5"/><circle cx="300" cy="140" r="70" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1.5"/><circle cx="300" cy="140" r="92" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1.5"/><circle cx="330" cy="330" r="44" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1.5"/>
+  <path d="M120 290 L186.8 263.0 A72 72 0 1 1 158.2 228.9 Z" fill="#A0F34C"/><path d="M300 140 L249.1 150.8 A52 52 0 1 1 265.2 178.6 Z" fill="#A0F34C"/><path d="M330 330 L306.4 311.5 A30 30 0 1 1 300.0 329.0 Z" fill="#A0F34C"/><path d="M62 92 L66.6 113.5 A22 22 0 1 1 78.3 106.7 Z" fill="#A0F34C"/>
+  <path d="M150 238 Q205 60 288 116" fill="none" stroke="#fff" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <g transform="translate(206 70)"><ellipse cx="-7" cy="-5" rx="8" ry="5" fill="#fff" fill-opacity=".55" transform="rotate(-25 -7 -5)"/><ellipse cx="7" cy="-5" rx="8" ry="5" fill="#fff" fill-opacity=".55" transform="rotate(25 7 -5)"/><circle r="5" fill="#fff"/></g>
+  <g transform="translate(118 262)">
+    <ellipse cx="-44" cy="30" rx="22" ry="11" fill="#fff"/><ellipse cx="44" cy="30" rx="22" ry="11" fill="#fff"/>
+    <ellipse cx="0" cy="8" rx="52" ry="40" fill="#fff"/>
+    <circle cx="-26" cy="-30" r="20" fill="#fff"/><circle cx="26" cy="-30" r="20" fill="#fff"/>
+    <circle cx="-24" cy="-30" r="9" fill="#000"/><circle cx="28" cy="-30" r="9" fill="#000"/>
+    <circle cx="-21" cy="-33" r="3" fill="#fff"/><circle cx="31" cy="-33" r="3" fill="#fff"/>
+    <path d="M-20 8 Q0 24 20 8" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="-30" cy="4" rx="7" ry="4" fill="#A0F34C"/><ellipse cx="30" cy="4" rx="7" ry="4" fill="#A0F34C"/>
+  </g>
+</svg>
