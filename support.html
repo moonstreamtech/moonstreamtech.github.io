@@ -16,9 +16,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=e3849ab2">
+<link rel="stylesheet" href="/assets/css/site.css?v=32ecfbf0">
 <script>document.documentElement.classList.add('js')</script>
-<script src="/assets/js/site.js?v=e3849ab2" defer></script>
+<script src="/assets/js/site.js?v=32ecfbf0" defer></script>
 </head>
 <body>
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
@@ -76,7 +76,7 @@
         <h2 id="contact">Contact</h2>
         <div class="callout">
           <p>The fastest way to reach us is by email:</p>
-          <p class="mt-4 text-[clamp(1.4rem,3vw,2rem)] font-medium tracking-tight"><strong>Email:</strong>
+          <p class="mt-4 text-[clamp(1.4rem,3vw,2rem)] font-medium tracking-tight [overflow-wrap:anywhere]"><strong>Email:</strong>
             <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a></p>
           <p class="mt-4">We aim to respond within 2–3 business days.</p>
         </div>
@@ -117,18 +117,89 @@
         <details class="faq">
           <summary>Are your apps free?</summary>
           <div class="faq-body">
-            <p>Last Tile is free to install and play, supported by optional
-              rewarded ads and a non-intrusive banner. Other apps may differ —
-              please check the listing for each app on Google Play.</p>
+            <p>Yes. All of our games are free to install and play and are
+              supported by ads — mostly optional rewarded ads that you choose
+              to watch for an in-game reward. Some apps may also offer
+              optional in-app purchases; the Google Play listing of each app
+              shows whether it does.</p>
           </div>
         </details>
         <details class="faq">
           <summary>Do your apps require an account?</summary>
           <div class="faq-body">
-            <p>None of our apps require a personal account or any sign-in.
-              Some apps include online leaderboards powered by anonymous
-              Firebase identifiers; no Google account or personal
-              information is required.</p>
+            <p>No. You can play every game without signing in. Some games
+              offer optional online leaderboards: Last Tile uses an anonymous
+              account that is created automatically, and Ribbo: Pond Hopper
+              lets you sign in with Google if you want your scores on the
+              leaderboard. My Mini BBQ, My Tiny Garden and Mozai have no
+              accounts at all.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Where is my progress saved? Can I move it to a new phone?</summary>
+          <div class="faq-body">
+            <p>Game progress, unlocked items and settings are saved on your
+              phone. They are not uploaded to our servers, so uninstalling a
+              game or clearing its data removes them, and we cannot restore or
+              transfer them. Online leaderboard scores stay with your
+              leaderboard account.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How do I delete my account or my data?</summary>
+          <div class="faq-body">
+            <p>For games with accounts, you can delete your account inside the
+              game (in Ribbo: <strong>Settings → Account → Delete
+              account</strong>) or by emailing us from the address linked to
+              the account. See
+              <a href="/Ribbo/#delete-account">Ribbo account deletion</a> and
+              the <a href="/LastTile/privacy-policy/">Last Tile privacy
+              policy</a>. Data stored only on your phone is removed by
+              uninstalling the game.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>I can’t sign in with Google. What can I do?</summary>
+          <div class="faq-body">
+            <p>Google sign-in needs an internet connection and Google Play
+              services. Some phones — for example recent Huawei models — do not
+              include Google Play services, so sign-in is not available on
+              them, but the rest of the game still works. Otherwise, update
+              Google Play services, check that your phone’s date and time are
+              correct, and try again.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>An ad won’t load or I didn’t get my reward.</summary>
+          <div class="faq-body">
+            <p>Ads need an internet connection and are not always available
+              right away. Wait a moment and try again. A reward is given only
+              when a rewarded ad is watched to the end. If you watched a full
+              ad and got nothing, email us with the game name, the time it
+              happened and a screenshot if you can.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>How do I change my ad privacy choices?</summary>
+          <div class="faq-body">
+            <p>In the EEA, the UK and Switzerland, our games show Google’s
+              consent form. Where a game has a <strong>Privacy
+              options</strong> button in its settings, you can change your
+              choice there at any time. On any Android phone you can also
+              reset or delete your advertising ID in <strong>Settings →
+              Google → Ads</strong>. See our
+              <a href="/privacy.html#advertising">Privacy Policy</a>.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>I bought something but it didn’t show up.</summary>
+          <div class="faq-body">
+            <p>Make sure you are signed in to Google Play with the account you
+              used for the purchase, check your connection and restart the
+              game. If the game has a <strong>Restore purchases</strong>
+              button, tap it. Still missing? Email us with the Google Play
+              order number (it starts with <code>GPA.</code>) — never send
+              card details.</p>
           </div>
         </details>
         <details class="faq">
@@ -151,11 +222,23 @@
         </div>
 
         <h2 id="per-app">Per-app help</h2>
-        <p>For Last Tile-specific questions — hazards, the shield mechanic,
-           leaderboards, ads — see the
-           <a href="/LastTile/support/">Last Tile FAQ</a>.</p>
-        <p>For Mozai-specific questions — rooms, hints, ads — see the
-           <a href="/Mozai/support/">Mozai FAQ</a>.</p>
+        <p>Each game has its own help page with answers about its gameplay,
+           ads and data:</p>
+        <ul>
+          <li><a href="/LastTile/support/">Last Tile FAQ</a> — hazards, the
+              shield mechanic, leaderboards, ads</li>
+          <li><a href="/Mozai/support/">Mozai FAQ</a> — rooms, hints, ads</li>
+          <li><a href="/Ribbo/#support">Ribbo: Pond Hopper help</a> — controls,
+              game modes, Google sign-in, player names, free flies, account
+              deletion</li>
+          <li><a href="/MyMiniBBQ/#support">My Mini BBQ help</a> — serving
+              cars, sales licences, supplies, crew, free $100</li>
+          <li><a href="/MyTinyGarden/#support">My Tiny Garden help</a> —
+              planting, selling at the stand, prices and offers, compost,
+              decorating</li>
+        </ul>
+        <p>Privacy questions? Read our <a href="/privacy.html">Privacy
+           Policy</a> and the privacy section on each game’s page.</p>
 
       </article>
     </div>
@@ -175,6 +258,8 @@
             <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/">Last Tile</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/">Mozai</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/">Ribbo: Pond Hopper</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/">My Mini BBQ</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/">My Tiny Garden</a></li>
           </ul>
         </div>
         <div>
@@ -193,6 +278,9 @@
             <li><a class="text-white/70 transition-colors hover:text-white" href="/privacy.html">Privacy Policy</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/support/">Last Tile support</a></li>
             <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/support/">Mozai support</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/#support">Ribbo support</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/#support">My Mini BBQ support</a></li>
+            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/#support">My Tiny Garden support</a></li>
           </ul>
         </div>
       </div>

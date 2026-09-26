@@ -22,5 +22,6 @@ These URLs are referenced by Google Play listings, AdMob or the games:
 - `/support.html`, `/privacy.html`
 - `/LastTile/support/`, `/LastTile/privacy-policy/`, `/LastTile/terms/`
 - `/Mozai/support/`, `/Mozai/privacy-policy/`, `/Mozai/terms/`
+- `/Ribbo/` (with `#support`, `#privacy-policy` and `#delete-account`), `/MyMiniBBQ/`, `/MyTinyGarden/` (with `#support` and `#privacy-policy`)
 - `/app-ads.txt` (AdMob)
 - `/mozai-content/**` (synced automatically from the Mozai repo)
