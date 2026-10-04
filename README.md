@@ -23,5 +23,6 @@ These URLs are referenced by Google Play listings, AdMob or the games:
 - `/LastTile/support/`, `/LastTile/privacy-policy/`, `/LastTile/terms/`
 - `/Mozai/support/`, `/Mozai/privacy-policy/`, `/Mozai/terms/`
 - `/Ribbo/` (with `#support`, `#privacy-policy` and `#delete-account`), `/MyMiniBBQ/`, `/MyTinyGarden/` (with `#support` and `#privacy-policy`)
+- `/MeshChat/`, `/MeshChat/support/`, `/MeshChat/privacy-policy/`, `/MeshChat/terms/`, `/MeshChat/child-safety/`, `/MeshChat/delete-account/` (Google Play listing and the app itself link here)
 - `/app-ads.txt` (AdMob)
 - `/mozai-content/**` (synced automatically from the Mozai repo)
