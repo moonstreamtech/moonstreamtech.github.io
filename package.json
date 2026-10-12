@@ -3,7 +3,8 @@
   "private": true,
   "description": "moonstreamtech.com \u2014 static site built with Tailwind CSS",
   "scripts": {
-    "build": "tailwindcss -i ./src/site.css -o ./assets/css/site.css --minify && node scripts/bust-cache.mjs",
+    "build": "node scripts/layout.mjs && tailwindcss -i ./src/site.css -o ./assets/css/site.css --minify && node scripts/bust-cache.mjs",
+    "layout": "node scripts/layout.mjs",
     "dev": "tailwindcss -i ./src/site.css -o ./assets/css/site.css --watch"
   },
   "devDependencies": {

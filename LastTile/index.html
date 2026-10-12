@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Last Tile — Official Site</title>
 <meta name="description" content="Last Tile is a tactical merge puzzle for Android where every move counts. Grow the board, beat Fire, Ice and Poison hazards with shields, and climb the global leaderboard. Free on Google Play.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://moonstreamtech.com/LastTile/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Moonstream Tech">
@@ -16,162 +16,218 @@
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css?v=7bf4b57b">
 <script>document.documentElement.classList.add('js')</script>
 <script src="/assets/js/site.js?v=7bf4b57b" defer></script>
 </head>
 <body>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
-
-<header class="fixed inset-x-0 top-0 z-50">
-  <div class="shell pt-3">
-    <nav class="flex h-14 items-center justify-between rounded-full border border-white/10 bg-black/70 pr-2 pl-5 backdrop-blur-xl backdrop-saturate-150" aria-label="Main">
-      <a href="/" class="text-[20px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
-      <div class="hidden items-center md:flex">
-        <a class="nav-link" href="/#games" aria-current="page">Games</a>
-        <a class="nav-link" href="/#studio">Studio</a>
-        <a class="nav-link" href="/support.html">Support</a>
-        <a class="nav-link" href="/privacy.html">Privacy</a>
+<!-- @header -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-[10px] focus:bg-ink focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+<header class="site-header">
+  <div class="wrap flex h-16 items-center justify-between gap-6">
+    <a href="/" class="text-[19px] text-ink" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
+      <div class="relative" data-dropdown>
+        <button type="button" class="nav-link" aria-current="page" aria-expanded="false" aria-controls="games-menu" data-dropdown-toggle>Games <svg class="size-3.5 opacity-60 transition-transform [[aria-expanded=true]>&]:rotate-180" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div id="games-menu" class="games-menu hidden" data-dropdown-panel>
+          <div class="grid grid-cols-2 gap-0.5">
+            <a class="menu-item" href="/LastTile/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Last Tile</span><span class="badge badge-live mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Out now</span></span>
+            </a>
+            <a class="menu-item" href="/Mozai/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-surface"><img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="size-[72%]"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Mozai</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon</span></span>
+            </a>
+            <a class="menu-item" href="/Ribbo/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Ribbo: Pond Hopper</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MyMiniBBQ/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_25%]"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Mini BBQ</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MyTinyGarden/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Tiny Garden</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MeshChat/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">MeshChat</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon · App</span></span>
+            </a>
+          </div>
+          <a href="/#games" class="mt-1 flex items-center justify-between rounded-[12px] bg-surface px-4 py-3 text-[14px] font-medium hover:bg-line"><span>Games</span><span class="link-arrow text-muted">All games &amp; apps</span></a>
+        </div>
       </div>
-      <div class="flex items-center gap-1.5">
-        <a href="mailto:moonstreamtech@gmail.com" class="btn-brand btn-sm hidden sm:inline-flex">Contact</a>
-        <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </button>
-      </div>
+      <a class="nav-link" href="/#studio">Studio</a>
+      <a class="nav-link" href="/support.html">Support</a>
+      <a class="nav-link" href="/privacy.html">Privacy</a>
     </nav>
-    <div id="mobile-menu" class="mt-2 hidden rounded-[28px] border border-white/10 bg-black/90 p-2 backdrop-blur-xl md:hidden">
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#games" aria-current="page">Games<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#studio">Studio<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/support.html">Support<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/privacy.html">Privacy<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-2 w-full">Contact us</a>
+    <div class="flex items-center gap-2">
+      <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary btn-sm hidden sm:inline-flex">Contact</a>
+      <button type="button" class="grid size-10 place-items-center rounded-[10px] hover:bg-surface md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper md:hidden">
+    <div class="wrap py-3">
+      <a class="mobile-link" href="/#games">Games<span class="text-muted" aria-hidden="true">→</span></a>
+      <div class="grid grid-cols-1 gap-0.5 pb-2 pl-1">
+        <a class="menu-item" href="/LastTile/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Last Tile</span><span class="badge badge-live mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Out now</span></span>
+        </a>
+        <a class="menu-item" href="/Mozai/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-surface"><img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="size-[72%]"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Mozai</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon</span></span>
+        </a>
+        <a class="menu-item" href="/Ribbo/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Ribbo: Pond Hopper</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MyMiniBBQ/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_25%]"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Mini BBQ</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MyTinyGarden/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Tiny Garden</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MeshChat/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">MeshChat</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon · App</span></span>
+        </a>
+      </div>
+      <a class="mobile-link" href="/#studio">Studio<span class="text-muted" aria-hidden="true">→</span></a>
+      <a class="mobile-link" href="/support.html">Support<span class="text-muted" aria-hidden="true">→</span></a>
+      <a class="mobile-link" href="/privacy.html">Privacy<span class="text-muted" aria-hidden="true">→</span></a>
+      <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary mt-3 w-full">Contact us</a>
     </div>
   </div>
 </header>
+<!-- /@header -->
+<!-- @product LastTile -->
+<div class="product-bar">
+  <div class="wrap flex items-center gap-6">
+    <a href="/LastTile/" class="hidden shrink-0 items-center gap-2.5 py-2 text-[14.5px] font-semibold tracking-[-0.01em] sm:flex"><span class="grid size-7 shrink-0 place-items-center overflow-hidden rounded-[7px]"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-full object-cover"></span>Last Tile</a>
+    <nav aria-label="Last Tile" class="-mx-3 flex min-w-0 flex-1 items-center overflow-x-auto sm:mx-0 sm:justify-end [&::-webkit-scrollbar]:hidden">
+        <a class="tab" href="/LastTile/" aria-current="page">Overview</a>
+        <a class="tab" href="/LastTile/support/">Support</a>
+        <a class="tab" href="/LastTile/privacy-policy/">Privacy</a>
+        <a class="tab" href="/LastTile/terms/">Terms</a>
+    </nav>
+  </div>
+</div>
+<!-- /@product -->
 
 <main id="main">
   <!-- Hero -->
-  <section class="relative isolate overflow-hidden pt-28 pb-10 sm:pt-32 sm:pb-20">
-    <div class="shell">
-      <nav aria-label="Last Tile" class="inline-flex max-w-full items-center gap-1 overflow-x-auto rounded-full border border-white/15 p-1">
-        <a href="/LastTile/" aria-current="page" class="shrink-0 rounded-full bg-white px-4 py-2 text-[14px] font-medium text-black">Overview</a>
-        <a href="/LastTile/support/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/65 transition-colors hover:text-white">Support</a>
-        <a href="/LastTile/privacy-policy/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/65 transition-colors hover:text-white">Privacy</a>
-        <a href="/LastTile/terms/" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/65 transition-colors hover:text-white">Terms</a>
-      </nav>
-      <div class="mt-10 grid items-center gap-16 lg:grid-cols-12">
-        <div class="lg:col-span-7">
-          <div class="flex items-center gap-4">
-            <img src="/LastTile/img/icon.png" alt="" width="256" height="256" class="size-16 rounded-[18px] sm:size-[72px] sm:rounded-[20px]">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="chip border-brand/40 text-brand"><span class="size-1.5 rounded-full bg-brand"></span>Out now on Google Play</span>
-              <span class="chip text-white/60">Puzzle · PEGI 3</span>
-            </div>
+  <section class="relative isolate overflow-hidden border-b border-line">
+    <div class="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-[60%] bg-[radial-gradient(closest-side,rgb(160_243_76/0.28),transparent)] lg:block" aria-hidden="true"></div>
+    <div class="wrap grid items-center gap-14 py-14 sm:py-20 lg:grid-cols-12 lg:py-24">
+      <div class="lg:col-span-7">
+        <div class="flex flex-wrap items-center gap-4">
+          <img src="/LastTile/img/icon.png" alt="" width="256" height="256" class="size-16 rounded-[16px] shadow-[0_8px_24px_-10px_rgb(0_0_0/0.35)] sm:size-[72px] sm:rounded-[18px]">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="badge badge-live">Out now on Google Play</span>
+            <span class="badge">Puzzle · PEGI 3</span>
           </div>
-          <h1 class="mt-8 text-[clamp(3.5rem,9.5vw,8rem)] leading-[0.9] font-medium tracking-[-0.055em]">Last Tile</h1>
-          <p class="mt-6 max-w-xl text-[clamp(1.4rem,2.4vw,1.9rem)] leading-[1.25] font-medium tracking-[-0.02em]">A tactical merge puzzle where every move counts.</p>
-          <p class="lede mt-5 max-w-xl text-white/60">Merge matching tiles, keep the board clear, and survive as it grows.
-            Hazards shake up every run — shields help you fight back.</p>
-          <div class="mt-9 flex flex-wrap items-center gap-3">
-            <a href="https://play.google.com/store/apps/details?id=com.moonstreamtech.lasttile" class="btn-brand" target="_blank" rel="noopener">Get it on Google Play</a>
-            <a href="#how-to-play" class="btn-ghost text-white">How to play</a>
-          </div>
-          <p class="mt-6 text-[14px] text-white/45">Free to play · Optional rewarded ads · Android</p>
         </div>
-        <div class="relative isolate lg:col-span-5">
-          <div class="absolute inset-[10%] -z-10 rounded-full bg-brand/15 blur-3xl" aria-hidden="true"></div>
-          <div class="animate-float">
-            <!-- phone: bezel, screen, and a camera pill over the top edge -->
-            <div class="relative mx-auto w-[240px] rotate-6 rounded-[46px] border border-white/20 bg-[#0b0b0b] p-2.5 shadow-2xl ring-1 ring-black sm:w-[290px] sm:rounded-[52px] sm:p-3">
-              <!-- iPhone-shaped 9:19.5 screen; the 9:16 screenshot sits centred, edges filled with its own colours -->
-              <div class="flex aspect-[9/19.5] items-center overflow-hidden rounded-[36px] bg-[linear-gradient(#080e1c_50%,#070a0f_50%)] sm:rounded-[40px]">
-                <img src="/LastTile/img/merge-to-grow.jpg" alt="Last Tile gameplay: a 7×7 board with score, turn, combo and shield counters, and Fire and Ice hazard tiles" width="720" height="1280" fetchpriority="high" class="block w-full">
-              </div>
-              <span class="absolute top-4 left-1/2 h-5 w-[72px] -translate-x-1/2 rounded-full bg-black sm:top-5 sm:h-6 sm:w-[86px]" aria-hidden="true"></span>
-            </div>
+        <h1 class="h-display mt-8">Last Tile</h1>
+        <p class="mt-5 max-w-xl text-[clamp(1.35rem,2.3vw,1.75rem)] leading-[1.25] font-semibold tracking-[-0.025em]">A tactical merge puzzle where every move counts.</p>
+        <p class="lead mt-4 max-w-xl">Merge matching tiles, keep the board clear, and survive as it grows.
+          Hazards shake up every run — shields help you fight back.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="https://play.google.com/store/apps/details?id=com.moonstreamtech.lasttile" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Get it on Google Play</a>
+          <a href="#how-to-play" class="btn btn-secondary btn-lg">How to play</a>
+        </div>
+        <p class="mt-6 text-[14px] text-muted">Free to play · Optional rewarded ads · Android</p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="phone rotate-3">
+          <!-- iPhone-shaped 9:19.5 screen; the 9:16 screenshot sits centred, edges filled with its own colours -->
+          <div class="phone-screen bg-[linear-gradient(#080e1c_50%,#070a0f_50%)]">
+            <img src="/LastTile/img/merge-to-grow.jpg" alt="Last Tile gameplay: a 7×7 board with score, turn, combo and shield counters, and Fire and Ice hazard tiles" width="720" height="1280" fetchpriority="high" class="block w-full">
           </div>
+          <span class="phone-notch" aria-hidden="true"></span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Screenshots -->
-  <section class="pb-10 sm:pb-20" aria-labelledby="screens-title">
-    <div class="shell">
-      <div class="reveal flex flex-wrap items-end justify-between gap-4">
-        <h2 id="screens-title" class="text-[clamp(2.25rem,5vw,4rem)] leading-[0.95] font-medium tracking-[-0.045em]">See it in action.</h2>
-        <p class="text-[15px] text-white/50">Screenshots from the Google Play listing</p>
+  <section class="section band" aria-labelledby="screens-title">
+    <div class="wrap">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <h2 id="screens-title" class="h-section">See it in action.</h2>
+        <p class="text-[14.5px] text-muted">Screenshots from the Google Play listing</p>
       </div>
-    </div>
-    <div class="shell mt-10">
-      <ul class="-mx-5 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-4 sm:overflow-visible sm:px-0 sm:pb-0">
-        <li class="reveal w-[62%] shrink-0 snap-start sm:w-auto">
-          <img src="/LastTile/img/merge-to-grow.jpg" alt="Merge to grow — combine matching tiles to climb higher" width="720" height="1280" loading="lazy" class="w-full rounded-[28px] border border-white/10 transition-transform duration-500 hover:-translate-y-2">
+      <ul class="-mx-5 mt-10 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-4 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0">
+        <li class="reveal w-[64%] shrink-0 snap-start sm:w-auto">
+          <img src="/LastTile/img/merge-to-grow.jpg" alt="Merge to grow — combine matching tiles to climb higher" width="720" height="1280" loading="lazy" class="shot">
         </li>
-        <li class="reveal w-[62%] shrink-0 snap-start sm:w-auto">
-          <img src="/LastTile/img/beat-the-hazards.jpg" alt="Beat the hazards — Fire, Ice and Poison tiles disrupt every run" width="720" height="1280" loading="lazy" class="w-full rounded-[28px] border border-white/10 transition-transform duration-500 hover:-translate-y-2">
+        <li class="reveal w-[64%] shrink-0 snap-start sm:w-auto">
+          <img src="/LastTile/img/beat-the-hazards.jpg" alt="Beat the hazards — Fire, Ice and Poison tiles disrupt every run" width="720" height="1280" loading="lazy" class="shot">
         </li>
-        <li class="reveal w-[62%] shrink-0 snap-start sm:w-auto">
-          <img src="/LastTile/img/open-the-frame.jpg" alt="Open the frame — unlock more cells as your run deepens" width="720" height="1280" loading="lazy" class="w-full rounded-[28px] border border-white/10 transition-transform duration-500 hover:-translate-y-2">
+        <li class="reveal w-[64%] shrink-0 snap-start sm:w-auto">
+          <img src="/LastTile/img/open-the-frame.jpg" alt="Open the frame — unlock more cells as your run deepens" width="720" height="1280" loading="lazy" class="shot">
         </li>
-        <li class="reveal w-[62%] shrink-0 snap-start sm:w-auto">
-          <img src="/LastTile/img/chase-the-combo.jpg" alt="Chase the combo — stack multipliers and top the leaderboard" width="720" height="1280" loading="lazy" class="w-full rounded-[28px] border border-white/10 transition-transform duration-500 hover:-translate-y-2">
+        <li class="reveal w-[64%] shrink-0 snap-start sm:w-auto">
+          <img src="/LastTile/img/chase-the-combo.jpg" alt="Chase the combo — stack multipliers and top the leaderboard" width="720" height="1280" loading="lazy" class="shot">
         </li>
       </ul>
     </div>
   </section>
 
   <!-- About + features -->
-  <section class="rounded-t-[40px] bg-white py-10 text-black sm:rounded-t-[56px] sm:py-20">
-    <div class="shell">
-      <div class="reveal grid gap-5 md:gap-8 lg:grid-cols-12">
-        <p class="eyebrow inline-flex items-center gap-2 self-start text-black/50 lg:col-span-4"><span class="size-2 rounded-full bg-black"></span>About the game</p>
-        <div class="space-y-6 lg:col-span-8">
-          <p class="text-[clamp(1.5rem,2.6vw,2.1rem)] leading-[1.3] font-medium tracking-[-0.02em]">Last Tile is a merge puzzle about survival. Every merge is a turn,
+  <section class="section">
+    <div class="wrap">
+      <div class="grid gap-6 lg:grid-cols-12">
+        <p class="eyebrow self-start lg:col-span-4">About the game</p>
+        <div class="space-y-5 lg:col-span-8">
+          <p class="text-[clamp(1.4rem,2.4vw,1.9rem)] leading-[1.3] font-semibold tracking-[-0.025em] text-balance">Last Tile is a merge puzzle about survival. Every merge is a turn,
             the board keeps opening up as you climb, and the run only ends when no matching pair is left.</p>
-          <p class="text-[18px] leading-relaxed text-black/60">Plan ahead, react fast, survive longer. No timers, no energy systems,
+          <p class="lead">Plan ahead, react fast, survive longer. No timers, no energy systems,
             no paywalls — just you and the board. Free to play, with optional rewarded ads.</p>
         </div>
       </div>
 
-      <div class="reveal mt-10 flex flex-wrap items-end justify-between gap-4 sm:mt-20">
-        <h2 class="text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">Quick sessions.<br><span class="text-black/35">Deep strategy.</span></h2>
-      </div>
-      <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">01</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">A board that grows.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Start on a 5×5 grid. Hit value milestones to open the frame — 7×7, 9×9 and beyond.</p>
+      <h2 class="h-section mt-16 sm:mt-24">Quick sessions.<br><span class="text-muted">Deep strategy.</span></h2>
+      <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <li class="feature card reveal">
+          <span class="feature-num">01</span>
+          <p class="feature-title">A board that grows.</p>
+          <p class="feature-text">Start on a 5×5 grid. Hit value milestones to open the frame — 7×7, 9×9 and beyond.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">02</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Hazards every run.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Fire, Ice and Poison tiles show up where they hurt most, so no two runs play the same.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">02</span>
+          <p class="feature-title">Hazards every run.</p>
+          <p class="feature-text">Fire, Ice and Poison tiles show up where they hurt most, so no two runs play the same.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">03</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Shields when it gets tight.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Clear a hazard and keep the tile’s value. Out of shields? Watch a short optional video to earn three more.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">03</span>
+          <p class="feature-title">Shields when it gets tight.</p>
+          <p class="feature-text">Clear a hazard and keep the tile’s value. Out of shields? Watch a short optional video to earn three more.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">04</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Combos that stack.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Chain merges back to back to build your multiplier and push your score higher.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">04</span>
+          <p class="feature-title">Combos that stack.</p>
+          <p class="feature-text">Chain merges back to back to build your multiplier and push your score higher.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">05</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Global leaderboard.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Climb the global ranks — and keep your best ten runs on your own device.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">05</span>
+          <p class="feature-title">Global leaderboard.</p>
+          <p class="feature-text">Climb the global ranks — and keep your best ten runs on your own device.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">06</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Every move is a choice.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Merge, split, slide or swap. Think a few turns ahead and the board will reward you.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">06</span>
+          <p class="feature-title">Every move is a choice.</p>
+          <p class="feature-text">Merge, split, slide or swap. Think a few turns ahead and the board will reward you.</p>
         </li>
       </ul>
-      <ul class="reveal mt-8 flex flex-wrap gap-2 text-black/60">
+      <ul class="mt-8 flex flex-wrap gap-2">
         <li class="chip">Plays offline</li>
         <li class="chip">No account needed</li>
         <li class="chip">Autosaves every run</li>
@@ -181,34 +237,36 @@
   </section>
 
   <!-- How to play -->
-  <section id="how-to-play" class="py-10 sm:py-20">
-    <div class="shell">
-      <p class="eyebrow inline-flex items-center gap-2 text-white/60"><span class="size-2 rounded-full bg-brand"></span>How to play</p>
-      <h2 class="reveal mt-5 text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">Easy to learn.<br><span class="text-white/40">Hard to put down.</span></h2>
-      <ol class="mt-8 divide-y divide-white/10 border-y border-white/10 sm:mt-14">
-        <li class="reveal grid gap-3 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
-          <span class="text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">01</span>
-          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-9 sm:text-[21px] [&_strong]:font-medium [&_strong]:text-white">Two adjacent tiles with the same value can be merged. The
+  <section id="how-to-play" class="section band-dark on-dark">
+    <div class="wrap grid gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="eyebrow">How to play</p>
+        <h2 class="h-section mt-4">Easy to learn.<br><span class="text-white/45">Hard to put down.</span></h2>
+      </div>
+      <ol class="steps lg:col-span-8">
+        <li class="reveal">
+          <span class="step-num">01</span>
+          <p class="step-text">Two adjacent tiles with the same value can be merged. The
             result is the next tier (e.g. two 4s become an 8).</p>
         </li>
-        <li class="reveal grid gap-3 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
-          <span class="text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">02</span>
-          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-9 sm:text-[21px] [&_strong]:font-medium [&_strong]:text-white">Each merge counts as a turn; a new tile spawns somewhere on
+        <li class="reveal">
+          <span class="step-num">02</span>
+          <p class="step-text">Each merge counts as a turn; a new tile spawns somewhere on
             the board, or an existing tile is infected by a hazard.</p>
         </li>
-        <li class="reveal grid gap-3 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
-          <span class="text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">03</span>
-          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-9 sm:text-[21px] [&_strong]:font-medium [&_strong]:text-white">Use the <strong>Shield</strong> counter to clean Fire, Ice or
+        <li class="reveal">
+          <span class="step-num">03</span>
+          <p class="step-text">Use the <strong>Shield</strong> counter to clean Fire, Ice or
             Poison from a tile and keep its value.</p>
         </li>
-        <li class="reveal grid gap-3 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
-          <span class="text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">04</span>
-          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-9 sm:text-[21px] [&_strong]:font-medium [&_strong]:text-white">Reach milestone values to unlock additional cells and
+        <li class="reveal">
+          <span class="step-num">04</span>
+          <p class="step-text">Reach milestone values to unlock additional cells and
             eventually grow the active region.</p>
         </li>
-        <li class="reveal grid gap-3 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
-          <span class="text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-medium tracking-[-0.05em] text-brand tabular-nums sm:col-span-3">05</span>
-          <p class="text-[18px] leading-relaxed text-white/75 sm:col-span-9 sm:text-[21px] [&_strong]:font-medium [&_strong]:text-white">If no two adjacent tiles match anywhere on the board, the run
+        <li class="reveal">
+          <span class="step-num">05</span>
+          <p class="step-text">If no two adjacent tiles match anywhere on the board, the run
             ends — your score is recorded on the local leaderboard and on
             the global leaderboard.</p>
         </li>
@@ -216,99 +274,94 @@
     </div>
   </section>
 
-  <!-- Download -->
-  <section class="pb-10 sm:pb-20">
-    <div class="shell">
-      <div class="reveal relative isolate flex flex-col items-start gap-8 overflow-hidden rounded-[40px] bg-white px-7 py-10 text-black sm:flex-row sm:items-center sm:justify-between sm:px-14">
-        <div class="pointer-events-none absolute -right-16 -bottom-24 -z-10 hidden size-72 animate-float rounded-full bg-brand lg:block" aria-hidden="true"></div>
+  <!-- Download + more -->
+  <section class="section">
+    <div class="wrap">
+      <div class="card reveal flex flex-col items-start gap-8 bg-surface p-7 sm:flex-row sm:items-center sm:justify-between sm:p-10">
         <div class="flex items-center gap-5">
-          <img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-16 rounded-[18px] sm:size-20 sm:rounded-[22px]">
+          <img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-16 rounded-[16px] sm:size-20 sm:rounded-[20px]">
           <div>
-            <h2 class="text-[clamp(1.75rem,3.5vw,2.75rem)] leading-none font-medium tracking-[-0.04em]">Ready for your next run?</h2>
-            <p class="mt-2 text-[16px] text-black/55">Free on Google Play for Android.</p>
+            <h2 class="text-[clamp(1.6rem,3vw,2.25rem)] leading-tight font-semibold tracking-[-0.035em]">Ready for your next run?</h2>
+            <p class="mt-1.5 text-[15.5px] text-muted">Free on Google Play for Android.</p>
           </div>
         </div>
-        <a href="https://play.google.com/store/apps/details?id=com.moonstreamtech.lasttile" class="btn-dark shrink-0 hover:!bg-black/85" target="_blank" rel="noopener">Get it on Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.moonstreamtech.lasttile" class="btn btn-primary btn-lg shrink-0" target="_blank" rel="noopener">Get it on Google Play</a>
       </div>
-    </div>
-  </section>
 
-  <!-- More -->
-  <section class="border-t border-white/10 py-10 sm:py-16">
-    <div class="shell">
-      <h2 class="text-[clamp(2rem,4.5vw,3.5rem)] leading-none font-medium tracking-[-0.045em]">Everything about Last Tile.</h2>
-      <div class="mt-10 grid gap-4 md:grid-cols-3">
-        <a href="/LastTile/support/" class="group flex min-h-[190px] flex-col rounded-[28px] border border-white/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-white/25">
-          <p class="text-[24px] font-medium tracking-tight">Support</p>
-          <p class="mt-2 text-[15px] text-white/55">FAQ, bug reports and contact.</p>
-          <span class="link-arrow mt-auto pt-8 text-[15px] text-brand">Open</span>
+      <h2 class="mt-16 text-[clamp(1.6rem,3vw,2.25rem)] leading-tight font-semibold tracking-[-0.035em] sm:mt-20">Everything about Last Tile.</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+        <a href="/LastTile/support/" class="card card-hover group flex min-h-[170px] flex-col p-6">
+          <p class="h-card">Support</p>
+          <p class="mt-1.5 text-[15px] text-muted">FAQ, bug reports and contact.</p>
+          <span class="link-arrow mt-auto pt-6 text-[14.5px]">Open</span>
         </a>
-        <a href="/LastTile/privacy-policy/" class="group flex min-h-[190px] flex-col rounded-[28px] border border-white/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-white/25">
-          <p class="text-[24px] font-medium tracking-tight">Privacy Policy</p>
-          <p class="mt-2 text-[15px] text-white/55">How Last Tile handles your information.</p>
-          <span class="link-arrow mt-auto pt-8 text-[15px] text-brand">Open</span>
+        <a href="/LastTile/privacy-policy/" class="card card-hover group flex min-h-[170px] flex-col p-6">
+          <p class="h-card">Privacy Policy</p>
+          <p class="mt-1.5 text-[15px] text-muted">How Last Tile handles your information.</p>
+          <span class="link-arrow mt-auto pt-6 text-[14.5px]">Open</span>
         </a>
-        <a href="/LastTile/terms/" class="group flex min-h-[190px] flex-col rounded-[28px] border border-white/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-white/25">
-          <p class="text-[24px] font-medium tracking-tight">Terms of Use</p>
-          <p class="mt-2 text-[15px] text-white/55">The simple rules for using Last Tile.</p>
-          <span class="link-arrow mt-auto pt-8 text-[15px] text-brand">Open</span>
+        <a href="/LastTile/terms/" class="card card-hover group flex min-h-[170px] flex-col p-6">
+          <p class="h-card">Terms of Use</p>
+          <p class="mt-1.5 text-[15px] text-muted">The simple rules for using Last Tile.</p>
+          <span class="link-arrow mt-auto pt-6 text-[14.5px]">Open</span>
         </a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="relative overflow-hidden border-t border-white/10 bg-black pt-8 text-white sm:pt-14">
-  <div class="shell">
+<!-- @footer -->
+<footer class="band-dark on-dark relative overflow-hidden">
+  <div class="wrap pt-14 pb-8 sm:pt-20">
     <div class="grid gap-12 lg:grid-cols-12">
-      <div class="lg:col-span-5">
-        <p class="max-w-sm text-[24px] leading-[1.2] font-medium tracking-[-0.02em]">Games without edges.<br><span class="text-white/40">Built with care by a small, independent studio.</span></p>
+      <div class="lg:col-span-4">
+        <a href="/" class="text-[22px]" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+        <p class="mt-6 max-w-xs text-[17px] leading-snug font-medium tracking-[-0.01em]">Games without edges.<br><span class="text-white/45">Built with care by a small, independent studio.</span></p>
+        <a href="mailto:moonstreamtech@gmail.com" class="footer-link mt-6 inline-block underline decoration-white/25 underline-offset-4">moonstreamtech@gmail.com</a>
       </div>
-      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7">
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-8">
         <div>
-          <p class="text-[13px] font-medium text-white/40">Games &amp; apps</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/">Last Tile</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/">Mozai</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/">Ribbo: Pond Hopper</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/">My Mini BBQ</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/">My Tiny Garden</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MeshChat/">MeshChat</a></li>
+          <p class="footer-head">Games &amp; apps</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/LastTile/">Last Tile</a></li>
+            <li><a class="footer-link" href="/Mozai/">Mozai</a></li>
+            <li><a class="footer-link" href="/Ribbo/">Ribbo: Pond Hopper</a></li>
+            <li><a class="footer-link" href="/MyMiniBBQ/">My Mini BBQ</a></li>
+            <li><a class="footer-link" href="/MyTinyGarden/">My Tiny Garden</a></li>
+            <li><a class="footer-link" href="/MeshChat/">MeshChat</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium text-white/40">Studio</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/">Home</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/#games">Games</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/#studio">About</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
+          <p class="footer-head">Studio</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/">Home</a></li>
+            <li><a class="footer-link" href="/#games">Games</a></li>
+            <li><a class="footer-link" href="/#studio">About</a></li>
+            <li><a class="footer-link" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium text-white/40">Help</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/support.html">Support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/privacy.html">Privacy Policy</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/support/">Last Tile support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/support/">Mozai support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/#support">Ribbo support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/#support">My Mini BBQ support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/#support">My Tiny Garden support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MeshChat/support/">MeshChat support</a></li>
+          <p class="footer-head">Help</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/support.html">Support</a></li>
+            <li><a class="footer-link" href="/privacy.html">Privacy Policy</a></li>
+            <li><a class="footer-link" href="/LastTile/support/">Last Tile support</a></li>
+            <li><a class="footer-link" href="/Mozai/support/">Mozai support</a></li>
+            <li><a class="footer-link" href="/Ribbo/#support">Ribbo support</a></li>
+            <li><a class="footer-link" href="/MyMiniBBQ/#support">My Mini BBQ support</a></li>
+            <li><a class="footer-link" href="/MyTinyGarden/#support">My Tiny Garden support</a></li>
+            <li><a class="footer-link" href="/MeshChat/support/">MeshChat support</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
       <p>© 2026 Moonstream Tech. All rights reserved.</p>
       <p class="flex gap-5"><a class="hover:text-white" href="/privacy.html">Privacy Policy</a><a class="hover:text-white" href="/support.html">Support</a></p>
     </div>
   </div>
-  <!-- the signature wordmark -->
-  <div class="pointer-events-none mt-8 -mb-[1.8vw] flex justify-center text-[10.5vw] leading-none text-white select-none sm:mt-10" aria-hidden="true">
-    <span class="brand-core">moonstream</span>
-  </div>
+  <div class="pointer-events-none -mb-[2.2vw] flex justify-center text-[15vw] leading-none text-white/[0.06] select-none" aria-hidden="true"><span class="brand-core">moonstream</span></div>
 </footer>
+<!-- /@footer -->
 </body>
 </html>

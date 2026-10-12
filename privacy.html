@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Moonstream Tech</title>
 <meta name="description" content="How Moonstream Tech approaches user information across every app we publish.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://moonstreamtech.com/privacy.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Moonstream Tech">
@@ -15,56 +15,137 @@
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=7bf4b57b">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=1ae8e6d4">
 <script>document.documentElement.classList.add('js')</script>
-<script src="/assets/js/site.js?v=7bf4b57b" defer></script>
+<script src="/assets/js/site.js?v=1ae8e6d4" defer></script>
 </head>
 <body>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
-
-<header class="fixed inset-x-0 top-0 z-50">
-  <div class="shell pt-3">
-    <nav class="flex h-14 items-center justify-between rounded-full border border-white/10 bg-black/70 pr-2 pl-5 backdrop-blur-xl backdrop-saturate-150" aria-label="Main">
-      <a href="/" class="text-[20px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
-      <div class="hidden items-center md:flex">
-        <a class="nav-link" href="/#games">Games</a>
-        <a class="nav-link" href="/#studio">Studio</a>
-        <a class="nav-link" href="/support.html">Support</a>
-        <a class="nav-link" href="/privacy.html" aria-current="page">Privacy</a>
+<!-- @header -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-[10px] focus:bg-ink focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+<header class="site-header">
+  <div class="wrap flex h-16 items-center justify-between gap-6">
+    <a href="/" class="text-[19px] text-ink" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
+      <div class="relative" data-dropdown>
+        <button type="button" class="nav-link" aria-expanded="false" aria-controls="games-menu" data-dropdown-toggle>Games <svg class="size-3.5 opacity-60 transition-transform [[aria-expanded=true]>&]:rotate-180" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div id="games-menu" class="games-menu hidden" data-dropdown-panel>
+          <div class="grid grid-cols-2 gap-0.5">
+            <a class="menu-item" href="/LastTile/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Last Tile</span><span class="badge badge-live mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Out now</span></span>
+            </a>
+            <a class="menu-item" href="/Mozai/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-surface"><img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="size-[72%]"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Mozai</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon</span></span>
+            </a>
+            <a class="menu-item" href="/Ribbo/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Ribbo: Pond Hopper</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MyMiniBBQ/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_25%]"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Mini BBQ</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MyTinyGarden/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Tiny Garden</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MeshChat/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">MeshChat</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon · App</span></span>
+            </a>
+          </div>
+          <a href="/#games" class="mt-1 flex items-center justify-between rounded-[12px] bg-surface px-4 py-3 text-[14px] font-medium hover:bg-line"><span>Games</span><span class="link-arrow text-muted">All games &amp; apps</span></a>
+        </div>
       </div>
-      <div class="flex items-center gap-1.5">
-        <a href="mailto:moonstreamtech@gmail.com" class="btn-brand btn-sm hidden sm:inline-flex">Contact</a>
-        <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </button>
-      </div>
+      <a class="nav-link" href="/#studio">Studio</a>
+      <a class="nav-link" href="/support.html">Support</a>
+      <a class="nav-link" href="/privacy.html" aria-current="page">Privacy</a>
     </nav>
-    <div id="mobile-menu" class="mt-2 hidden rounded-[28px] border border-white/10 bg-black/90 p-2 backdrop-blur-xl md:hidden">
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#games">Games<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#studio">Studio<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/support.html">Support<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/privacy.html" aria-current="page">Privacy<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-2 w-full">Contact us</a>
+    <div class="flex items-center gap-2">
+      <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary btn-sm hidden sm:inline-flex">Contact</a>
+      <button type="button" class="grid size-10 place-items-center rounded-[10px] hover:bg-surface md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper md:hidden">
+    <div class="wrap py-3">
+      <a class="mobile-link" href="/#games">Games<span class="text-muted" aria-hidden="true">→</span></a>
+      <div class="grid grid-cols-1 gap-0.5 pb-2 pl-1">
+        <a class="menu-item" href="/LastTile/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Last Tile</span><span class="badge badge-live mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Out now</span></span>
+        </a>
+        <a class="menu-item" href="/Mozai/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-surface"><img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="size-[72%]"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Mozai</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon</span></span>
+        </a>
+        <a class="menu-item" href="/Ribbo/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Ribbo: Pond Hopper</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MyMiniBBQ/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_25%]"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Mini BBQ</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MyTinyGarden/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Tiny Garden</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MeshChat/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">MeshChat</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon · App</span></span>
+        </a>
+      </div>
+      <a class="mobile-link" href="/#studio">Studio<span class="text-muted" aria-hidden="true">→</span></a>
+      <a class="mobile-link" href="/support.html">Support<span class="text-muted" aria-hidden="true">→</span></a>
+      <a class="mobile-link" href="/privacy.html">Privacy<span class="text-muted" aria-hidden="true">→</span></a>
+      <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary mt-3 w-full">Contact us</a>
     </div>
   </div>
 </header>
+<!-- /@header -->
 
 <main id="main">
-  <section class="relative isolate overflow-hidden pt-32 pb-10 sm:pt-32 sm:pb-16">
-    <div class="pointer-events-none absolute top-[30%] -right-[9vw] -z-10 hidden size-[26vw] animate-float rounded-full bg-white md:block" aria-hidden="true"></div>
-    <div class="shell">
-      <p class="flex flex-wrap items-center gap-2 text-[14px] text-white/50"><a class="hover:text-white" href="/">Moonstream Tech</a><span aria-hidden="true">/</span><span class="text-white">Privacy Policy</span></p>
-      <h1 class="mt-5 max-w-3xl text-[clamp(3rem,7.5vw,6.25rem)] leading-[0.95] font-medium tracking-[-0.05em]">Privacy Policy</h1>
-      <p class="mt-8 inline-flex rounded-full border border-white/15 px-4 py-2 text-[14px] text-white/60">Last updated: 26 September 2026</p>
+  <section class="border-b border-line bg-surface">
+    <div class="wrap py-12 sm:py-16">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Moonstream Tech</a><span aria-hidden="true">/</span><span aria-current="page">Privacy Policy</span></nav>
+      <h1 class="h-page mt-5 max-w-3xl">Privacy Policy</h1>
+      
+      <p class="badge mt-7">Last updated: 26 September 2026</p>
     </div>
   </section>
 
-  <section class="rounded-t-[40px] bg-white py-8 text-black sm:rounded-t-[56px] sm:py-16">
-    <div class="shell grid gap-12 lg:grid-cols-12">
-      <aside class="hidden lg:col-span-3 lg:block">
-        <nav class="toc sticky top-28" aria-label="On this page">
-          <p class="mb-3 text-[13px] font-medium text-black/40">On this page</p>
+  <section class="py-10 sm:py-16">
+    <div class="wrap grid gap-8 lg:grid-cols-12 lg:gap-12">
+      <aside class="lg:col-span-3">
+        <details class="toc-mobile lg:hidden">
+          <summary>On this page</summary>
+          <nav class="toc" aria-label="On this page">
+            <a href="#scope">Who we are</a>
+            <a href="#per-app-policies">App-specific policies</a>
+            <a href="#information">Information we may collect</a>
+            <a href="#use">How we use information</a>
+            <a href="#legal-bases">Legal bases</a>
+            <a href="#services">Services we use</a>
+            <a href="#advertising">Advertising and consent</a>
+            <a href="#purchases">In-app purchases</a>
+            <a href="#accounts">Accounts and leaderboards</a>
+            <a href="#sharing">How information is shared</a>
+            <a href="#transfers">International transfers</a>
+            <a href="#retention">Retention</a>
+            <a href="#security">Security</a>
+            <a href="#rights">Your rights and choices</a>
+            <a href="#children">Children’s privacy</a>
+            <a href="#website">This website</a>
+            <a href="#changes">Changes to this policy</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </details>
+        <nav class="toc sticky top-36 hidden lg:block" aria-label="On this page">
+          <p class="mb-3 font-mono text-[11.5px] font-medium tracking-[0.08em] text-muted uppercase">On this page</p>
           <a href="#scope">Who we are</a>
           <a href="#per-app-policies">App-specific policies</a>
           <a href="#information">Information we may collect</a>
@@ -391,57 +472,58 @@
   </section>
 </main>
 
-<footer class="relative overflow-hidden border-t border-white/10 bg-black pt-8 text-white sm:pt-14">
-  <div class="shell">
+<!-- @footer -->
+<footer class="band-dark on-dark relative overflow-hidden">
+  <div class="wrap pt-14 pb-8 sm:pt-20">
     <div class="grid gap-12 lg:grid-cols-12">
-      <div class="lg:col-span-5">
-        <p class="max-w-sm text-[24px] leading-[1.2] font-medium tracking-[-0.02em]">Games without edges.<br><span class="text-white/40">Built with care by a small, independent studio.</span></p>
+      <div class="lg:col-span-4">
+        <a href="/" class="text-[22px]" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+        <p class="mt-6 max-w-xs text-[17px] leading-snug font-medium tracking-[-0.01em]">Games without edges.<br><span class="text-white/45">Built with care by a small, independent studio.</span></p>
+        <a href="mailto:moonstreamtech@gmail.com" class="footer-link mt-6 inline-block underline decoration-white/25 underline-offset-4">moonstreamtech@gmail.com</a>
       </div>
-      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7">
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-8">
         <div>
-          <p class="text-[13px] font-medium text-white/40">Games &amp; apps</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/">Last Tile</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/">Mozai</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/">Ribbo: Pond Hopper</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/">My Mini BBQ</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/">My Tiny Garden</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MeshChat/">MeshChat</a></li>
+          <p class="footer-head">Games &amp; apps</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/LastTile/">Last Tile</a></li>
+            <li><a class="footer-link" href="/Mozai/">Mozai</a></li>
+            <li><a class="footer-link" href="/Ribbo/">Ribbo: Pond Hopper</a></li>
+            <li><a class="footer-link" href="/MyMiniBBQ/">My Mini BBQ</a></li>
+            <li><a class="footer-link" href="/MyTinyGarden/">My Tiny Garden</a></li>
+            <li><a class="footer-link" href="/MeshChat/">MeshChat</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium text-white/40">Studio</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/">Home</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/#games">Games</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/#studio">About</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
+          <p class="footer-head">Studio</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/">Home</a></li>
+            <li><a class="footer-link" href="/#games">Games</a></li>
+            <li><a class="footer-link" href="/#studio">About</a></li>
+            <li><a class="footer-link" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium text-white/40">Help</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/support.html">Support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/privacy.html">Privacy Policy</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/support/">Last Tile support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/support/">Mozai support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/#support">Ribbo support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/#support">My Mini BBQ support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/#support">My Tiny Garden support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MeshChat/support/">MeshChat support</a></li>
+          <p class="footer-head">Help</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/support.html">Support</a></li>
+            <li><a class="footer-link" href="/privacy.html">Privacy Policy</a></li>
+            <li><a class="footer-link" href="/LastTile/support/">Last Tile support</a></li>
+            <li><a class="footer-link" href="/Mozai/support/">Mozai support</a></li>
+            <li><a class="footer-link" href="/Ribbo/#support">Ribbo support</a></li>
+            <li><a class="footer-link" href="/MyMiniBBQ/#support">My Mini BBQ support</a></li>
+            <li><a class="footer-link" href="/MyTinyGarden/#support">My Tiny Garden support</a></li>
+            <li><a class="footer-link" href="/MeshChat/support/">MeshChat support</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
       <p>© 2026 Moonstream Tech. All rights reserved.</p>
       <p class="flex gap-5"><a class="hover:text-white" href="/privacy.html">Privacy Policy</a><a class="hover:text-white" href="/support.html">Support</a></p>
     </div>
   </div>
-  <!-- the signature wordmark -->
-  <div class="pointer-events-none mt-8 -mb-[1.8vw] flex justify-center text-[10.5vw] leading-none text-white select-none sm:mt-10" aria-hidden="true">
-    <span class="brand-core">moonstream</span>
-  </div>
+  <div class="pointer-events-none -mb-[2.2vw] flex justify-center text-[15vw] leading-none text-white/[0.06] select-none" aria-hidden="true"><span class="brand-core">moonstream</span></div>
 </footer>
+<!-- /@footer -->
 </body>
 </html>

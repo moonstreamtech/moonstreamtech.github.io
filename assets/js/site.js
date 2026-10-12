@@ -15,6 +15,38 @@
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
   }
 
+  // Games dropdown (desktop header)
+  document.querySelectorAll("[data-dropdown]").forEach((root) => {
+    const button = root.querySelector("[data-dropdown-toggle]");
+    const panel = root.querySelector("[data-dropdown-panel]");
+    const setOpen = (open) => {
+      button.setAttribute("aria-expanded", String(open));
+      panel.classList.toggle("hidden", !open);
+    };
+    button.addEventListener("click", () => setOpen(button.getAttribute("aria-expanded") !== "true"));
+    document.addEventListener("click", (e) => { if (!root.contains(e.target)) setOpen(false); });
+    root.addEventListener("focusout", (e) => { if (e.relatedTarget && !root.contains(e.relatedTarget)) setOpen(false); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && button.getAttribute("aria-expanded") === "true") { setOpen(false); button.focus(); }
+    });
+  });
+
+  // Game catalog filters (home)
+  const filters = document.querySelector("[data-filters]");
+  const cards = [...document.querySelectorAll("[data-catalog] [data-tags]")];
+  if (filters && cards.length) {
+    const matches = (card, key) => key === "all" || card.dataset.tags.split(" ").includes(key);
+    filters.querySelectorAll("[data-filter]").forEach((btn) => {
+      btn.querySelector(".filter-count").textContent = cards.filter((c) => matches(c, btn.dataset.filter)).length;
+    });
+    filters.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-filter]");
+      if (!btn) return;
+      filters.querySelectorAll("[data-filter]").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+      cards.forEach((c) => { c.hidden = !matches(c, btn.dataset.filter); });
+    });
+  }
+
   // Scroll reveal
   const reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !reduceMotion) {
@@ -24,7 +56,7 @@
         entry.target.classList.add("is-visible");
         io.unobserve(entry.target);
       }
-    }, { rootMargin: "0px 0px -8% 0px" });
+    }, { rootMargin: "0px 0px -6% 0px" });
     reveals.forEach((el) => io.observe(el));
   } else {
     reveals.forEach((el) => el.classList.add("is-visible"));
@@ -33,30 +65,18 @@
   // Table of contents: highlight the section being read
   const tocLinks = [...document.querySelectorAll(".toc a")];
   if (tocLinks.length && "IntersectionObserver" in window) {
-    const byId = new Map(tocLinks.map((a) => [decodeURIComponent(a.hash.slice(1)), a]));
+    const byId = new Map();
+    tocLinks.forEach((a) => {
+      const id = decodeURIComponent(a.hash.slice(1));
+      byId.set(id, [...(byId.get(id) || []), a]);
+    });
     const spy = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
         tocLinks.forEach((a) => a.classList.remove("is-active"));
-        byId.get(entry.target.id)?.classList.add("is-active");
+        byId.get(entry.target.id)?.forEach((a) => a.classList.add("is-active"));
       }
-    }, { rootMargin: "-15% 0px -75% 0px" });
+    }, { rootMargin: "-20% 0px -70% 0px" });
     byId.forEach((_, id) => { const h = document.getElementById(id); if (h) spy.observe(h); });
-  }
-
-  // Brand module: moonstream [tech] → [studio] → [games]
-  if (!reduceMotion) {
-    document.querySelectorAll("[data-cycle]").forEach((el) => {
-      const words = el.dataset.cycle.split(",");
-      let i = 0;
-      setInterval(() => {
-        i = (i + 1) % words.length;
-        el.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(-12%)" }], { duration: 220, easing: "ease-in", fill: "forwards" })
-          .onfinish = () => {
-            el.textContent = words[i];
-            el.animate([{ opacity: 0, transform: "translateY(12%)" }, { opacity: 1, transform: "none" }], { duration: 320, easing: "cubic-bezier(.16,1,.3,1)" });
-          };
-      }, 2600);
-    });
   }
 })();

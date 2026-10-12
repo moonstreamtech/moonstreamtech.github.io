@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Moonstream Tech — Independent game studio</title>
 <meta name="description" content="Moonstream Tech is an independent studio crafting thoughtful mobile games — calm interfaces, lasting mechanics, and respect for the people who play.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://moonstreamtech.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Moonstream Tech">
@@ -15,255 +15,379 @@
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=7bf4b57b">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=1ae8e6d4">
 <script>document.documentElement.classList.add('js')</script>
-<script src="/assets/js/site.js?v=7bf4b57b" defer></script>
+<script src="/assets/js/site.js?v=1ae8e6d4" defer></script>
 </head>
 <body>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
-
-<header class="fixed inset-x-0 top-0 z-50">
-  <div class="shell pt-3">
-    <nav class="flex h-14 items-center justify-between rounded-full border border-white/10 bg-black/70 pr-2 pl-5 backdrop-blur-xl backdrop-saturate-150" aria-label="Main">
-      <a href="/" class="text-[20px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
-      <div class="hidden items-center md:flex">
-        <a class="nav-link" href="/#games">Games</a>
-        <a class="nav-link" href="/#studio">Studio</a>
-        <a class="nav-link" href="/support.html">Support</a>
-        <a class="nav-link" href="/privacy.html">Privacy</a>
+<!-- @header -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-[10px] focus:bg-ink focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+<header class="site-header">
+  <div class="wrap flex h-16 items-center justify-between gap-6">
+    <a href="/" class="text-[19px] text-ink" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
+      <div class="relative" data-dropdown>
+        <button type="button" class="nav-link" aria-expanded="false" aria-controls="games-menu" data-dropdown-toggle>Games <svg class="size-3.5 opacity-60 transition-transform [[aria-expanded=true]>&]:rotate-180" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div id="games-menu" class="games-menu hidden" data-dropdown-panel>
+          <div class="grid grid-cols-2 gap-0.5">
+            <a class="menu-item" href="/LastTile/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Last Tile</span><span class="badge badge-live mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Out now</span></span>
+            </a>
+            <a class="menu-item" href="/Mozai/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-surface"><img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="size-[72%]"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Mozai</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon</span></span>
+            </a>
+            <a class="menu-item" href="/Ribbo/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Ribbo: Pond Hopper</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MyMiniBBQ/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_25%]"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Mini BBQ</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MyTinyGarden/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Tiny Garden</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MeshChat/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">MeshChat</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon · App</span></span>
+            </a>
+          </div>
+          <a href="/#games" class="mt-1 flex items-center justify-between rounded-[12px] bg-surface px-4 py-3 text-[14px] font-medium hover:bg-line"><span>Games</span><span class="link-arrow text-muted">All games &amp; apps</span></a>
+        </div>
       </div>
-      <div class="flex items-center gap-1.5">
-        <a href="mailto:moonstreamtech@gmail.com" class="btn-brand btn-sm hidden sm:inline-flex">Contact</a>
-        <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </button>
-      </div>
+      <a class="nav-link" href="/#studio">Studio</a>
+      <a class="nav-link" href="/support.html">Support</a>
+      <a class="nav-link" href="/privacy.html">Privacy</a>
     </nav>
-    <div id="mobile-menu" class="mt-2 hidden rounded-[28px] border border-white/10 bg-black/90 p-2 backdrop-blur-xl md:hidden">
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#games">Games<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#studio">Studio<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/support.html">Support<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/privacy.html">Privacy<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-2 w-full">Contact us</a>
+    <div class="flex items-center gap-2">
+      <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary btn-sm hidden sm:inline-flex">Contact</a>
+      <button type="button" class="grid size-10 place-items-center rounded-[10px] hover:bg-surface md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper md:hidden">
+    <div class="wrap py-3">
+      <a class="mobile-link" href="/#games">Games<span class="text-muted" aria-hidden="true">→</span></a>
+      <div class="grid grid-cols-1 gap-0.5 pb-2 pl-1">
+        <a class="menu-item" href="/LastTile/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Last Tile</span><span class="badge badge-live mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Out now</span></span>
+        </a>
+        <a class="menu-item" href="/Mozai/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-surface"><img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="size-[72%]"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Mozai</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon</span></span>
+        </a>
+        <a class="menu-item" href="/Ribbo/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Ribbo: Pond Hopper</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MyMiniBBQ/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_25%]"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Mini BBQ</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MyTinyGarden/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Tiny Garden</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MeshChat/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">MeshChat</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon · App</span></span>
+        </a>
+      </div>
+      <a class="mobile-link" href="/#studio">Studio<span class="text-muted" aria-hidden="true">→</span></a>
+      <a class="mobile-link" href="/support.html">Support<span class="text-muted" aria-hidden="true">→</span></a>
+      <a class="mobile-link" href="/privacy.html">Privacy<span class="text-muted" aria-hidden="true">→</span></a>
+      <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary mt-3 w-full">Contact us</a>
     </div>
   </div>
 </header>
+<!-- /@header -->
 
 <main id="main">
 
   <!-- Hero -->
-  <section class="relative overflow-hidden pt-28 pb-6 sm:pt-20 sm:pb-8">
-    <div class="shell grid items-center gap-14 lg:grid-cols-12">
-      <div class="lg:col-span-7">
-        <p class="eyebrow inline-flex items-center gap-2 text-white/60"><span class="size-2 rounded-full bg-brand"></span>Independent game studio</p>
-        <h1 class="mt-6 text-[clamp(3.25rem,7.5vw,6.75rem)] leading-[0.92] font-medium tracking-[-0.055em]">Play beyond<br>the edge<span class="text-brand">.</span></h1>
-        <p class="lede mt-8 max-w-xl text-white/60">Moonstream Tech is an independent studio crafting thoughtful mobile
+  <section class="relative overflow-hidden border-b border-line">
+    <div class="wrap grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-12 lg:gap-10 lg:py-24">
+      <div class="lg:col-span-6">
+        <p class="eyebrow">Independent game studio</p>
+        <h1 class="h-display mt-6">Play beyond<br>the edge<span class="text-brand-ink">.</span></h1>
+        <p class="lead mt-6 max-w-xl">Moonstream Tech is an independent studio crafting thoughtful mobile
           games and tools. We focus on calm interfaces, lasting mechanics,
           and respect for the people who use what we make.</p>
-        <div class="mt-10 flex flex-wrap gap-3">
-          <a href="#games" class="btn-brand">Explore our games</a>
-          <a href="mailto:moonstreamtech@gmail.com" class="btn-ghost text-white">Get in touch</a>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a href="#games" class="btn btn-primary btn-lg">Explore our games</a>
+          <a href="mailto:moonstreamtech@gmail.com" class="btn btn-secondary btn-lg">Get in touch</a>
         </div>
       </div>
-      <!-- the moon, with a lime satellite on a slow orbit -->
-      <div class="lg:col-span-5" aria-hidden="true">
-        <div class="relative mx-auto aspect-square w-full max-w-[230px] sm:max-w-[380px] lg:max-w-[440px]">
-          <div class="absolute inset-0 animate-spin-slow rounded-full border border-dashed border-white/25">
-            <span class="absolute top-[14.6%] left-[14.6%] size-[9%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand"></span>
-          </div>
-          <div class="absolute inset-[15%] animate-float rounded-full bg-white"></div>
+
+      <!-- a mosaic of the games' own artwork -->
+      <div class="lg:col-span-6" aria-hidden="true">
+        <div class="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4 aspect-square max-w-[560px] mx-auto lg:mr-0">
+          <a href="/LastTile/" tabindex="-1" class="art col-span-3 row-span-4 bg-night">
+            <img src="/LastTile/img/merge-to-grow.jpg" alt="" width="720" height="1280" fetchpriority="high" class="size-full object-cover object-[50%_40%]">
+          </a>
+          <a href="/Mozai/" tabindex="-1" class="art col-span-3 row-span-2 grid place-items-center bg-surface">
+            <img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" class="h-[78%] w-auto">
+          </a>
+          <a href="/Ribbo/" tabindex="-1" class="art col-span-3 row-span-2 bg-night">
+            <img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" class="size-full object-cover">
+          </a>
+          <a href="/MyMiniBBQ/" tabindex="-1" class="art col-span-2 row-span-2 bg-surface">
+            <img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" class="size-full object-cover object-[50%_30%]">
+          </a>
+          <a href="/MyTinyGarden/" tabindex="-1" class="art col-span-2 row-span-2 bg-night">
+            <img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" class="size-full object-cover">
+          </a>
+          <a href="/MeshChat/" tabindex="-1" class="art col-span-2 row-span-2 grid place-items-center bg-brand">
+            <img src="/MeshChat/img/icon.png" alt="" width="64" height="64" class="size-[46%] rounded-[22%] shadow-[0_10px_30px_-10px_rgb(0_0_0/0.4)]">
+          </a>
         </div>
+      </div>
+    </div>
+
+    <!-- principles strip -->
+    <div class="border-t border-line bg-surface" aria-hidden="true">
+      <div class="wrap flex gap-x-8 gap-y-2 overflow-x-auto py-4 font-mono text-[12.5px] tracking-[0.04em] whitespace-nowrap text-muted uppercase [&::-webkit-scrollbar]:hidden">
+        <span>Play beyond the edge</span><span class="text-line-2">/</span><span>No timers. No pressure.</span><span class="text-line-2">/</span><span>Respect your time</span><span class="text-line-2">/</span><span>Respect your data</span><span class="text-line-2">/</span><span>Respect your attention</span><span class="text-line-2">/</span><span>No dark patterns</span><span class="text-line-2">/</span><span>No noise</span>
       </div>
     </div>
   </section>
 
-  <!-- Marquee -->
-  <div class="overflow-hidden pt-8 pb-8 sm:pt-10 sm:pb-14" aria-hidden="true">
-    <div class="-mx-[5vw] -rotate-2 bg-brand py-4 text-black sm:py-5">
-      <div class="flex w-max animate-marquee text-[clamp(1.25rem,2.6vw,2.25rem)] font-medium tracking-[-0.03em] whitespace-nowrap"><span class="flex items-center gap-8 pr-8">Play beyond the edge<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">No timers. No pressure.<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">Respect your time<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">Respect your data<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">Respect your attention<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">No dark patterns<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">No noise<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">Play beyond the edge<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">No timers. No pressure.<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">Respect your time<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">Respect your data<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">Respect your attention<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">No dark patterns<span class="size-2.5 rounded-full bg-black"></span></span><span class="flex items-center gap-8 pr-8">No noise<span class="size-2.5 rounded-full bg-black"></span></span></div>
-    </div>
-  </div>
-
   <!-- Games -->
-  <section id="games" class="rounded-t-[40px] bg-white py-10 text-black sm:rounded-t-[56px] sm:py-20">
-    <div class="shell">
-      <div class="reveal grid gap-5 md:gap-8 md:grid-cols-12 md:items-end">
-        <div class="md:col-span-8">
-          <p class="eyebrow inline-flex items-center gap-2 text-black/50"><span class="size-2 rounded-full bg-black"></span>Our games &amp; apps</p>
-          <h2 class="mt-5 text-[clamp(2.5rem,6vw,5.25rem)] leading-[0.95] font-medium tracking-[-0.045em]">Games that keep<br>opening up.</h2>
+  <section id="games" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Our games &amp; apps</p>
+          <h2 class="h-section mt-4">Games that keep opening up.</h2>
         </div>
-        <p class="text-[17px] leading-relaxed text-black/60 md:col-span-4">Boards that grow. Rooms that unlock. Ponds to hop across.
+        <p>Boards that grow. Rooms that unlock. Ponds to hop across.
           Grills to fire up and gardens to grow. Games built to be played your way — no account required.</p>
       </div>
 
-      <div class="mt-10 grid gap-5 lg:grid-cols-2">
+      <div class="mt-10 flex flex-wrap items-center justify-between gap-4">
+        <div class="-mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden" role="group" aria-label="Filter games and apps">
+          <div class="flex w-max gap-2" data-filters>
+            <button type="button" class="filter" data-filter="all" aria-pressed="true">All <span class="filter-count"></span></button>
+            <button type="button" class="filter" data-filter="out" aria-pressed="false">Out now <span class="filter-count"></span></button>
+            <button type="button" class="filter" data-filter="soon" aria-pressed="false">Coming soon <span class="filter-count"></span></button>
+            <button type="button" class="filter" data-filter="dev" aria-pressed="false">In development <span class="filter-count"></span></button>
+            <button type="button" class="filter" data-filter="app" aria-pressed="false">Apps <span class="filter-count"></span></button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-catalog>
+
         <!-- Last Tile -->
-        <a href="/LastTile/" class="group reveal relative flex min-h-[620px] flex-col overflow-hidden rounded-[40px] bg-black p-8 text-white sm:p-12">
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="chip border-brand/40 text-brand"><span class="size-1.5 rounded-full bg-brand"></span>Out now on Google Play</span>
-            <span class="chip text-white/60">Merge · Survival · Puzzle</span>
+        <li class="game card card-hover reveal" data-tags="out game">
+          <a href="/LastTile/" class="game-art bg-night" tabindex="-1" aria-hidden="true">
+            <img src="/LastTile/img/merge-to-grow.jpg" alt="" width="720" height="1280" loading="lazy" class="size-full object-cover object-[50%_42%]">
+          </a>
+          <div class="flex flex-1 flex-col p-6">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-10 rounded-[10px]">
+                <div>
+                  <h3 class="h-card"><a href="/LastTile/" class="after:absolute after:inset-0">Last Tile</a></h3>
+                  <p class="tags mt-0.5">Merge · Survival · Puzzle</p>
+                </div>
+              </div>
+            </div>
+            <p class="mt-4"><span class="badge badge-live">Out now on Google Play</span></p>
+            <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">A calm but addictive merge puzzle. Start on a
+              small grid, merge matching tiles, and unlock a larger board.
+              Survive as long as you can while keeping your combo chain alive.
+              Free to play, with optional rewarded ads and a global leaderboard.</p>
+            <div class="game-links relative z-10">
+              <a href="https://play.google.com/store/apps/details?id=com.moonstreamtech.lasttile" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get it on Google Play</a>
+              <a href="/LastTile/">Visit Last Tile</a>
+              <a href="/LastTile/support/">Support</a>
+              <a href="/LastTile/privacy-policy/">Privacy</a>
+            </div>
           </div>
-          <h3 class="mt-9 text-[clamp(2.75rem,5vw,4.25rem)] leading-none font-medium tracking-[-0.045em]">Last Tile</h3>
-          <p class="mt-5 max-w-md text-[16px] leading-relaxed text-white/60">A calm but addictive merge puzzle. Start on a
-            small grid, merge matching tiles, and unlock a larger board.
-            Survive as long as you can while keeping your combo chain alive.
-            Free to play, with optional rewarded ads and a global leaderboard.</p>
-          <span class="link-arrow mt-6 text-brand">Visit Last Tile</span>
-          <div class="mt-auto -mr-16 -mb-24 w-[82%] self-end pt-8 sm:-mr-20" aria-hidden="true">
-            <div class="-rotate-6 transition-transform duration-700 group-hover:-translate-y-4 group-hover:rotate-0"><div class="grid aspect-square grid-cols-7 gap-[2.2%] text-[clamp(10px,2.2cqi,28px)] [container-type:inline-size]" aria-hidden="true"><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">2</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">4</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/[0.04]"></i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">8</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">2</i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">4</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/20 text-white">16</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-brand text-black shadow-[0_0_40px_-4px_#a0f34c]">8</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-brand text-black shadow-[0_0_40px_-4px_#a0f34c]">8</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/[0.04]"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/[0.04]"></i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">2</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/20 text-white">32</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">4</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">2</i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">8</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">4</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">2</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white text-black">64</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">4</i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">2</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/[0.04]"></i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">4</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">2</i><i class="grid place-items-center rounded-[18%] font-medium not-italic bg-white/10 text-white">8</i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i><i class="rounded-[18%] border border-dashed border-white/15"></i></div></div>
-          </div>
-        </a>
+        </li>
 
         <!-- Mozai -->
-        <a href="/Mozai/" class="group reveal relative flex min-h-[620px] flex-col overflow-hidden rounded-[40px] bg-black/[0.04] p-8 text-black sm:p-12">
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="chip border-black bg-black text-white">Coming to Google Play</span>
-            <span class="chip text-black/60">Color · Pixel · Calm</span>
+        <li class="game card card-hover reveal" data-tags="soon game">
+          <a href="/Mozai/" class="game-art grid place-items-center bg-surface" tabindex="-1" aria-hidden="true">
+            <img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="h-[78%] w-auto">
+          </a>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="h-card"><a href="/Mozai/" class="after:absolute after:inset-0">Mozai</a></h3>
+            <p class="tags mt-0.5">Color · Pixel · Calm</p>
+            <p class="mt-4"><span class="badge badge-soon">Coming to Google Play</span></p>
+            <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">A calm pixel coloring game. Pick a color and
+              discover the picture — correct cells fill in, wrong taps do
+              nothing. No numbers, no pressure. Finish pictures to unlock new
+              rooms. Free to play, with optional rewarded ads.</p>
+            <div class="game-links relative z-10">
+              <a href="/Mozai/" class="btn btn-secondary btn-sm">Visit Mozai</a>
+              <a href="/Mozai/support/">Support</a>
+              <a href="/Mozai/privacy-policy/">Privacy</a>
+              <a href="/Mozai/terms/">Terms</a>
+            </div>
           </div>
-          <h3 class="mt-9 text-[clamp(2.75rem,5vw,4.25rem)] leading-none font-medium tracking-[-0.045em]">Mozai</h3>
-          <p class="mt-5 max-w-md text-[16px] leading-relaxed text-black/60">A calm pixel coloring game. Pick a color and
-            discover the picture — correct cells fill in, wrong taps do
-            nothing. No numbers, no pressure. Finish pictures to unlock new
-            rooms. Free to play, with optional rewarded ads.</p>
-          <span class="link-arrow mt-6">Visit Mozai</span>
-          <div class="mt-auto -mr-12 -mb-16 w-[72%] self-end pt-8 sm:-mr-16" aria-hidden="true">
-            <div class="rotate-6 transition-transform duration-700 group-hover:-translate-y-4 group-hover:rotate-0"><div class="grid aspect-square grid-cols-20 gap-[1.5%]" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-brand"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] border border-black/25"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="rounded-[20%] bg-black"></i><i class="rounded-[20%] bg-black"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-          </div>
-        </a>
+        </li>
 
         <!-- Ribbo -->
-        <a href="/Ribbo/" class="group reveal relative grid items-center overflow-hidden rounded-[40px] bg-black p-8 text-white sm:p-12 lg:col-span-2 lg:grid-cols-2 lg:gap-12">
-          <div class="flex flex-col items-start">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="chip border-brand/40 text-brand"><span class="size-1.5 animate-pulse rounded-full bg-brand"></span>In development</span>
-              <span class="chip text-white/60">Hop · Collect · Compete</span>
-            </div>
-            <h3 class="mt-9 text-[clamp(2.75rem,5vw,4.25rem)] leading-none font-medium tracking-[-0.045em]">Ribbo<span class="block text-[0.5em] leading-[1.2] tracking-[-0.035em] text-white/45">Pond Hopper</span></h3>
-            <p class="mt-5 max-w-md text-[16px] leading-relaxed text-white/60">Hop across the pond with Ribbo. Play Classic or Time Attack,
+        <li class="game card card-hover reveal" data-tags="dev game">
+          <a href="/Ribbo/" class="game-art bg-night" tabindex="-1" aria-hidden="true">
+            <img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="mx-auto h-full w-auto">
+          </a>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="h-card"><a href="/Ribbo/" class="after:absolute after:inset-0">Ribbo<span class="text-muted"> Pond Hopper</span></a></h3>
+            <p class="tags mt-0.5">Hop · Collect · Compete</p>
+            <p class="mt-4"><span class="badge badge-dev">In development</span></p>
+            <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">Hop across the pond with Ribbo. Play Classic or Time Attack,
               dress Ribbo up with colors, hats and costumes, and chase your best
               score on the leaderboard.</p>
-            <span class="link-arrow mt-6 text-brand">Visit Ribbo</span>
+            <div class="game-links relative z-10">
+              <a href="/Ribbo/" class="btn btn-secondary btn-sm">Visit Ribbo</a>
+              <a href="/Ribbo/#support">Support</a>
+              <a href="/Ribbo/#privacy-policy">Privacy</a>
+            </div>
           </div>
-          <div class="mx-auto mt-10 -mb-16 w-[88%] max-w-[440px] lg:my-0 lg:-mr-4 lg:w-full" aria-hidden="true">
-            <img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" class="w-full -rotate-3 transition-transform duration-700 group-hover:-translate-y-3 group-hover:rotate-0">
-          </div>
-        </a>
+        </li>
 
         <!-- My Mini BBQ -->
-        <a href="/MyMiniBBQ/" class="group reveal relative flex min-h-[620px] flex-col overflow-hidden rounded-[40px] bg-black/[0.04] p-8 text-black sm:p-12">
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="chip border-black bg-black text-white"><span class="size-1.5 animate-pulse rounded-full bg-brand"></span>In development</span>
-            <span class="chip text-black/60">Grill · Serve · Grow</span>
+        <li class="game card card-hover reveal" data-tags="dev game">
+          <a href="/MyMiniBBQ/" class="game-art bg-surface" tabindex="-1" aria-hidden="true">
+            <img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_28%]">
+          </a>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="h-card"><a href="/MyMiniBBQ/" class="after:absolute after:inset-0">My Mini BBQ</a></h3>
+            <p class="tags mt-0.5">Grill · Serve · Grow</p>
+            <p class="mt-4"><span class="badge badge-dev">In development</span></p>
+            <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">An arcade idle BBQ tycoon. Grill burgers, serve the
+              cars lining up at your window, hire a crew and grow a tiny hut
+              into a busy kitchen. Free to play, with ads.</p>
+            <div class="game-links relative z-10">
+              <a href="/MyMiniBBQ/" class="btn btn-secondary btn-sm">Visit My Mini BBQ</a>
+              <a href="/MyMiniBBQ/#support">Support</a>
+              <a href="/MyMiniBBQ/#privacy-policy">Privacy</a>
+            </div>
           </div>
-          <h3 class="mt-9 text-[clamp(2.75rem,5vw,4.25rem)] leading-none font-medium tracking-[-0.045em]">My Mini BBQ</h3>
-          <p class="mt-5 max-w-md text-[16px] leading-relaxed text-black/60">An arcade idle BBQ tycoon. Grill burgers, serve the
-            cars lining up at your window, hire a crew and grow a tiny hut
-            into a busy kitchen. Free to play, with ads.</p>
-          <span class="link-arrow mt-6">Visit My Mini BBQ</span>
-          <div class="mt-auto -mr-10 -mb-40 w-[62%] self-end pt-8 sm:-mr-12" aria-hidden="true">
-            <img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="w-full rotate-6 rounded-[32px] border-[6px] border-black transition-transform duration-700 group-hover:-translate-y-4 group-hover:rotate-0">
-          </div>
-        </a>
+        </li>
 
         <!-- My Tiny Garden -->
-        <a href="/MyTinyGarden/" class="group reveal relative flex min-h-[620px] flex-col overflow-hidden rounded-[40px] bg-black p-8 text-white sm:p-12">
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="chip border-brand/40 text-brand"><span class="size-1.5 animate-pulse rounded-full bg-brand"></span>In development</span>
-            <span class="chip text-white/60">Plant · Harvest · Sell</span>
+        <li class="game card card-hover reveal" data-tags="dev game">
+          <a href="/MyTinyGarden/" class="game-art bg-night" tabindex="-1" aria-hidden="true">
+            <img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="mx-auto h-full w-auto">
+          </a>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="h-card"><a href="/MyTinyGarden/" class="after:absolute after:inset-0">My Tiny Garden</a></h3>
+            <p class="tags mt-0.5">Plant · Harvest · Sell</p>
+            <p class="mt-4"><span class="badge badge-dev">In development</span></p>
+            <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">A cozy gardening game. Grow vegetables, fruit and
+              flowers, sell your harvest at the stand, bargain with customers
+              and decorate every corner. Free to play, with ads.</p>
+            <div class="game-links relative z-10">
+              <a href="/MyTinyGarden/" class="btn btn-secondary btn-sm">Visit My Tiny Garden</a>
+              <a href="/MyTinyGarden/#support">Support</a>
+              <a href="/MyTinyGarden/#privacy-policy">Privacy</a>
+            </div>
           </div>
-          <h3 class="mt-9 text-[clamp(2.75rem,5vw,4.25rem)] leading-none font-medium tracking-[-0.045em]">My Tiny Garden</h3>
-          <p class="mt-5 max-w-md text-[16px] leading-relaxed text-white/60">A cozy gardening game. Grow vegetables, fruit and
-            flowers, sell your harvest at the stand, bargain with customers
-            and decorate every corner. Free to play, with ads.</p>
-          <span class="link-arrow mt-6 text-brand">Visit My Tiny Garden</span>
-          <div class="mt-auto -mr-8 -mb-12 w-[78%] max-w-[420px] self-end pt-10" aria-hidden="true">
-            <img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="w-full rotate-3 transition-transform duration-700 group-hover:-translate-y-3 group-hover:rotate-0">
-          </div>
-        </a>
+        </li>
 
         <!-- MeshChat -->
-        <a href="/MeshChat/" class="group reveal relative grid items-center overflow-hidden rounded-[40px] bg-black/[0.04] p-8 text-black sm:p-12 lg:col-span-2 lg:grid-cols-2 lg:gap-12">
-          <div class="flex flex-col items-start">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="chip border-black bg-black text-white">Coming to Google Play</span>
-              <span class="chip text-black/60">App · Private · Serverless</span>
+        <li class="game card card-hover reveal" data-tags="soon app">
+          <a href="/MeshChat/" class="game-art bg-surface" tabindex="-1" aria-hidden="true">
+            <img src="/MeshChat/img/chat-light.webp" alt="" width="540" height="1169" loading="lazy" class="absolute top-7 left-1/2 w-[44%] -translate-x-1/2 rounded-t-[22px] border-x-[5px] border-t-[5px] border-night">
+          </a>
+          <div class="flex flex-1 flex-col p-6">
+            <div class="flex items-center gap-3">
+              <img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-10 rounded-[10px]">
+              <div>
+                <h3 class="h-card"><a href="/MeshChat/" class="after:absolute after:inset-0">MeshChat</a></h3>
+                <p class="tags mt-0.5">App · Private · Serverless</p>
+              </div>
             </div>
-            <h3 class="mt-9 flex items-center gap-4 text-[clamp(2.75rem,5vw,4.25rem)] leading-none font-medium tracking-[-0.045em]"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" class="size-14 rounded-[16px]">MeshChat</h3>
-            <p class="mt-5 max-w-md text-[16px] leading-relaxed text-black/60">Private one-to-one messaging with no servers.
+            <p class="mt-4"><span class="badge badge-soon">Coming to Google Play</span></p>
+            <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">Private one-to-one messaging with no servers.
               End-to-end encrypted, no phone number or e-mail, and messages that
               delete themselves after 30 days. Free, with no ads.</p>
-            <span class="link-arrow mt-6">Visit MeshChat</span>
+            <div class="game-links relative z-10">
+              <a href="/MeshChat/" class="btn btn-secondary btn-sm">Visit MeshChat</a>
+              <a href="/MeshChat/support/">Support</a>
+              <a href="/MeshChat/privacy-policy/">Privacy</a>
+              <a href="/MeshChat/terms/">Terms</a>
+            </div>
           </div>
-          <div class="mx-auto mt-10 -mb-24 w-[70%] max-w-[300px] lg:my-0 lg:-mb-28 lg:w-full" aria-hidden="true">
-            <div class="rotate-3 rounded-[40px] border-[6px] border-black transition-transform duration-700 group-hover:-translate-y-3 group-hover:rotate-0"><img src="/MeshChat/img/chat-light.webp" alt="" width="540" height="1169" loading="lazy" class="w-full rounded-[34px]"></div>
-          </div>
-        </a>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
 
   <!-- Studio -->
-  <section id="studio" class="py-12 sm:py-24">
-    <div class="shell">
-      <div class="reveal grid gap-5 md:gap-8 md:grid-cols-12">
-        <p class="eyebrow inline-flex items-center gap-2 self-start text-white/60 md:col-span-4"><span class="size-2 rounded-full bg-brand"></span>About the studio</p>
-        <p class="text-[clamp(1.5rem,2.8vw,2.4rem)] leading-[1.25] font-medium tracking-[-0.025em] md:col-span-8">Moonstream Tech is a small, independent software studio. Every app
-          we ship is built with the same principles:</p>
+  <section id="studio" class="section band">
+    <div class="wrap">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <p class="eyebrow">About the studio</p>
+          <p class="mt-5 text-[clamp(1.5rem,2.6vw,2.1rem)] leading-[1.2] font-semibold tracking-[-0.03em] text-balance">Moonstream Tech is a small, independent software studio. Every app
+            we ship is built with the same principles:</p>
+          <p class="mt-6 max-w-md text-[17px] leading-relaxed text-muted">No dark patterns. No noise. <span class="text-ink">Just software we'd want to use ourselves.</span></p>
+        </div>
+        <ol class="reveal grid gap-3 lg:col-span-7">
+          <li class="card flex items-center gap-6 p-6 sm:p-7">
+            <span class="num text-[13px] text-muted">01</span>
+            <span class="text-[clamp(1.5rem,2.8vw,2.25rem)] leading-none font-semibold tracking-[-0.035em]">Respect your time.</span>
+          </li>
+          <li class="card flex items-center gap-6 p-6 sm:p-7">
+            <span class="num text-[13px] text-muted">02</span>
+            <span class="text-[clamp(1.5rem,2.8vw,2.25rem)] leading-none font-semibold tracking-[-0.035em]">Respect your data.</span>
+          </li>
+          <li class="card flex items-center gap-6 p-6 sm:p-7">
+            <span class="num text-[13px] text-muted">03</span>
+            <span class="text-[clamp(1.5rem,2.8vw,2.25rem)] leading-none font-semibold tracking-[-0.035em]">Respect your attention.</span>
+          </li>
+        </ol>
       </div>
-      <ol class="reveal mt-8 border-t border-white/15 sm:mt-16">
-        <li class="group flex items-baseline gap-6 border-b border-white/15 py-7 sm:gap-12 sm:py-9">
-          <span class="w-8 shrink-0 text-[14px] text-white/40 tabular-nums sm:w-16">01</span>
-          <span class="text-[clamp(2.25rem,6.5vw,6rem)] leading-none font-medium tracking-[-0.05em] transition-colors duration-500 group-hover:text-brand">Respect your time.</span>
-        </li>
-        <li class="group flex items-baseline gap-6 border-b border-white/15 py-7 sm:gap-12 sm:py-9">
-          <span class="w-8 shrink-0 text-[14px] text-white/40 tabular-nums sm:w-16">02</span>
-          <span class="text-[clamp(2.25rem,6.5vw,6rem)] leading-none font-medium tracking-[-0.05em] transition-colors duration-500 group-hover:text-brand">Respect your data.</span>
-        </li>
-        <li class="group flex items-baseline gap-6 border-b border-white/15 py-7 sm:gap-12 sm:py-9">
-          <span class="w-8 shrink-0 text-[14px] text-white/40 tabular-nums sm:w-16">03</span>
-          <span class="text-[clamp(2.25rem,6.5vw,6rem)] leading-none font-medium tracking-[-0.05em] transition-colors duration-500 group-hover:text-brand">Respect your attention.</span>
-        </li>
-      </ol>
-      <p class="reveal mt-8 max-w-2xl text-[20px] leading-snug text-white/50 sm:text-[24px]">No dark patterns. No noise. <span class="text-white">Just software we'd want to use ourselves.</span></p>
-      <dl class="reveal mt-14 grid gap-px overflow-hidden rounded-[32px] bg-white/15 sm:grid-cols-3">
-        <div class="flex flex-col gap-3 bg-black p-8 sm:p-10">
-          <dt class="text-[15px] text-white/50">Games — Last Tile is out now; Mozai, Ribbo, My Mini BBQ and My Tiny Garden are on the way</dt>
-          <dd class="order-first text-[56px] leading-none font-medium tracking-[-0.05em]">5</dd>
+      <dl class="stats reveal mt-12 !border-transparent">
+        <div>
+          <dt>Games — Last Tile is out now; Mozai, Ribbo, My Mini BBQ and My Tiny Garden are on the way</dt>
+          <dd class="num !font-sans">5</dd>
         </div>
-        <div class="flex flex-col gap-3 bg-black p-8 sm:p-10">
-          <dt class="text-[15px] text-white/50">Personal accounts required to play</dt>
-          <dd class="order-first text-[56px] leading-none font-medium tracking-[-0.05em]">0</dd>
+        <div>
+          <dt>Personal accounts required to play</dt>
+          <dd class="num !font-sans">0</dd>
         </div>
-        <div class="flex flex-col gap-3 bg-black p-8 sm:p-10">
-          <dt class="text-[15px] text-white/50">Gameplay that works without a connection</dt>
-          <dd class="order-first text-[56px] leading-none font-medium tracking-[-0.05em]">Offline</dd>
+        <div>
+          <dt>Gameplay that works without a connection</dt>
+          <dd>Offline</dd>
         </div>
       </dl>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="pb-10 sm:pb-20">
-    <div class="shell">
-      <div class="reveal relative isolate overflow-hidden rounded-[40px] bg-white px-7 py-8 text-black sm:px-14 sm:py-14">
-        <div class="pointer-events-none absolute -right-20 -bottom-28 -z-10 hidden size-[22rem] animate-float rounded-full bg-brand lg:block" aria-hidden="true"></div>
-        <p class="eyebrow inline-flex items-center gap-2 text-black/50"><span class="size-2 rounded-full bg-black"></span>Contact</p>
-        <h2 class="mt-5 max-w-3xl text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">Questions, bugs, ideas — we read everything.</h2>
-        <div class="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
-          <a href="mailto:moonstreamtech@gmail.com" class="btn-dark hover:!bg-brand hover:!text-black">moonstreamtech@gmail.com</a>
-          <p class="text-[15px] text-black/55">We aim to respond within 2–3 business days.</p>
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="band-dark on-dark reveal grid gap-10 overflow-hidden rounded-[28px] p-8 sm:p-12 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-7">
+          <p class="eyebrow">Contact</p>
+          <h2 class="h-section mt-4">Questions, bugs, ideas — we read everything.</h2>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a href="mailto:moonstreamtech@gmail.com" class="btn btn-accent btn-lg">moonstreamtech@gmail.com</a>
+            <p class="text-[14.5px] text-white/55">We aim to respond within 2–3 business days.</p>
+          </div>
         </div>
-        <div class="mt-10 grid max-w-xl gap-4 sm:grid-cols-2">
-          <a href="/support.html" class="group rounded-[24px] bg-black/[0.05] p-6 transition duration-300 hover:-translate-y-1">
-            <p class="text-[21px] font-medium tracking-tight">Support</p>
-            <p class="mt-1.5 text-[15px] text-black/60">Help, feedback and contact for all Moonstream Tech apps.</p>
-            <span class="link-arrow mt-5 text-[15px]">Get help</span>
+        <div class="grid gap-3 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
+          <a href="/support.html" class="group rounded-[16px] border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-white/25 hover:bg-white/[0.06]">
+            <p class="text-[17px] font-semibold tracking-[-0.01em]">Support</p>
+            <p class="mt-1 text-[14.5px] text-white/55">Help, feedback and contact for all Moonstream Tech apps.</p>
+            <span class="link-arrow mt-3 text-[14px] text-brand">Get help</span>
           </a>
-          <a href="/privacy.html" class="group rounded-[24px] bg-black/[0.05] p-6 transition duration-300 hover:-translate-y-1">
-            <p class="text-[21px] font-medium tracking-tight">Privacy</p>
-            <p class="mt-1.5 text-[15px] text-black/60">How we approach user information across every app we publish.</p>
-            <span class="link-arrow mt-5 text-[15px]">Read the policy</span>
+          <a href="/privacy.html" class="group rounded-[16px] border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-white/25 hover:bg-white/[0.06]">
+            <p class="text-[17px] font-semibold tracking-[-0.01em]">Privacy</p>
+            <p class="mt-1 text-[14.5px] text-white/55">How we approach user information across every app we publish.</p>
+            <span class="link-arrow mt-3 text-[14px] text-brand">Read the policy</span>
           </a>
         </div>
       </div>
@@ -271,57 +395,58 @@
   </section>
 </main>
 
-<footer class="relative overflow-hidden border-t border-white/10 bg-black pt-8 text-white sm:pt-14">
-  <div class="shell">
+<!-- @footer -->
+<footer class="band-dark on-dark relative overflow-hidden">
+  <div class="wrap pt-14 pb-8 sm:pt-20">
     <div class="grid gap-12 lg:grid-cols-12">
-      <div class="lg:col-span-5">
-        <p class="max-w-sm text-[24px] leading-[1.2] font-medium tracking-[-0.02em]">Games without edges.<br><span class="text-white/40">Built with care by a small, independent studio.</span></p>
+      <div class="lg:col-span-4">
+        <a href="/" class="text-[22px]" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+        <p class="mt-6 max-w-xs text-[17px] leading-snug font-medium tracking-[-0.01em]">Games without edges.<br><span class="text-white/45">Built with care by a small, independent studio.</span></p>
+        <a href="mailto:moonstreamtech@gmail.com" class="footer-link mt-6 inline-block underline decoration-white/25 underline-offset-4">moonstreamtech@gmail.com</a>
       </div>
-      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7">
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-8">
         <div>
-          <p class="text-[13px] font-medium text-white/40">Games &amp; apps</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/">Last Tile</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/">Mozai</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/">Ribbo: Pond Hopper</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/">My Mini BBQ</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/">My Tiny Garden</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MeshChat/">MeshChat</a></li>
+          <p class="footer-head">Games &amp; apps</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/LastTile/">Last Tile</a></li>
+            <li><a class="footer-link" href="/Mozai/">Mozai</a></li>
+            <li><a class="footer-link" href="/Ribbo/">Ribbo: Pond Hopper</a></li>
+            <li><a class="footer-link" href="/MyMiniBBQ/">My Mini BBQ</a></li>
+            <li><a class="footer-link" href="/MyTinyGarden/">My Tiny Garden</a></li>
+            <li><a class="footer-link" href="/MeshChat/">MeshChat</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium text-white/40">Studio</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/">Home</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/#games">Games</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/#studio">About</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
+          <p class="footer-head">Studio</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/">Home</a></li>
+            <li><a class="footer-link" href="/#games">Games</a></li>
+            <li><a class="footer-link" href="/#studio">About</a></li>
+            <li><a class="footer-link" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium text-white/40">Help</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/support.html">Support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/privacy.html">Privacy Policy</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/support/">Last Tile support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/support/">Mozai support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/#support">Ribbo support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/#support">My Mini BBQ support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/#support">My Tiny Garden support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MeshChat/support/">MeshChat support</a></li>
+          <p class="footer-head">Help</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/support.html">Support</a></li>
+            <li><a class="footer-link" href="/privacy.html">Privacy Policy</a></li>
+            <li><a class="footer-link" href="/LastTile/support/">Last Tile support</a></li>
+            <li><a class="footer-link" href="/Mozai/support/">Mozai support</a></li>
+            <li><a class="footer-link" href="/Ribbo/#support">Ribbo support</a></li>
+            <li><a class="footer-link" href="/MyMiniBBQ/#support">My Mini BBQ support</a></li>
+            <li><a class="footer-link" href="/MyTinyGarden/#support">My Tiny Garden support</a></li>
+            <li><a class="footer-link" href="/MeshChat/support/">MeshChat support</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
       <p>© 2026 Moonstream Tech. All rights reserved.</p>
       <p class="flex gap-5"><a class="hover:text-white" href="/privacy.html">Privacy Policy</a><a class="hover:text-white" href="/support.html">Support</a></p>
     </div>
   </div>
-  <!-- the signature wordmark -->
-  <div class="pointer-events-none mt-8 -mb-[1.8vw] flex justify-center text-[10.5vw] leading-none text-white select-none sm:mt-10" aria-hidden="true">
-    <span class="brand-core">moonstream</span>
-  </div>
+  <div class="pointer-events-none -mb-[2.2vw] flex justify-center text-[15vw] leading-none text-white/[0.06] select-none" aria-hidden="true"><span class="brand-core">moonstream</span></div>
 </footer>
+<!-- /@footer -->
 </body>
 </html>
