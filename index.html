@@ -15,17 +15,17 @@
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=09b37989">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&family=Lilita+One&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=ae0669b4">
 <script>document.documentElement.classList.add('js')</script>
-<script src="/assets/js/site.js?v=09b37989" defer></script>
+<script src="/assets/js/site.js?v=ae0669b4" defer></script>
 </head>
 <body>
 <!-- @header -->
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-[10px] focus:bg-ink focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
 <header class="site-header">
   <div class="wrap flex h-16 items-center justify-between gap-6">
-    <a href="/" class="text-[19px] text-ink" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+    <a href="/" class="text-[20px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
     <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
       <div class="relative" data-dropdown>
         <button type="button" class="nav-link" aria-expanded="false" aria-controls="games-menu" data-dropdown-toggle>Games <svg class="size-3.5 opacity-60 transition-transform [[aria-expanded=true]>&]:rotate-180" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -65,12 +65,12 @@
     </nav>
     <div class="flex items-center gap-2">
       <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary btn-sm hidden sm:inline-flex">Contact</a>
-      <button type="button" class="grid size-10 place-items-center rounded-[10px] hover:bg-surface md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+      <button type="button" class="grid size-10 place-items-center rounded-[10px] hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       </button>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper md:hidden">
+  <div id="mobile-menu" class="hidden max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-white/10 bg-night md:hidden">
     <div class="wrap py-3">
       <a class="mobile-link" href="/#games">Games<span class="text-muted" aria-hidden="true">→</span></a>
       <div class="grid grid-cols-1 gap-0.5 pb-2 pl-1">
@@ -110,93 +110,172 @@
 
 <main id="main">
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden border-b border-line">
-    <div class="wrap grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-12 lg:gap-10 lg:py-24">
-      <div class="lg:col-span-6">
-        <p class="eyebrow">Independent game studio</p>
-        <h1 class="h-display mt-6">Play beyond<br>the edge<span class="text-brand-ink">.</span></h1>
-        <p class="lead mt-6 max-w-xl">Moonstream Tech is an independent studio crafting thoughtful mobile
-          games and tools. We focus on calm interfaces, lasting mechanics,
-          and respect for the people who use what we make.</p>
-        <div class="mt-9 flex flex-wrap gap-3">
-          <a href="#games" class="btn btn-primary btn-lg">Explore our games</a>
-          <a href="mailto:moonstreamtech@gmail.com" class="btn btn-secondary btn-lg">Get in touch</a>
+  <!-- Hero: a banner carousel — the studio first, then every game -->
+  <section class="hero" aria-roledescription="carousel" aria-label="Moonstream Tech" data-carousel>
+    <div class="hero-track">
+
+      <!-- Studio -->
+      <div class="hero-slide bg-brand" role="group" aria-roledescription="slide" aria-label="1 of 7" data-slide>
+        <div class="wrap grid h-full items-center gap-10 py-14 lg:grid-cols-12 lg:py-0">
+          <div class="lg:col-span-7">
+            <p class="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-white px-3 py-1 font-mono text-[12px] font-semibold tracking-[0.08em] uppercase">Independent game studio</p>
+            <h1 class="h-display mt-6 !text-[clamp(3.25rem,8vw,6.5rem)]">Play beyond<br>the edge.</h1>
+            <p class="mt-6 max-w-xl text-[18px] leading-relaxed font-medium text-ink/80 sm:text-[19px]">Moonstream Tech is an independent studio crafting thoughtful mobile
+              games and tools. We focus on calm interfaces, lasting mechanics,
+              and respect for the people who use what we make.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#games" class="btn btn-light btn-lg">Explore our games</a>
+              <a href="mailto:moonstreamtech@gmail.com" class="btn btn-light btn-lg !bg-transparent">Get in touch</a>
+            </div>
+          </div>
+          <!-- the moon, with an ink satellite on a slow orbit -->
+          <div class="hidden lg:col-span-5 lg:block" aria-hidden="true">
+            <div class="relative mx-auto aspect-square w-full max-w-[380px]">
+              <div class="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-ink/40">
+                <span class="absolute top-[14.6%] left-[14.6%] size-[9%] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-ink bg-white"></span>
+              </div>
+              <div class="absolute inset-[15%] animate-float rounded-full border-[3px] border-ink bg-white shadow-[10px_10px_0_var(--color-ink)]"></div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- a mosaic of the games' own artwork -->
-      <div class="lg:col-span-6" aria-hidden="true">
-        <div class="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4 aspect-square max-w-[560px] mx-auto lg:mr-0">
-          <a href="/LastTile/" tabindex="-1" class="art col-span-3 row-span-4 bg-night">
-            <img src="/LastTile/img/merge-to-grow.jpg" alt="" width="720" height="1280" fetchpriority="high" class="size-full object-cover object-[50%_40%]">
-          </a>
-          <a href="/Mozai/" tabindex="-1" class="art col-span-3 row-span-2 grid place-items-center bg-surface">
-            <img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" class="h-[78%] w-auto">
-          </a>
-          <a href="/Ribbo/" tabindex="-1" class="art col-span-3 row-span-2 bg-night">
-            <img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" class="size-full object-cover">
-          </a>
-          <a href="/MyMiniBBQ/" tabindex="-1" class="art col-span-2 row-span-2 bg-surface">
-            <img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" class="size-full object-cover object-[50%_30%]">
-          </a>
-          <a href="/MyTinyGarden/" tabindex="-1" class="art col-span-2 row-span-2 bg-night">
-            <img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" class="size-full object-cover">
-          </a>
-          <a href="/MeshChat/" tabindex="-1" class="art col-span-2 row-span-2 grid place-items-center bg-brand">
-            <img src="/MeshChat/img/icon.png" alt="" width="64" height="64" class="size-[46%] rounded-[22%] shadow-[0_10px_30px_-10px_rgb(0_0_0/0.4)]">
-          </a>
+      <!-- Last Tile -->
+      <div class="hero-slide bg-night text-white" role="group" aria-roledescription="slide" aria-label="2 of 7" data-slide>
+        <div class="wrap grid h-full items-center gap-10 py-14 lg:grid-cols-12 lg:py-0">
+          <div class="lg:col-span-6">
+            <div class="flex items-center gap-3"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" class="size-14 rounded-[14px] border-2 border-white"><span class="badge !border-brand !bg-brand">Out now on Google Play</span></div>
+            <p class="hero-title mt-6 text-brand">Last Tile</p>
+            <p class="mt-3 font-mono text-[13px] tracking-[0.06em] text-white/60 uppercase">Merge · Survival · Puzzle</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="https://play.google.com/store/apps/details?id=com.moonstreamtech.lasttile" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Get it on Google Play</a>
+              <a href="/LastTile/" class="btn btn-outline-light btn-lg">Visit Last Tile</a>
+            </div>
+          </div>
+          <div class="hidden justify-center gap-5 lg:col-span-6 lg:flex" aria-hidden="true">
+            <img src="/LastTile/img/merge-to-grow.jpg" alt="" width="720" height="1280" class="hero-shot -rotate-3">
+            <img src="/LastTile/img/beat-the-hazards.jpg" alt="" width="720" height="1280" loading="lazy" class="hero-shot mt-16 rotate-3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Mozai -->
+      <div class="hero-slide bg-surface" role="group" aria-roledescription="slide" aria-label="3 of 7" data-slide>
+        <div class="wrap grid h-full items-center gap-10 py-14 lg:grid-cols-12 lg:py-0">
+          <div class="lg:col-span-6">
+            <span class="badge badge-soon">Coming to Google Play</span>
+            <p class="hero-title mt-6">Mozai</p>
+            <p class="mt-3 font-mono text-[13px] tracking-[0.06em] text-muted uppercase">Color · Pixel · Calm</p>
+            <div class="mt-8"><a href="/Mozai/" class="btn btn-primary btn-lg">Visit Mozai</a></div>
+          </div>
+          <div class="hidden justify-center lg:col-span-6 lg:flex" aria-hidden="true">
+            <img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="h-[380px] w-auto rotate-6">
+          </div>
+        </div>
+      </div>
+
+      <!-- Ribbo -->
+      <div class="hero-slide bg-night text-white" role="group" aria-roledescription="slide" aria-label="4 of 7" data-slide>
+        <div class="wrap grid h-full items-center gap-10 py-14 lg:grid-cols-12 lg:py-0">
+          <div class="lg:col-span-6">
+            <span class="badge badge-dev">In development</span>
+            <p class="hero-title mt-6 text-brand">Ribbo<span class="block text-[0.45em] text-white">Pond Hopper</span></p>
+            <p class="mt-3 font-mono text-[13px] tracking-[0.06em] text-white/60 uppercase">Hop · Collect · Compete</p>
+            <div class="mt-8"><a href="/Ribbo/" class="btn btn-primary btn-lg">Visit Ribbo</a></div>
+          </div>
+          <div class="hidden justify-center lg:col-span-6 lg:flex" aria-hidden="true">
+            <img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="h-[420px] w-auto">
+          </div>
+        </div>
+      </div>
+
+      <!-- My Mini BBQ -->
+      <div class="hero-slide bg-night text-white" role="group" aria-roledescription="slide" aria-label="5 of 7" data-slide>
+        <img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="absolute inset-y-0 right-0 hidden h-full w-[55%] object-cover object-[50%_35%] [mask-image:linear-gradient(to_right,transparent,black_30%)] lg:block" aria-hidden="true">
+        <div class="wrap relative grid h-full items-center gap-10 py-14 lg:grid-cols-12 lg:py-0">
+          <div class="lg:col-span-6">
+            <span class="badge badge-dev">In development</span>
+            <p class="hero-title mt-6 text-brand">My Mini BBQ</p>
+            <p class="mt-3 font-mono text-[13px] tracking-[0.06em] text-white/60 uppercase">Grill · Serve · Grow</p>
+            <div class="mt-8"><a href="/MyMiniBBQ/" class="btn btn-primary btn-lg">Visit My Mini BBQ</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- My Tiny Garden -->
+      <div class="hero-slide bg-night text-white" role="group" aria-roledescription="slide" aria-label="6 of 7" data-slide>
+        <div class="wrap grid h-full items-center gap-10 py-14 lg:grid-cols-12 lg:py-0">
+          <div class="lg:col-span-6">
+            <span class="badge badge-dev">In development</span>
+            <p class="hero-title mt-6 text-brand">My Tiny Garden</p>
+            <p class="mt-3 font-mono text-[13px] tracking-[0.06em] text-white/60 uppercase">Plant · Harvest · Sell</p>
+            <div class="mt-8"><a href="/MyTinyGarden/" class="btn btn-primary btn-lg">Visit My Tiny Garden</a></div>
+          </div>
+          <div class="hidden justify-center lg:col-span-6 lg:flex" aria-hidden="true">
+            <img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="h-[420px] w-auto">
+          </div>
+        </div>
+      </div>
+
+      <!-- MeshChat -->
+      <div class="hero-slide bg-surface" role="group" aria-roledescription="slide" aria-label="7 of 7" data-slide>
+        <div class="wrap grid h-full items-center gap-10 py-14 lg:grid-cols-12 lg:py-0">
+          <div class="lg:col-span-6">
+            <div class="flex items-center gap-3"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" class="size-14 rounded-[14px] border-2 border-ink"><span class="badge badge-soon">Coming to Google Play</span></div>
+            <p class="hero-title mt-6">MeshChat</p>
+            <p class="mt-3 font-mono text-[13px] tracking-[0.06em] text-muted uppercase">App · Private · Serverless</p>
+            <div class="mt-8"><a href="/MeshChat/" class="btn btn-primary btn-lg">Visit MeshChat</a></div>
+          </div>
+          <div class="hidden justify-center gap-5 lg:col-span-6 lg:flex" aria-hidden="true">
+            <img src="/MeshChat/img/chat-light.webp" alt="" width="540" height="1169" loading="lazy" class="hero-shot -rotate-3">
+            <img src="/MeshChat/img/key-dark.webp" alt="" width="540" height="1169" loading="lazy" class="hero-shot mt-16 rotate-3">
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- principles strip -->
-    <div class="border-t border-line bg-surface" aria-hidden="true">
-      <div class="wrap flex gap-x-8 gap-y-2 overflow-x-auto py-4 font-mono text-[12.5px] tracking-[0.04em] whitespace-nowrap text-muted uppercase [&::-webkit-scrollbar]:hidden">
-        <span>Play beyond the edge</span><span class="text-line-2">/</span><span>No timers. No pressure.</span><span class="text-line-2">/</span><span>Respect your time</span><span class="text-line-2">/</span><span>Respect your data</span><span class="text-line-2">/</span><span>Respect your attention</span><span class="text-line-2">/</span><span>No dark patterns</span><span class="text-line-2">/</span><span>No noise</span>
+    <div class="pointer-events-none absolute inset-x-0 bottom-12 z-10 sm:bottom-14">
+      <div class="wrap flex items-center gap-3">
+        <button type="button" class="hero-arrow pointer-events-auto" data-prev aria-label="Previous slide"><svg viewBox="0 0 16 16" class="size-4" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" class="hero-arrow pointer-events-auto" data-next aria-label="Next slide"><svg viewBox="0 0 16 16" class="size-4" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="pointer-events-auto ml-2 flex gap-1.5" data-dots></div>
       </div>
     </div>
   </section>
 
   <!-- Games -->
-  <section id="games" class="section">
+  <section id="games" class="torn-top section before:!bg-paper">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Our games &amp; apps</p>
-          <h2 class="h-section mt-4">Games that keep opening up.</h2>
-        </div>
-        <p>Boards that grow. Rooms that unlock. Ponds to hop across.
+      <div class="text-center">
+        <p class="eyebrow">Our games &amp; apps</p>
+        <h2 class="h-section mt-4">Games that keep <span class="mark">opening up.</span></h2>
+        <p class="mx-auto mt-6 max-w-2xl text-[17px] leading-relaxed text-muted">Boards that grow. Rooms that unlock. Ponds to hop across.
           Grills to fire up and gardens to grow. Games built to be played your way — no account required.</p>
       </div>
 
-      <div class="mt-10 flex flex-wrap items-center justify-between gap-4">
-        <div class="-mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden" role="group" aria-label="Filter games and apps">
-          <div class="flex w-max gap-2" data-filters>
-            <button type="button" class="filter" data-filter="all" aria-pressed="true">All <span class="filter-count"></span></button>
-            <button type="button" class="filter" data-filter="out" aria-pressed="false">Out now <span class="filter-count"></span></button>
-            <button type="button" class="filter" data-filter="soon" aria-pressed="false">Coming soon <span class="filter-count"></span></button>
-            <button type="button" class="filter" data-filter="dev" aria-pressed="false">In development <span class="filter-count"></span></button>
-            <button type="button" class="filter" data-filter="app" aria-pressed="false">Apps <span class="filter-count"></span></button>
-          </div>
+      <div class="mt-10 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden" role="group" aria-label="Filter games and apps">
+        <div class="mx-auto flex w-max gap-2" data-filters>
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">All <span class="filter-count"></span></button>
+          <button type="button" class="filter" data-filter="out" aria-pressed="false">Out now <span class="filter-count"></span></button>
+          <button type="button" class="filter" data-filter="soon" aria-pressed="false">Coming soon <span class="filter-count"></span></button>
+          <button type="button" class="filter" data-filter="dev" aria-pressed="false">In development <span class="filter-count"></span></button>
+          <button type="button" class="filter" data-filter="app" aria-pressed="false">Apps <span class="filter-count"></span></button>
         </div>
       </div>
 
-      <ul class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-catalog>
+      <ul class="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3" data-catalog>
 
         <!-- Last Tile -->
-        <li class="game card card-hover reveal" data-tags="out game">
+        <li class="game reveal" data-tags="out game">
           <a href="/LastTile/" class="game-art bg-night" tabindex="-1" aria-hidden="true">
             <img src="/LastTile/img/merge-to-grow.jpg" alt="" width="720" height="1280" loading="lazy" class="size-full object-cover object-[50%_42%]">
           </a>
-          <div class="flex flex-1 flex-col p-6">
-            <div class="flex items-start justify-between gap-3">
-              <div class="flex items-center gap-3">
-                <img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-10 rounded-[10px]">
-                <div>
-                  <h3 class="h-card"><a href="/LastTile/" class="after:absolute after:inset-0">Last Tile</a></h3>
-                  <p class="tags mt-0.5">Merge · Survival · Puzzle</p>
-                </div>
+          <div class="mt-6 flex flex-1 flex-col">
+            <div class="flex items-center gap-3">
+              <img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-10 rounded-[10px] border-2 border-ink">
+              <div>
+                <h3 class="h-card"><a href="/LastTile/" class="hover:underline hover:decoration-brand hover:decoration-4 hover:underline-offset-4">Last Tile</a></h3>
+                <p class="tags mt-0.5">Merge · Survival · Puzzle</p>
               </div>
             </div>
             <p class="mt-4"><span class="badge badge-live">Out now on Google Play</span></p>
@@ -204,7 +283,7 @@
               small grid, merge matching tiles, and unlock a larger board.
               Survive as long as you can while keeping your combo chain alive.
               Free to play, with optional rewarded ads and a global leaderboard.</p>
-            <div class="game-links relative z-10">
+            <div class="game-links">
               <a href="https://play.google.com/store/apps/details?id=com.moonstreamtech.lasttile" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get it on Google Play</a>
               <a href="/LastTile/">Visit Last Tile</a>
               <a href="/LastTile/support/">Support</a>
@@ -214,19 +293,19 @@
         </li>
 
         <!-- Mozai -->
-        <li class="game card card-hover reveal" data-tags="soon game">
+        <li class="game reveal" data-tags="soon game">
           <a href="/Mozai/" class="game-art grid place-items-center bg-surface" tabindex="-1" aria-hidden="true">
             <img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="h-[78%] w-auto">
           </a>
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="h-card"><a href="/Mozai/" class="after:absolute after:inset-0">Mozai</a></h3>
+          <div class="mt-6 flex flex-1 flex-col">
+            <h3 class="h-card"><a href="/Mozai/" class="hover:underline hover:decoration-brand hover:decoration-4 hover:underline-offset-4">Mozai</a></h3>
             <p class="tags mt-0.5">Color · Pixel · Calm</p>
             <p class="mt-4"><span class="badge badge-soon">Coming to Google Play</span></p>
             <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">A calm pixel coloring game. Pick a color and
               discover the picture — correct cells fill in, wrong taps do
               nothing. No numbers, no pressure. Finish pictures to unlock new
               rooms. Free to play, with optional rewarded ads.</p>
-            <div class="game-links relative z-10">
+            <div class="game-links">
               <a href="/Mozai/" class="btn btn-secondary btn-sm">Visit Mozai</a>
               <a href="/Mozai/support/">Support</a>
               <a href="/Mozai/privacy-policy/">Privacy</a>
@@ -236,18 +315,18 @@
         </li>
 
         <!-- Ribbo -->
-        <li class="game card card-hover reveal" data-tags="dev game">
+        <li class="game reveal" data-tags="dev game">
           <a href="/Ribbo/" class="game-art bg-night" tabindex="-1" aria-hidden="true">
             <img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="mx-auto h-full w-auto">
           </a>
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="h-card"><a href="/Ribbo/" class="after:absolute after:inset-0">Ribbo<span class="text-muted"> Pond Hopper</span></a></h3>
+          <div class="mt-6 flex flex-1 flex-col">
+            <h3 class="h-card"><a href="/Ribbo/" class="hover:underline hover:decoration-brand hover:decoration-4 hover:underline-offset-4">Ribbo<span class="text-muted"> Pond Hopper</span></a></h3>
             <p class="tags mt-0.5">Hop · Collect · Compete</p>
             <p class="mt-4"><span class="badge badge-dev">In development</span></p>
             <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">Hop across the pond with Ribbo. Play Classic or Time Attack,
               dress Ribbo up with colors, hats and costumes, and chase your best
               score on the leaderboard.</p>
-            <div class="game-links relative z-10">
+            <div class="game-links">
               <a href="/Ribbo/" class="btn btn-secondary btn-sm">Visit Ribbo</a>
               <a href="/Ribbo/#support">Support</a>
               <a href="/Ribbo/#privacy-policy">Privacy</a>
@@ -256,18 +335,18 @@
         </li>
 
         <!-- My Mini BBQ -->
-        <li class="game card card-hover reveal" data-tags="dev game">
+        <li class="game reveal" data-tags="dev game">
           <a href="/MyMiniBBQ/" class="game-art bg-surface" tabindex="-1" aria-hidden="true">
             <img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_28%]">
           </a>
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="h-card"><a href="/MyMiniBBQ/" class="after:absolute after:inset-0">My Mini BBQ</a></h3>
+          <div class="mt-6 flex flex-1 flex-col">
+            <h3 class="h-card"><a href="/MyMiniBBQ/" class="hover:underline hover:decoration-brand hover:decoration-4 hover:underline-offset-4">My Mini BBQ</a></h3>
             <p class="tags mt-0.5">Grill · Serve · Grow</p>
             <p class="mt-4"><span class="badge badge-dev">In development</span></p>
             <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">An arcade idle BBQ tycoon. Grill burgers, serve the
               cars lining up at your window, hire a crew and grow a tiny hut
               into a busy kitchen. Free to play, with ads.</p>
-            <div class="game-links relative z-10">
+            <div class="game-links">
               <a href="/MyMiniBBQ/" class="btn btn-secondary btn-sm">Visit My Mini BBQ</a>
               <a href="/MyMiniBBQ/#support">Support</a>
               <a href="/MyMiniBBQ/#privacy-policy">Privacy</a>
@@ -276,18 +355,18 @@
         </li>
 
         <!-- My Tiny Garden -->
-        <li class="game card card-hover reveal" data-tags="dev game">
+        <li class="game reveal" data-tags="dev game">
           <a href="/MyTinyGarden/" class="game-art bg-night" tabindex="-1" aria-hidden="true">
             <img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="mx-auto h-full w-auto">
           </a>
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="h-card"><a href="/MyTinyGarden/" class="after:absolute after:inset-0">My Tiny Garden</a></h3>
+          <div class="mt-6 flex flex-1 flex-col">
+            <h3 class="h-card"><a href="/MyTinyGarden/" class="hover:underline hover:decoration-brand hover:decoration-4 hover:underline-offset-4">My Tiny Garden</a></h3>
             <p class="tags mt-0.5">Plant · Harvest · Sell</p>
             <p class="mt-4"><span class="badge badge-dev">In development</span></p>
             <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">A cozy gardening game. Grow vegetables, fruit and
               flowers, sell your harvest at the stand, bargain with customers
               and decorate every corner. Free to play, with ads.</p>
-            <div class="game-links relative z-10">
+            <div class="game-links">
               <a href="/MyTinyGarden/" class="btn btn-secondary btn-sm">Visit My Tiny Garden</a>
               <a href="/MyTinyGarden/#support">Support</a>
               <a href="/MyTinyGarden/#privacy-policy">Privacy</a>
@@ -296,15 +375,15 @@
         </li>
 
         <!-- MeshChat -->
-        <li class="game card card-hover reveal" data-tags="soon app">
+        <li class="game reveal" data-tags="soon app">
           <a href="/MeshChat/" class="game-art bg-surface" tabindex="-1" aria-hidden="true">
             <img src="/MeshChat/img/chat-light.webp" alt="" width="540" height="1169" loading="lazy" class="absolute top-7 left-1/2 w-[44%] -translate-x-1/2 rounded-t-[22px] border-x-[5px] border-t-[5px] border-night">
           </a>
-          <div class="flex flex-1 flex-col p-6">
+          <div class="mt-6 flex flex-1 flex-col">
             <div class="flex items-center gap-3">
-              <img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-10 rounded-[10px]">
+              <img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-10 rounded-[10px] border-2 border-ink">
               <div>
-                <h3 class="h-card"><a href="/MeshChat/" class="after:absolute after:inset-0">MeshChat</a></h3>
+                <h3 class="h-card"><a href="/MeshChat/" class="hover:underline hover:decoration-brand hover:decoration-4 hover:underline-offset-4">MeshChat</a></h3>
                 <p class="tags mt-0.5">App · Private · Serverless</p>
               </div>
             </div>
@@ -312,7 +391,7 @@
             <p class="mt-4 mb-6 text-[15px] leading-relaxed text-muted">Private one-to-one messaging with no servers.
               End-to-end encrypted, no phone number or e-mail, and messages that
               delete themselves after 30 days. Free, with no ads.</p>
-            <div class="game-links relative z-10">
+            <div class="game-links">
               <a href="/MeshChat/" class="btn btn-secondary btn-sm">Visit MeshChat</a>
               <a href="/MeshChat/support/">Support</a>
               <a href="/MeshChat/privacy-policy/">Privacy</a>
@@ -324,39 +403,57 @@
     </div>
   </section>
 
-  <!-- Studio -->
-  <section id="studio" class="section band">
+  <!-- Studio + team -->
+  <section id="studio" class="section band-dark on-dark !py-20 sm:!py-28">
     <div class="wrap">
-      <div class="grid gap-12 lg:grid-cols-12">
+      <h2 class="h-section text-center !text-[clamp(2.6rem,6vw,4.75rem)]">We are <span class="mark">Moonstream</span></h2>
+      <p class="mx-auto mt-6 max-w-xl text-center font-display text-[clamp(1.25rem,2.4vw,1.75rem)] leading-tight tracking-[0.01em] uppercase">And we make games. Calm, honest, made to last.</p>
+
+      <ul class="mx-auto mt-14 grid max-w-2xl grid-cols-2 gap-6 sm:gap-16">
+        <li class="reveal text-center">
+          <img src="/assets/img/team/hasancan.webp" alt="Illustrated portrait of Hasancan Özmen" width="678" height="720" loading="lazy" class="mx-auto h-[140px] w-auto drop-shadow-[0_14px_24px_rgb(0_0_0/0.5)] transition-transform duration-300 hover:-rotate-3 sm:h-[220px]">
+          <p class="mt-5 font-display text-[19px] leading-none tracking-[0.02em] text-brand uppercase sm:text-[24px]">Hasancan Özmen</p>
+          <p class="mt-2 text-[13.5px] font-medium text-white/80 sm:text-[15px]">Game Designer</p>
+        </li>
+        <li class="reveal text-center">
+          <img src="/assets/img/team/kaan.webp" alt="Illustrated portrait of Kaan Kozan" width="670" height="720" loading="lazy" class="mx-auto h-[140px] w-auto drop-shadow-[0_14px_24px_rgb(0_0_0/0.5)] transition-transform duration-300 hover:rotate-3 sm:h-[220px]">
+          <p class="mt-5 font-display text-[19px] leading-none tracking-[0.02em] text-brand uppercase sm:text-[24px]">Kaan Kozan</p>
+          <p class="mt-2 text-[13.5px] font-medium text-white/80 sm:text-[15px]">Founder &amp; Studio Director</p>
+        </li>
+      </ul>
+
+      <div class="mt-24 grid gap-12 lg:grid-cols-12">
         <div class="lg:col-span-5">
           <p class="eyebrow">About the studio</p>
-          <p class="mt-5 text-[clamp(1.5rem,2.6vw,2.1rem)] leading-[1.2] font-semibold tracking-[-0.03em] text-balance">Moonstream Tech is a small, independent software studio. Every app
+          <p class="mt-5 text-[clamp(1.4rem,2.4vw,1.9rem)] leading-[1.25] font-semibold tracking-[-0.02em] text-balance">Moonstream Tech is a small, independent software studio. Every app
             we ship is built with the same principles:</p>
-          <p class="mt-6 max-w-md text-[17px] leading-relaxed text-muted">No dark patterns. No noise. <span class="text-ink">Just software we'd want to use ourselves.</span></p>
+          <p class="mt-6 max-w-md text-[17px] leading-relaxed text-white/60">No dark patterns. No noise. <span class="text-white">Just software we'd want to use ourselves.</span></p>
+          <p class="mt-6 inline-flex rounded-full border-2 border-brand px-4 py-1.5 font-display text-[15px] tracking-[0.03em] text-brand uppercase">No timers. No pressure.</p>
         </div>
-        <ol class="reveal grid gap-3 lg:col-span-7">
-          <li class="card flex items-center gap-6 p-6 sm:p-7">
-            <span class="num text-[13px] text-muted">01</span>
-            <span class="text-[clamp(1.5rem,2.8vw,2.25rem)] leading-none font-semibold tracking-[-0.035em]">Respect your time.</span>
+        <ol class="reveal grid gap-4 lg:col-span-7">
+          <li class="flex items-center gap-6 rounded-[18px] border-2 border-white/80 p-6 shadow-[5px_5px_0_var(--color-brand)] sm:p-7">
+            <span class="font-display text-[22px] text-brand">01</span>
+            <span class="font-display text-[clamp(1.6rem,3vw,2.4rem)] leading-none tracking-[0.01em] uppercase">Respect your time.</span>
           </li>
-          <li class="card flex items-center gap-6 p-6 sm:p-7">
-            <span class="num text-[13px] text-muted">02</span>
-            <span class="text-[clamp(1.5rem,2.8vw,2.25rem)] leading-none font-semibold tracking-[-0.035em]">Respect your data.</span>
+          <li class="flex items-center gap-6 rounded-[18px] border-2 border-white/80 p-6 shadow-[5px_5px_0_var(--color-brand)] sm:p-7">
+            <span class="font-display text-[22px] text-brand">02</span>
+            <span class="font-display text-[clamp(1.6rem,3vw,2.4rem)] leading-none tracking-[0.01em] uppercase">Respect your data.</span>
           </li>
-          <li class="card flex items-center gap-6 p-6 sm:p-7">
-            <span class="num text-[13px] text-muted">03</span>
-            <span class="text-[clamp(1.5rem,2.8vw,2.25rem)] leading-none font-semibold tracking-[-0.035em]">Respect your attention.</span>
+          <li class="flex items-center gap-6 rounded-[18px] border-2 border-white/80 p-6 shadow-[5px_5px_0_var(--color-brand)] sm:p-7">
+            <span class="font-display text-[22px] text-brand">03</span>
+            <span class="font-display text-[clamp(1.6rem,3vw,2.4rem)] leading-none tracking-[0.01em] uppercase">Respect your attention.</span>
           </li>
         </ol>
       </div>
-      <dl class="stats reveal mt-12 !border-transparent">
+
+      <dl class="stats reveal mt-14">
         <div>
           <dt>Games — Last Tile is out now; Mozai, Ribbo, My Mini BBQ and My Tiny Garden are on the way</dt>
-          <dd class="num !font-sans">5</dd>
+          <dd>5</dd>
         </div>
         <div>
           <dt>Personal accounts required to play</dt>
-          <dd class="num !font-sans">0</dd>
+          <dd>0</dd>
         </div>
         <div>
           <dt>Gameplay that works without a connection</dt>
@@ -367,36 +464,39 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="wrap">
-      <div class="band-dark on-dark reveal grid gap-10 overflow-hidden rounded-[28px] p-8 sm:p-12 lg:grid-cols-12 lg:items-end">
-        <div class="lg:col-span-7">
-          <p class="eyebrow">Contact</p>
-          <h2 class="h-section mt-4">Questions, bugs, ideas — we read everything.</h2>
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a href="mailto:moonstreamtech@gmail.com" class="btn btn-accent btn-lg">moonstreamtech@gmail.com</a>
-            <p class="text-[14.5px] text-white/55">We aim to respond within 2–3 business days.</p>
-          </div>
-        </div>
-        <div class="grid gap-3 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
-          <a href="/support.html" class="group rounded-[16px] border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-white/25 hover:bg-white/[0.06]">
-            <p class="text-[17px] font-semibold tracking-[-0.01em]">Support</p>
-            <p class="mt-1 text-[14.5px] text-white/55">Help, feedback and contact for all Moonstream Tech apps.</p>
-            <span class="link-arrow mt-3 text-[14px] text-brand">Get help</span>
-          </a>
-          <a href="/privacy.html" class="group rounded-[16px] border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-white/25 hover:bg-white/[0.06]">
-            <p class="text-[17px] font-semibold tracking-[-0.01em]">Privacy</p>
-            <p class="mt-1 text-[14.5px] text-white/55">How we approach user information across every app we publish.</p>
-            <span class="link-arrow mt-3 text-[14px] text-brand">Read the policy</span>
-          </a>
-        </div>
+  <section id="contact" class="relative overflow-hidden pt-24 pb-36 sm:pt-32 sm:pb-44">
+    <div class="wrap relative z-10">
+      <p class="eyebrow">Contact</p>
+      <h2 class="h-section mt-4 max-w-3xl !text-[clamp(2.4rem,5.4vw,4.25rem)]">Questions, bugs, ideas — we read <span class="mark">everything.</span></h2>
+      <div class="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary btn-lg self-start normal-case">moonstreamtech@gmail.com</a>
+        <p class="text-[15px] text-muted">We aim to respond within 2–3 business days.</p>
+      </div>
+      <div class="mt-12 grid max-w-2xl gap-5 sm:grid-cols-2">
+        <a href="/support.html" class="card card-hover group p-6">
+          <p class="h-card">Support</p>
+          <p class="mt-1.5 text-[15px] text-muted">Help, feedback and contact for all Moonstream Tech apps.</p>
+          <span class="link-arrow mt-4 text-[14.5px]">Get help</span>
+        </a>
+        <a href="/privacy.html" class="card card-hover group p-6">
+          <p class="h-card">Privacy</p>
+          <p class="mt-1.5 text-[15px] text-muted">How we approach user information across every app we publish.</p>
+          <span class="link-arrow mt-4 text-[14.5px]">Read the policy</span>
+        </a>
       </div>
     </div>
+    <!-- the studio moon, rising out of the footer -->
+    <svg class="pointer-events-none absolute -right-16 -bottom-24 w-[300px] sm:-right-10 sm:w-[420px] lg:w-[520px]" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="210" r="170" fill="#0c0d0f"/>
+      <circle cx="140" cy="150" r="26" fill="#17181b"/><circle cx="250" cy="120" r="14" fill="#17181b"/><circle cx="270" cy="230" r="34" fill="#17181b"/><circle cx="170" cy="270" r="18" fill="#17181b"/>
+      <circle cx="58" cy="44" r="16" fill="#a0f34c" stroke="#0c0d0f" stroke-width="4"/>
+      <path d="M352 30l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#0c0d0f"/><path d="M20 140l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#0c0d0f"/>
+    </svg>
   </section>
 </main>
 
 <!-- @footer -->
-<footer class="band-dark on-dark relative overflow-hidden">
+<footer class="band-dark on-dark torn-top overflow-x-clip">
   <div class="wrap pt-14 pb-8 sm:pt-20">
     <div class="grid gap-12 lg:grid-cols-12">
       <div class="lg:col-span-4">

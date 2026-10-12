@@ -31,6 +31,50 @@
     });
   });
 
+  // Hero carousel (home): arrows, dots, swipe, autoplay that pauses on hover/focus
+  document.querySelectorAll("[data-carousel]").forEach((root) => {
+    const slides = [...root.querySelectorAll("[data-slide]")];
+    const dots = root.querySelector("[data-dots]");
+    if (slides.length < 2) return;
+    let index = 0, timer = null;
+    const dotButtons = slides.map((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "hero-dot";
+      b.setAttribute("aria-label", `Go to slide ${i + 1}`);
+      b.addEventListener("click", () => { show(i); restart(); });
+      dots?.append(b);
+      return b;
+    });
+    const show = (i) => {
+      index = (i + slides.length) % slides.length;
+      slides.forEach((s, n) => {
+        const on = n === index;
+        s.classList.toggle("is-active", on);
+        s.toggleAttribute("inert", !on);
+        s.setAttribute("aria-hidden", String(!on));
+      });
+      dotButtons.forEach((b, n) => b.setAttribute("aria-current", String(n === index)));
+    };
+    const stop = () => { clearInterval(timer); timer = null; };
+    const restart = () => { stop(); if (!reduceMotion) timer = setInterval(() => show(index + 1), 6500); };
+    root.querySelector("[data-prev]")?.addEventListener("click", () => { show(index - 1); restart(); });
+    root.querySelector("[data-next]")?.addEventListener("click", () => { show(index + 1); restart(); });
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", restart);
+    root.addEventListener("focusin", stop);
+    let x0 = null;
+    root.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener("touchend", (e) => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) { show(index + (dx < 0 ? 1 : -1)); restart(); }
+      x0 = null;
+    });
+    show(0);
+    restart();
+  });
+
   // Game catalog filters (home)
   const filters = document.querySelector("[data-filters]");
   const cards = [...document.querySelectorAll("[data-catalog] [data-tags]")];

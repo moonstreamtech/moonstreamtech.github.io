@@ -11,9 +11,10 @@ npm run dev     # watch mode, rebuilds assets/css/site.css
 npm run build   # shared layout + minified CSS + cache-bust links — commit the results
 ```
 
-Design tokens and components live in `src/site.css`: a light system with
-white paper, near-black ink, one warm-grey surface and brand lime `#A0F34C`
-for small signals only (never text on white). Fonts are Geist and Geist Mono.
+Design tokens and components live in `src/site.css`: a game-studio look with
+black and white bands joined by torn-paper edges, ink-outlined buttons and cards
+with hard offset shadows, and brand lime `#A0F34C` as the studio colour (never
+text on white). Fonts: Lilita One for headings, Geist and Geist Mono for text.
 
 The header, the per-game bar and the footer are shared. Pages carry marker
 comments (`<!-- @header -->`, `<!-- @product LastTile -->`, `<!-- @footer -->`)

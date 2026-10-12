@@ -1,12 +1,14 @@
 /*
  * moonstreamtech.com — design system
  *
- * A light, editorial system: white paper, near-black ink, one warm-grey
- * surface for alternating bands, and the brand lime #A0F34C kept for small
- * signals only (status dots, the wordmark pill, focus rings, one CTA on dark).
- * Lime is never used for text on white — it fails contrast.
+ * A game-studio system: black and white bands joined by torn-paper edges,
+ * chunky display type, ink-outlined buttons and cards with hard offset
+ * shadows, and the brand lime #A0F34C as the studio colour (button fills,
+ * brush underlines, offset blocks behind artwork). Lime is never used for
+ * text on white — it fails contrast; on black it is fine.
  *
- * Type: Geist for everything, Geist Mono for eyebrows, labels and numbers.
+ * Type: Lilita One for display headings, Geist for reading, Geist Mono for
+ * labels and numbers.
  * Tailwind's default palette is removed; use the tokens below plus
  * opacity modifiers (ink/60, white/70…).
  *
@@ -44,8 +46,9 @@
 
   --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: "Lilita One", "Geist", ui-sans-serif, system-ui, sans-serif;
 
-  --radius-card: 20px;
+  --radius-card: 18px;
 
   --animate-float: float 8s ease-in-out infinite;
   --animate-spin-slow: spin 40s linear infinite;
@@ -129,16 +132,25 @@
     @apply text-white/55;
   }
   .h-display {
-    @apply text-[clamp(2.75rem,6.4vw,5.25rem)] leading-[0.98] font-semibold tracking-[-0.045em] text-balance;
+    @apply font-display text-[clamp(3rem,7vw,5.75rem)] leading-[0.92] font-normal tracking-[0.005em] text-balance uppercase;
   }
   .h-page {
-    @apply text-[clamp(2.4rem,5.2vw,4.25rem)] leading-[1] font-semibold tracking-[-0.04em] text-balance;
+    @apply font-display text-[clamp(2.6rem,5.6vw,4.5rem)] leading-[0.95] font-normal tracking-[0.005em] text-balance uppercase;
   }
   .h-section {
-    @apply text-[clamp(2rem,3.8vw,3rem)] leading-[1.05] font-semibold tracking-[-0.035em] text-balance;
+    @apply font-display text-[clamp(2.2rem,4.2vw,3.4rem)] leading-[0.98] font-normal tracking-[0.005em] text-balance uppercase;
   }
   .h-card {
-    @apply text-[20px] leading-tight font-semibold tracking-[-0.02em];
+    @apply font-display text-[22px] leading-[1.05] font-normal tracking-[0.01em] uppercase;
+  }
+  /* brush-stroke underline under a key word */
+  .mark {
+    @apply relative isolate inline-block whitespace-nowrap;
+  }
+  .mark::after {
+    content: "";
+    @apply pointer-events-none absolute right-[-3%] -bottom-[0.12em] left-[-3%] -z-10 h-[0.22em] bg-brand;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 7.5C30 3 62 2.6 98 4.2c33 1.4 64 1.6 100-1.2l-.6 5.6c-35 3.2-68 3.3-101 2-35-1.4-65-.8-94 2.4z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
   }
   .lead {
     @apply text-[18px] leading-[1.6] text-ink-2 sm:text-[19px];
@@ -168,28 +180,34 @@
 
   /* ── Buttons */
   .btn {
-    @apply inline-flex h-11 cursor-pointer items-center justify-center gap-2 rounded-[12px] px-5 text-[15px] font-medium whitespace-nowrap transition duration-200 select-none;
+    @apply inline-flex h-11 cursor-pointer items-center justify-center gap-2 rounded-[12px] border-2 border-ink px-5 font-display text-[16px] tracking-[0.02em] whitespace-nowrap uppercase shadow-[3px_3px_0_var(--color-ink)] transition duration-150 select-none hover:-translate-x-px hover:-translate-y-px hover:shadow-[5px_5px_0_var(--color-ink)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none;
   }
   .btn-sm {
-    @apply h-9 rounded-[10px] px-3.5 text-[14px];
+    @apply h-9 rounded-[10px] px-3.5 text-[14px] shadow-[2px_2px_0_var(--color-ink)] hover:shadow-[3px_3px_0_var(--color-ink)];
   }
   .btn-lg {
-    @apply h-12 px-6 text-[16px];
+    @apply h-[52px] px-7 text-[18px];
   }
-  .btn-primary {
-    @apply bg-ink text-white hover:bg-ink-2;
-  }
-  .btn-secondary {
-    @apply border border-line-2 bg-paper text-ink hover:border-ink/40 hover:bg-surface;
-  }
+  .btn-primary,
   .btn-accent {
-    @apply bg-brand text-ink hover:bg-white;
+    @apply bg-brand text-ink;
   }
+  .btn-secondary,
   .btn-light {
-    @apply bg-white text-ink hover:bg-white/85;
+    @apply bg-white text-ink;
   }
   .btn-outline-light {
-    @apply border border-white/20 text-white hover:border-white/50 hover:bg-white/5;
+    @apply bg-transparent text-white;
+  }
+  .band-dark .btn,
+  .on-dark .btn,
+  .site-header .btn {
+    @apply border-white shadow-[3px_3px_0_var(--color-white)] hover:shadow-[5px_5px_0_var(--color-brand)];
+  }
+  .band-dark .btn-sm,
+  .on-dark .btn-sm,
+  .site-header .btn-sm {
+    @apply shadow-[2px_2px_0_var(--color-white)] hover:shadow-[3px_3px_0_var(--color-brand)];
   }
   .btn-icon {
     @apply size-[1.05em] shrink-0;
@@ -212,7 +230,7 @@
 
   /* ── Badges and tags */
   .badge {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-paper px-2.5 py-1 text-[12.5px] leading-none font-medium whitespace-nowrap text-ink-2;
+    @apply inline-flex items-center gap-1.5 rounded-full border-[1.5px] border-ink bg-paper px-2.5 py-1 text-[12.5px] leading-none font-semibold whitespace-nowrap text-ink;
   }
   .badge::before {
     content: "";
@@ -262,45 +280,42 @@
 
   /* ── Cards */
   .card {
-    @apply rounded-[var(--radius-card)] border border-line bg-paper;
+    @apply rounded-[var(--radius-card)] border-2 border-ink bg-paper shadow-[5px_5px_0_var(--color-ink)];
   }
   .card-hover {
-    @apply transition duration-300 hover:-translate-y-0.5 hover:border-line-2 hover:shadow-[0_12px_32px_-16px_rgb(0_0_0/0.18)];
-  }
-  .band .card {
-    @apply border-transparent;
+    @apply transition duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_var(--color-brand)];
   }
   .band-dark .card {
-    @apply border-white/10 bg-night-2;
+    @apply border-white/80 bg-night-2 shadow-[5px_5px_0_var(--color-brand)];
   }
 
   /* ── Header */
   .site-header {
-    @apply sticky top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-xl backdrop-saturate-150;
+    @apply sticky top-0 z-50 bg-night text-white;
   }
   .nav-link {
-    @apply inline-flex h-9 items-center gap-1 rounded-[10px] px-3 text-[14.5px] text-ink-2 transition-colors hover:bg-surface hover:text-ink;
+    @apply inline-flex h-9 items-center gap-1 rounded-[10px] px-3 font-display text-[16px] tracking-[0.03em] text-white uppercase transition-colors hover:text-brand;
   }
   .nav-link[aria-current="page"],
   .nav-link[aria-expanded="true"] {
-    @apply text-ink;
-  }
-  .nav-link[aria-current="page"] {
-    @apply font-medium;
+    @apply text-brand;
   }
   .games-menu {
-    @apply absolute top-full left-1/2 mt-2 w-[min(640px,calc(100vw-2rem))] -translate-x-1/2 rounded-[18px] border border-line bg-paper p-2 shadow-[0_24px_60px_-24px_rgb(0_0_0/0.25)];
+    @apply absolute top-full left-1/2 mt-3 w-[min(640px,calc(100vw-2rem))] -translate-x-1/2 rounded-[18px] border-2 border-ink bg-paper p-2 text-ink shadow-[6px_6px_0_var(--color-brand)];
   }
   .menu-item {
     @apply flex items-center gap-3 rounded-[12px] p-2.5 transition-colors hover:bg-surface;
   }
   .mobile-link {
-    @apply flex items-center justify-between rounded-[12px] px-3 py-3 text-[17px] font-medium hover:bg-surface;
+    @apply flex items-center justify-between rounded-[12px] px-3 py-3 font-display text-[22px] tracking-[0.02em] uppercase hover:bg-white/5 hover:text-brand;
+  }
+  #mobile-menu .menu-item {
+    @apply hover:bg-white/5;
   }
 
   /* ── Product bar: the per-game sub-navigation under the site header */
   .product-bar {
-    @apply sticky top-16 z-40 border-b border-line bg-paper/90 backdrop-blur-xl;
+    @apply sticky top-16 z-40 border-b-2 border-ink bg-paper;
   }
   .tab {
     @apply relative inline-flex h-12 shrink-0 items-center px-3 text-[14.5px] text-muted transition-colors hover:text-ink;
@@ -310,7 +325,7 @@
   }
   .tab[aria-current="page"]::after {
     content: "";
-    @apply absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-ink;
+    @apply absolute inset-x-3 -bottom-[2px] h-[4px] rounded-full bg-brand;
   }
 
   /* ── Breadcrumb */
@@ -338,15 +353,52 @@
     @apply relative block overflow-hidden rounded-[16px];
   }
   .shot {
-    @apply w-full rounded-[18px] border border-line;
+    @apply w-full rounded-[18px] border-2 border-ink shadow-[6px_6px_0_var(--color-brand)];
+  }
+
+  /* ── Home hero: banner carousel */
+  .hero {
+    @apply relative overflow-hidden bg-night;
+  }
+  .hero-track {
+    @apply relative grid;
+  }
+  .hero-slide {
+    @apply relative col-start-1 row-start-1 min-h-[600px] overflow-hidden pb-24 transition-opacity duration-700 ease-out lg:h-[660px] lg:min-h-0 lg:pb-16;
+  }
+  .js .hero-slide:not(.is-active) {
+    @apply pointer-events-none invisible opacity-0;
+  }
+  .hero-title {
+    @apply font-display text-[clamp(3.5rem,9vw,7.5rem)] leading-[0.88] tracking-[0.005em] uppercase;
+    text-shadow: 4px 4px 0 var(--color-ink);
+  }
+  .bg-surface .hero-title,
+  .bg-brand .hero-title {
+    text-shadow: 4px 4px 0 var(--color-brand);
+  }
+  .hero-shot {
+    @apply h-[440px] w-auto rounded-[22px] border-[3px] border-white shadow-[8px_8px_0_var(--color-brand)];
+  }
+  .bg-surface .hero-shot {
+    @apply border-ink;
+  }
+  .hero-arrow {
+    @apply grid size-11 cursor-pointer place-items-center rounded-full border-2 border-ink bg-white text-ink shadow-[2px_2px_0_var(--color-ink)] transition hover:bg-brand;
+  }
+  .hero-dot {
+    @apply h-2.5 w-2.5 cursor-pointer rounded-full border-2 border-ink bg-white transition-all;
+  }
+  .hero-dot[aria-current="true"] {
+    @apply w-7 bg-brand;
   }
 
   /* ── Game catalog */
   .filter {
-    @apply inline-flex h-9 cursor-pointer items-center gap-2 rounded-full border border-line bg-paper px-3.5 text-[14px] font-medium text-ink-2 transition-colors hover:border-line-2 hover:text-ink;
+    @apply inline-flex h-10 cursor-pointer items-center gap-2 rounded-full border-2 border-ink bg-paper px-4 font-display text-[15px] tracking-[0.03em] text-ink uppercase transition hover:bg-surface;
   }
   .filter[aria-pressed="true"] {
-    @apply border-ink bg-ink text-white;
+    @apply bg-brand shadow-[2px_2px_0_var(--color-ink)];
   }
   .filter-count {
     @apply font-mono text-[11.5px] tabular-nums opacity-55;
@@ -358,7 +410,10 @@
     display: none;
   }
   .game-art {
-    @apply relative block aspect-[16/11] overflow-hidden border-b border-line;
+    @apply relative block aspect-[16/11] overflow-hidden rounded-[14px] border-2 border-ink shadow-[10px_10px_0_var(--color-brand)] transition duration-200;
+  }
+  .game:hover .game-art {
+    @apply -translate-x-1 -translate-y-1 shadow-[14px_14px_0_var(--color-brand)];
   }
   .game-art > img {
     @apply transition-transform duration-700 ease-out;
@@ -381,7 +436,7 @@
     @apply font-mono text-[12.5px] text-muted tabular-nums;
   }
   .feature-title {
-    @apply mt-8 text-[19px] leading-snug font-semibold tracking-[-0.015em];
+    @apply mt-8 font-display text-[21px] leading-[1.1] tracking-[0.01em] uppercase;
   }
   .feature-text {
     @apply mt-2 text-[15px] leading-relaxed text-muted;
@@ -396,7 +451,7 @@
     @apply grid gap-2 border-b border-line py-6 sm:grid-cols-12 sm:gap-8 sm:py-8;
   }
   .step-num {
-    @apply font-mono text-[14px] text-muted tabular-nums sm:col-span-2 sm:pt-1;
+    @apply font-display text-[34px] leading-none text-muted sm:col-span-2;
   }
   .step-text {
     @apply text-[17px] leading-relaxed text-ink-2 sm:col-span-10 sm:text-[19px];
@@ -420,13 +475,25 @@
 
   /* ── Stats */
   .stats {
-    @apply grid gap-px overflow-hidden rounded-[var(--radius-card)] border border-line bg-line sm:grid-cols-3;
+    @apply grid gap-0.5 overflow-hidden rounded-[var(--radius-card)] border-2 border-ink bg-ink shadow-[5px_5px_0_var(--color-ink)] sm:grid-cols-3;
   }
   .stats > div {
     @apply flex flex-col gap-2 bg-paper p-6 sm:p-8;
   }
+  .band-dark .stats {
+    @apply border-white/80 bg-white/80 shadow-[5px_5px_0_var(--color-brand)];
+  }
+  .band-dark .stats > div {
+    @apply bg-night;
+  }
+  .band-dark .stats dt {
+    @apply text-white/60;
+  }
+  .band-dark .stats dd {
+    @apply text-brand;
+  }
   .stats dd {
-    @apply order-first text-[44px] leading-none font-semibold tracking-[-0.04em];
+    @apply order-first font-display text-[52px] leading-none uppercase;
   }
   .stats dt {
     @apply text-[14.5px] leading-snug text-muted;
@@ -440,7 +507,7 @@
     @apply mt-5;
   }
   .doc h2 {
-    @apply mt-14 scroll-mt-36 border-t border-line pt-10 text-[24px] leading-tight font-semibold tracking-[-0.025em] text-ink first:mt-0 first:border-0 first:pt-0 sm:text-[28px];
+    @apply mt-14 scroll-mt-36 border-t-2 border-ink pt-9 font-display text-[26px] leading-[1.05] font-normal tracking-[0.005em] text-ink first:mt-0 first:border-0 first:pt-0 sm:text-[30px];
   }
   .doc h3 {
     @apply mt-9 text-[18px] font-semibold tracking-[-0.01em] text-ink;
@@ -511,7 +578,7 @@
     @apply border-line-2 bg-surface;
   }
   .faq[open] > summary::after {
-    @apply rotate-45 border-ink bg-ink text-white;
+    @apply rotate-45 border-ink bg-brand text-ink;
   }
   .faq > .faq-body {
     @apply pb-6 text-ink-2 sm:pr-12;
@@ -545,6 +612,37 @@
   }
   .toc-mobile .toc {
     @apply px-4 pb-4;
+  }
+
+  /* ── Torn-paper edges: every dark band and the footer tear into the white
+     around them. The edge is a pseudo-element in the band's own colour. */
+  section.band-dark,
+  .torn,
+  .torn-top {
+    @apply relative z-[1];
+  }
+  section.band-dark::before,
+  section.band-dark::after,
+  .torn::before,
+  .torn::after,
+  .torn-top::before {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 h-[22px] bg-night sm:h-[30px];
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30' preserveAspectRatio='none'%3E%3Cpath d='M0 30V17l38-6 30 8 46-12 41 9 33-11 52 13 29-7 47 4 35-12 44 10 38-3 31 9 49-14 37 8 40-6 33 10 46-9 28 5 51-12 36 9 42-4 34 8 47-13 31 7 45-5 29 9 41-10 38 6 30-8 44 12 38-7V30z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  }
+  section.band-dark::before,
+  .torn::before,
+  .torn-top::before {
+    @apply bottom-full -mb-px;
+  }
+  section.band-dark::after,
+  .torn::after {
+    @apply top-full -mt-px -scale-100;
+  }
+  /* a torn edge in another colour: set --torn on the element */
+  .torn-lime::before,
+  .torn-lime::after {
+    @apply bg-brand;
   }
 
   /* ── Footer */
