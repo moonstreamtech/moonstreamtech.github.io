@@ -8,12 +8,17 @@ Static HTML served by GitHub Pages, styled with Tailwind CSS v4.
 ```sh
 npm install
 npm run dev     # watch mode, rebuilds assets/css/site.css
-npm run build   # minified build + cache-bust links — commit the results
+npm run build   # shared layout + minified CSS + cache-bust links — commit the results
 ```
 
-Design tokens live in `src/site.css`. The palette is locked to black, white
-and brand lime `#A0F34C`, used 60 / 30 / 10 (black page, white surfaces,
-lime accents only); font is Google Sans.
+Design tokens and components live in `src/site.css`: a light system with
+white paper, near-black ink, one warm-grey surface and brand lime `#A0F34C`
+for small signals only (never text on white). Fonts are Geist and Geist Mono.
+
+The header, the per-game bar and the footer are shared. Pages carry marker
+comments (`<!-- @header -->`, `<!-- @product LastTile -->`, `<!-- @footer -->`)
+and `scripts/layout.mjs` rewrites what sits between them — edit the chrome
+(and the list of games) there, then run `npm run build`.
 
 ## Do not move or rename
 

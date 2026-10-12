@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ribbo: Pond Hopper — Official Site</title>
 <meta name="description" content="Ribbo: Pond Hopper is a retro pixel-art arcade game from Moonstream Tech, in development. Help, support, privacy policy and account deletion.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://moonstreamtech.com/Ribbo/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Moonstream Tech">
@@ -15,261 +15,336 @@
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=1ae8e6d4">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=09b37989">
 <script>document.documentElement.classList.add('js')</script>
-<script src="/assets/js/site.js?v=1ae8e6d4" defer></script>
+<script src="/assets/js/site.js?v=09b37989" defer></script>
 </head>
 <body>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-black">Skip to content</a>
-
-<header class="fixed inset-x-0 top-0 z-50">
-  <div class="shell pt-3">
-    <nav class="flex h-14 items-center justify-between rounded-full border border-white/10 bg-black/70 pr-2 pl-5 backdrop-blur-xl backdrop-saturate-150" aria-label="Main">
-      <a href="/" class="text-[20px] text-white" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
-      <div class="hidden items-center md:flex">
-        <a class="nav-link" href="/#games" aria-current="page">Games</a>
-        <a class="nav-link" href="/#studio">Studio</a>
-        <a class="nav-link" href="/support.html">Support</a>
-        <a class="nav-link" href="/privacy.html">Privacy</a>
+<!-- @header -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-[10px] focus:bg-ink focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+<header class="site-header">
+  <div class="wrap flex h-16 items-center justify-between gap-6">
+    <a href="/" class="text-[19px] text-ink" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
+      <div class="relative" data-dropdown>
+        <button type="button" class="nav-link" aria-current="page" aria-expanded="false" aria-controls="games-menu" data-dropdown-toggle>Games <svg class="size-3.5 opacity-60 transition-transform [[aria-expanded=true]>&]:rotate-180" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div id="games-menu" class="games-menu hidden" data-dropdown-panel>
+          <div class="grid grid-cols-2 gap-0.5">
+            <a class="menu-item" href="/LastTile/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Last Tile</span><span class="badge badge-live mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Out now</span></span>
+            </a>
+            <a class="menu-item" href="/Mozai/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-surface"><img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="size-[72%]"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Mozai</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon</span></span>
+            </a>
+            <a class="menu-item" href="/Ribbo/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Ribbo: Pond Hopper</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MyMiniBBQ/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_25%]"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Mini BBQ</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MyTinyGarden/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Tiny Garden</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+            </a>
+            <a class="menu-item" href="/MeshChat/">
+              <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-full object-cover"></span>
+              <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">MeshChat</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon · App</span></span>
+            </a>
+          </div>
+          <a href="/#games" class="mt-1 flex items-center justify-between rounded-[12px] bg-surface px-4 py-3 text-[14px] font-medium hover:bg-line"><span>Games</span><span class="link-arrow text-muted">All games &amp; apps</span></a>
+        </div>
       </div>
-      <div class="flex items-center gap-1.5">
-        <a href="mailto:moonstreamtech@gmail.com" class="btn-brand btn-sm hidden sm:inline-flex">Contact</a>
-        <button type="button" class="grid size-10 place-items-center rounded-full text-white hover:bg-white/10 md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </button>
-      </div>
+      <a class="nav-link" href="/#studio">Studio</a>
+      <a class="nav-link" href="/support.html">Support</a>
+      <a class="nav-link" href="/privacy.html">Privacy</a>
     </nav>
-    <div id="mobile-menu" class="mt-2 hidden rounded-[28px] border border-white/10 bg-black/90 p-2 backdrop-blur-xl md:hidden">
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#games" aria-current="page">Games<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/#studio">Studio<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/support.html">Support<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a class="flex items-center justify-between rounded-2xl px-4 py-3.5 text-[20px] font-medium tracking-tight hover:bg-white/5" href="/privacy.html">Privacy<span class="text-white/30" aria-hidden="true">→</span></a>
-      <a href="mailto:moonstreamtech@gmail.com" class="btn-brand mt-2 w-full">Contact us</a>
+    <div class="flex items-center gap-2">
+      <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary btn-sm hidden sm:inline-flex">Contact</a>
+      <button type="button" class="grid size-10 place-items-center rounded-[10px] hover:bg-surface md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 5.5h14M2 12.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper md:hidden">
+    <div class="wrap py-3">
+      <a class="mobile-link" href="/#games">Games<span class="text-muted" aria-hidden="true">→</span></a>
+      <div class="grid grid-cols-1 gap-0.5 pb-2 pl-1">
+        <a class="menu-item" href="/LastTile/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/LastTile/img/icon.png" alt="" width="256" height="256" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Last Tile</span><span class="badge badge-live mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Out now</span></span>
+        </a>
+        <a class="menu-item" href="/Mozai/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-surface"><img src="/assets/img/mozai-heart.svg" alt="" width="200" height="200" loading="lazy" class="size-[72%]"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Mozai</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon</span></span>
+        </a>
+        <a class="menu-item" href="/Ribbo/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">Ribbo: Pond Hopper</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MyMiniBBQ/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MyMiniBBQ/img/key-art.webp" alt="" width="640" height="1146" loading="lazy" class="size-full object-cover object-[50%_25%]"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Mini BBQ</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MyTinyGarden/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] bg-night"><img src="/MyTinyGarden/img/garden.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">My Tiny Garden</span><span class="badge badge-dev mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">In development</span></span>
+        </a>
+        <a class="menu-item" href="/MeshChat/">
+          <span class="grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px]"><img src="/MeshChat/img/icon.png" alt="" width="64" height="64" loading="lazy" class="size-full object-cover"></span>
+          <span class="min-w-0"><span class="block truncate text-[14.5px] font-medium">MeshChat</span><span class="badge badge-soon mt-1 !border-0 !bg-transparent !p-0 !text-[12px] !text-muted">Coming soon · App</span></span>
+        </a>
+      </div>
+      <a class="mobile-link" href="/#studio">Studio<span class="text-muted" aria-hidden="true">→</span></a>
+      <a class="mobile-link" href="/support.html">Support<span class="text-muted" aria-hidden="true">→</span></a>
+      <a class="mobile-link" href="/privacy.html">Privacy<span class="text-muted" aria-hidden="true">→</span></a>
+      <a href="mailto:moonstreamtech@gmail.com" class="btn btn-primary mt-3 w-full">Contact us</a>
     </div>
   </div>
 </header>
+<!-- /@header -->
+<!-- @product Ribbo -->
+<div class="product-bar">
+  <div class="wrap flex items-center gap-6">
+    <a href="/Ribbo/" class="hidden shrink-0 items-center gap-2.5 py-2 text-[14.5px] font-semibold tracking-[-0.01em] sm:flex"><span class="grid size-7 shrink-0 place-items-center overflow-hidden rounded-[7px] bg-night"><img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" loading="lazy" class="size-full object-cover"></span>Ribbo: Pond Hopper</a>
+    <nav aria-label="Ribbo: Pond Hopper" class="-mx-3 flex min-w-0 flex-1 items-center overflow-x-auto sm:mx-0 sm:justify-end [&::-webkit-scrollbar]:hidden">
+        <a class="tab" href="/Ribbo/" aria-current="page">Overview</a>
+        <a class="tab" href="#support">Help</a>
+        <a class="tab" href="#privacy-policy">Privacy policy</a>
+        <a class="tab" href="#delete-account">Account deletion</a>
+    </nav>
+  </div>
+</div>
+<!-- /@product -->
 
 <main id="main">
   <!-- Hero -->
-  <section class="relative isolate overflow-hidden pt-28 pb-10 sm:pt-32 sm:pb-20">
-    <div class="shell">
-      <nav aria-label="Ribbo: Pond Hopper" class="inline-flex max-w-full items-center gap-1 overflow-x-auto rounded-full border border-white/15 p-1">
-        <a href="/Ribbo/" aria-current="page" class="shrink-0 rounded-full bg-white px-4 py-2 text-[14px] font-medium text-black">Overview</a>
-        <a href="#support" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/65 transition-colors hover:text-white">Help</a>
-        <a href="#privacy-policy" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/65 transition-colors hover:text-white">Privacy policy</a>
-        <a href="#delete-account" class="shrink-0 rounded-full px-4 py-2 text-[14px] text-white/65 transition-colors hover:text-white">Account deletion</a>
-      </nav>
-      <div class="mt-10 grid items-center gap-16 lg:grid-cols-12">
-        <div class="lg:col-span-7">
+  <section class="relative isolate overflow-hidden border-b border-line">
+    <div class="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-[60%] bg-[radial-gradient(closest-side,rgb(160_243_76/0.28),transparent)] lg:block" aria-hidden="true"></div>
+    <div class="wrap grid items-center gap-14 py-14 sm:py-20 lg:grid-cols-12 lg:py-24">
+      <div class="lg:col-span-7">
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="grid size-16 shrink-0 place-items-center overflow-hidden rounded-[16px] bg-night shadow-[0_8px_24px_-10px_rgb(0_0_0/0.35)] sm:size-[72px] sm:rounded-[18px]">
+            <img src="/Ribbo/img/pond.svg" alt="" width="400" height="400" class="size-full object-cover">
+          </span>
           <div class="flex flex-wrap items-center gap-2">
-            <span class="chip border-brand/40 text-brand"><span class="size-1.5 animate-pulse rounded-full bg-brand"></span>In development</span>
-            <span class="chip text-white/60">Hop · Collect · Compete</span>
-          </div>
-          <h1 class="mt-7 text-[clamp(3.5rem,9.5vw,8rem)] leading-[0.9] font-medium tracking-[-0.055em]">Ribbo<span class="block text-[0.42em] leading-[1.1] tracking-[-0.04em] text-white/45">Pond Hopper</span></h1>
-          <p class="lede mt-7 max-w-xl text-white/60">Hop across the lily pads, catch flies with your tongue and watch the sky for storks. Play Classic, Zen or Time Attack, dress Ribbo up and chase your best score on the leaderboard.</p>
-          <div class="mt-9 flex flex-wrap items-center gap-3">
-            <span class="btn-brand">In development</span>
-            <a href="#support" class="btn-ghost text-white">Help &amp; support</a>
-            <a href="#privacy-policy" class="btn-ghost text-white">Privacy policy</a>
+            <span class="badge badge-dev">In development</span>
+            <span class="badge">Hop · Collect · Compete</span>
           </div>
         </div>
-        <div class="relative isolate lg:col-span-5">
-          <div class="absolute inset-[12%] -z-10 rounded-full bg-brand/15 blur-3xl" aria-hidden="true"></div>
-          <div class="animate-float">
-            <div class="-rotate-3">
-              <div class="mx-auto w-[240px] rounded-[46px] border border-white/15 bg-white/[0.04] p-2.5 sm:w-[280px]">
-                <div class="flex aspect-[9/19] items-center rounded-[38px] bg-black px-3">
-                  <img src="/Ribbo/img/pond.svg" alt="Ribbo the frog hopping between lily pads" class="w-full" width="400" height="400">
-                </div>
-              </div>
-            </div>
+        <h1 class="h-display mt-8">Ribbo<span class="block text-[0.5em] leading-[1.1] tracking-[-0.035em] text-muted">Pond Hopper</span></h1>
+        <p class="lead mt-6 max-w-xl">Hop across the lily pads, catch flies with your tongue and watch the sky for storks. Play Classic, Zen or Time Attack, dress Ribbo up and chase your best score on the leaderboard.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#support" class="btn btn-primary btn-lg">Help &amp; support</a>
+          <a href="#privacy-policy" class="btn btn-secondary btn-lg">Privacy policy</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="phone -rotate-3">
+          <div class="phone-screen px-3">
+            <img src="/Ribbo/img/pond.svg" alt="Ribbo the frog hopping between lily pads" width="400" height="400" fetchpriority="high" class="block w-full">
           </div>
+          <span class="phone-notch" aria-hidden="true"></span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About + features -->
-  <section class="rounded-t-[40px] bg-white py-10 text-black sm:rounded-t-[56px] sm:py-20">
-    <div class="shell">
-      <div class="reveal grid gap-5 md:gap-8 lg:grid-cols-12">
-        <p class="eyebrow inline-flex items-center gap-2 self-start text-black/50 lg:col-span-4"><span class="size-2 rounded-full bg-black"></span>About the game</p>
-        <div class="space-y-6 lg:col-span-8">
-          <p class="text-[clamp(1.5rem,2.6vw,2.1rem)] leading-[1.3] font-medium tracking-[-0.02em]">Ribbo: Pond Hopper is a retro pixel-art arcade game about a small frog, a big pond and a sky full of storks — and it is in development right now.</p>
-          <p class="text-[18px] leading-relaxed text-black/60">Hop between lily pads and flick your tongue at flies. Storks dive straight, at an angle or on a curve, and their shadow is your only warning. After 25 flies a pike starts leaping out of the water too. Spend the flies you catch on colors, hats, costumes and new maps.</p>
-          <p class="text-[18px] leading-relaxed text-black/60">You can play without an account. Signing in with Google is only needed if you want to join the leaderboard — and you can delete that account at any time.</p>
+  <section class="section band">
+    <div class="wrap">
+      <div class="grid gap-6 lg:grid-cols-12">
+        <p class="eyebrow self-start lg:col-span-4">About the game</p>
+        <div class="space-y-5 lg:col-span-8">
+          <p class="text-[clamp(1.4rem,2.4vw,1.9rem)] leading-[1.3] font-semibold tracking-[-0.025em] text-balance">Ribbo: Pond Hopper is a retro pixel-art arcade game about a small frog, a big pond and a sky full of storks — and it is in development right now.</p>
+          <p class="lead">Hop between lily pads and flick your tongue at flies. Storks dive straight, at an angle or on a curve, and their shadow is your only warning. After 25 flies a pike starts leaping out of the water too. Spend the flies you catch on colors, hats, costumes and new maps.</p>
+          <p class="lead">You can play without an account. Signing in with Google is only needed if you want to join the leaderboard — and you can delete that account at any time.</p>
         </div>
       </div>
 
-      <div class="reveal mt-10 flex flex-wrap items-end justify-between gap-4 sm:mt-20">
-        <h2 class="text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">What's inside</h2>
-        <p class="text-[15px] text-black/45">Everything below is in the current build</p>
+      <div class="mt-16 flex flex-wrap items-end justify-between gap-4 sm:mt-24">
+        <h2 class="h-section">What's inside</h2>
+        <p class="text-[14.5px] text-muted">Everything below is in the current build</p>
       </div>
       <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">01</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Three ways to play.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Classic, a relaxing Zen mode without enemies, and a 60-second Time Attack — each with its own record.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">01</span>
+          <p class="feature-title">Three ways to play.</p>
+          <p class="feature-text">Classic, a relaxing Zen mode without enemies, and a 60-second Time Attack — each with its own record.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">02</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Combos and special bugs.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Catch flies in a row for up to ×5. Fireflies slow time, dragonflies are fast, and bees are best left alone.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">02</span>
+          <p class="feature-title">Combos and special bugs.</p>
+          <p class="feature-text">Catch flies in a row for up to ×5. Fireflies slow time, dragonflies are fast, and bees are best left alone.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">03</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Power-ups.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">A shield, a fly magnet and 2× score to turn a good run into a great one.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">03</span>
+          <p class="feature-title">Power-ups.</p>
+          <p class="feature-text">A shield, a fly magnet and 2× score to turn a good run into a great one.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">04</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Eight maps.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">A day cycle and their own events: fog in the swamp, rain in spring, wind in autumn and a tongue that freezes in winter.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">04</span>
+          <p class="feature-title">Eight maps.</p>
+          <p class="feature-text">A day cycle and their own events: fog in the swamp, rain in spring, wind in autumn and a tongue that freezes in winter.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">05</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Dress up Ribbo.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Frog colors, hats, costumes, tongue upgrades and animated menu backgrounds, all bought with flies.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">05</span>
+          <p class="feature-title">Dress up Ribbo.</p>
+          <p class="feature-text">Frog colors, hats, costumes, tongue upgrades and animated menu backgrounds, all bought with flies.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">06</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Missions.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">A permanent mission list plus a new Mission of the Day.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">06</span>
+          <p class="feature-title">Missions.</p>
+          <p class="feature-text">A permanent mission list plus a new Mission of the Day.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">07</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Leaderboard, if you want it.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">Sign in with Google to post your scores under an auto-generated player name. Skip it and just play.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">07</span>
+          <p class="feature-title">Leaderboard, if you want it.</p>
+          <p class="feature-text">Sign in with Google to post your scores under an auto-generated player name. Skip it and just play.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black/[0.04] p-7 transition-colors duration-500 hover:bg-black hover:text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-black text-[13px] font-medium text-brand tabular-nums transition-colors duration-500 group-hover:bg-brand group-hover:text-black">08</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Retro all the way.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-black/60 transition-colors duration-500 group-hover:text-white/60">A chiptune soundtrack with an in-game playlist and an adjustable CRT effect with scanlines and glow.</p>
+        <li class="feature card reveal">
+          <span class="feature-num">08</span>
+          <p class="feature-title">Retro all the way.</p>
+          <p class="feature-text">A chiptune soundtrack with an in-game playlist and an adjustable CRT effect with scanlines and glow.</p>
         </li>
-        <li class="reveal group flex min-h-[220px] flex-col rounded-[28px] bg-black p-7 text-white">
-          <span class="grid size-10 place-items-center rounded-full bg-brand text-[13px] font-medium text-black tabular-nums">09</span>
-          <p class="mt-auto pt-10 text-[21px] leading-snug font-medium tracking-[-0.015em]">Progress stays on your phone.</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-white/60">Playable offline, in 15 languages. Free to play, with a small banner at the bottom and optional rewarded ads.</p>
+        <li class="feature card reveal border-transparent bg-night text-white">
+          <span class="feature-num text-brand">09</span>
+          <p class="feature-title">Progress stays on your phone.</p>
+          <p class="feature-text text-white/60">Playable offline, in 15 languages. Free to play, with a small banner at the bottom and optional rewarded ads.</p>
         </li>
       </ul>
     </div>
   </section>
 
   <!-- Help and support -->
-  <section class="border-t border-black/10 bg-white pb-10 text-black sm:pb-20">
-    <div class="shell pt-10 sm:pt-20">
-      <div id="support" class="grid scroll-mt-24 gap-5 md:gap-8 lg:grid-cols-12">
-        <div class="lg:col-span-4">
-          <p class="eyebrow inline-flex items-center gap-2 text-black/50"><span class="size-2 rounded-full bg-black"></span>Help</p>
-          <div class="mt-8 rounded-[28px] bg-black p-7 text-white">
-            <p class="text-[15px] text-white/50">Still stuck?</p>
-            <p class="mt-2 text-[20px] leading-snug font-medium tracking-[-0.015em]">Email us and we will get back to you within 2–3 business days.</p>
-            <a href="mailto:moonstreamtech@gmail.com?subject=Ribbo%20Pond%20Hopper%20support" class="btn-brand mt-6">Email support</a>
-            <p class="mt-6 border-t border-white/15 pt-5 text-[14px] leading-relaxed text-white/55">Please include your phone model, Android version and the game version (shown at the bottom of Settings).</p>
+  <section id="support" class="section scroll-mt-28">
+    <div class="wrap">
+      <div class="max-w-3xl">
+        <p class="eyebrow">Help</p>
+        <h2 class="h-section mt-4">Help &amp; Support</h2>
+        <p class="lead mt-5 max-w-2xl">Answers to the most common questions about Ribbo: Pond Hopper. Can’t find what you need? Email us — we read every message.</p>
+      </div>
+      <div class="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-12">
+        <div class="lg:order-2 lg:col-span-4">
+          <div class="card on-dark border-transparent bg-night p-7 text-white lg:sticky lg:top-36">
+            <p class="text-[14.5px] text-white/55">Still stuck?</p>
+            <p class="mt-2 text-[20px] leading-snug font-semibold tracking-[-0.015em]">Email us and we will get back to you within 2–3 business days.</p>
+            <a href="mailto:moonstreamtech@gmail.com?subject=Ribbo%20Pond%20Hopper%20support" class="btn btn-accent mt-6">Email support</a>
+            <p class="mt-6 border-t border-white/15 pt-5 text-[14px] leading-relaxed text-white/60">Please include your phone model, Android version and the game version (shown at the bottom of Settings).</p>
           </div>
         </div>
-        <div class="lg:col-span-8">
-          <h2 class="text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">Help &amp; Support</h2>
-          <p class="lede mt-7 text-black/65">Answers to the most common questions about Ribbo: Pond Hopper. Can’t find what you need? Email us — we read every message.</p>
-          <div class="mt-10">
+        <div class="lg:order-1 lg:col-span-8">
           <details class="faq">
             <summary>How do I play?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
+            <div class="faq-body">
             <p>Walk with the ◀ ▶ buttons and jump with the round button — tap it again in the air for a double jump. Tap the pond to shoot your tongue at a fly. Watch for stork shadows and, after 25 flies, the pike leaping out of the water. On a keyboard: arrow keys or A/D to walk, Space or ↑ to jump, click to shoot, Esc to pause.</p>
             </div>
           </details>
           <details class="faq">
             <summary>What are the game modes?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
+            <div class="faq-body">
             <p><strong>Classic</strong> is the full game with storks and the pike. <strong>Zen</strong> has no enemies — just you, the pond and the flies. <strong>Time Attack</strong> gives you 60 seconds to catch as many flies as you can. Classic and Time Attack have their own leaderboards.</p>
             </div>
           </details>
           <details class="faq">
             <summary>Do I need an account?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
+            <div class="faq-body">
             <p>No. Everything works without signing in. An account is only needed for the online leaderboard and is created when you tap <strong>Sign in with Google</strong> in the game.</p>
             </div>
           </details>
           <details class="faq">
             <summary>Why can’t I sign in?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
+            <div class="faq-body">
             <p>Signing in needs an internet connection and <strong>Google Play services</strong>. Some phones (for example recent Huawei models) do not include Google Play services, so sign-in is not available on them — you can still play everything else. Sign-in is also only available in the Android app, not in the browser version.</p>
             <p>If it still fails, update Google Play services, check that the date and time on your phone are correct and try again.</p>
             </div>
           </details>
           <details class="faq">
             <summary>How do I change my player name?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
+            <div class="faq-body">
             <p>Player names are generated automatically so the leaderboard stays friendly. Open <strong>Settings → Account</strong> and tap <strong>New name</strong> to get a new random one.</p>
             </div>
           </details>
           <details class="faq">
             <summary>What are the ad buttons for?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
+            <div class="faq-body">
             <p>A small banner is shown at the bottom of the screen, below the controls. All other ads are optional: watch one to <strong>continue</strong> after a game over (once per run), to <strong>double the flies</strong> from a run, or to get <strong>20 free flies</strong> from the main menu, up to five times a day. If an ad fails to load, check your connection and try again a little later.</p>
             </div>
           </details>
           <details class="faq">
             <summary>How do I change my ad privacy choice?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
+            <div class="faq-body">
             <p>Open <strong>Settings → Privacy options</strong> to review or change the choice you made in the consent form.</p>
             </div>
           </details>
           <details class="faq">
             <summary>Will I lose my progress if I change phones?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
+            <div class="faq-body">
             <p>Flies, looks, maps, missions and settings are saved only on your phone, so they are removed if you uninstall the game or clear its data and cannot be moved to a new phone. Your best scores on the leaderboard stay with your Google account until you delete it.</p>
             </div>
           </details>
           <details class="faq">
             <summary>How do I delete my account?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
-            <p>In the game: <strong>Settings → Account → Delete account</strong>, then tap again to confirm. Without the app: see <a class="font-medium text-black underline decoration-black/25 underline-offset-4 hover:decoration-black" href="#delete-account">Account and data deletion</a> below.</p>
+            <div class="faq-body">
+            <p>In the game: <strong>Settings → Account → Delete account</strong>, then tap again to confirm. Without the app: see <a class="link" href="#delete-account">Account and data deletion</a> below.</p>
             </div>
           </details>
           <details class="faq">
             <summary>The game is slow or the screen looks blurry.</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
+            <div class="faq-body">
             <p>Lower the <strong>CRT effect</strong> in Settings or turn it off; it is the most demanding part of the game on older phones.</p>
             </div>
           </details>
           <details class="faq">
             <summary>How do I report a bug or suggest an idea?</summary>
-            <div class="faq-body text-[16px] leading-relaxed text-black/70">
-            <p>Email <a class="font-medium text-black underline decoration-black/25 underline-offset-4 hover:decoration-black" href="mailto:moonstreamtech@gmail.com?subject=Ribbo%20support">moonstreamtech@gmail.com</a> with your phone model, Android version, the game version and a screenshot or video if you can.</p>
+            <div class="faq-body">
+            <p>Email <a class="link" href="mailto:moonstreamtech@gmail.com?subject=Ribbo%20support">moonstreamtech@gmail.com</a> with your phone model, Android version, the game version and a screenshot or video if you can.</p>
             </div>
           </details>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Privacy policy -->
-  <section class="border-t border-black/10 bg-white pb-10 text-black sm:pb-20">
-    <div class="shell pt-10 sm:pt-20">
-      <div id="privacy-policy" class="grid scroll-mt-24 gap-5 md:gap-8 lg:grid-cols-12">
-        <div class="lg:col-span-4">
-          <p class="eyebrow inline-flex items-center gap-2 text-black/50"><span class="size-2 rounded-full bg-black"></span>Privacy</p>
-          <dl class="mt-8 space-y-4 text-[15px]">
-            <div><dt class="text-black/45">App</dt><dd class="mt-0.5 font-medium">Ribbo: Pond Hopper</dd></div>
-            <div><dt class="text-black/45">Package</dt><dd class="mt-0.5 font-medium break-all">com.moonstreamtech.ribbo</dd></div>
-            <div><dt class="text-black/45">Developer</dt><dd class="mt-0.5 font-medium">Moonstream Tech</dd></div>
-            <div><dt class="text-black/45">Last updated</dt><dd class="mt-0.5 font-medium">27 September 2026</dd></div>
-          </dl>
-          <div class="mt-8 rounded-[28px] bg-black/[0.04] p-7">
-            <p class="text-[15px] font-medium">At a glance</p>
-            <ul class="mt-4 space-y-3 text-[15px] leading-relaxed text-black/70">
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span><span>Playing needs no account</span></li>
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span><span>Progress is stored only on your phone</span></li>
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span><span>Optional Google sign-in for the leaderboard (stored with Supabase)</span></li>
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span><span>Banner and optional rewarded ads by Google AdMob, with a consent form where required</span></li>
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span><span>Delete your account in the game at any time</span></li>
-            </ul>
-          </div>
-          <nav class="toc mt-8 hidden lg:block" aria-label="Privacy policy sections">
-            <p class="mb-3 text-[13px] font-medium text-black/40">In this policy</p>
+  <section id="privacy-policy" class="section scroll-mt-28 border-t border-line">
+    <div class="wrap">
+      <div class="max-w-3xl">
+        <p class="eyebrow">Privacy</p>
+        <h2 class="h-section mt-4">Privacy Policy</h2>
+        <p class="lead mt-5 max-w-2xl">You can play Ribbo without an account. We only store data on our servers if you sign in with Google for the leaderboard, and you can delete it at any time.</p>
+      </div>
+      <dl class="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 border-y border-line py-6 text-[15px] md:grid-cols-4">
+        <div><dt class="font-mono text-[11.5px] tracking-[0.08em] text-muted uppercase">App</dt><dd class="mt-1 font-medium text-ink">Ribbo: Pond Hopper</dd></div>
+        <div><dt class="font-mono text-[11.5px] tracking-[0.08em] text-muted uppercase">Package</dt><dd class="mt-1 font-medium break-all text-ink">com.moonstreamtech.ribbo</dd></div>
+        <div><dt class="font-mono text-[11.5px] tracking-[0.08em] text-muted uppercase">Developer</dt><dd class="mt-1 font-medium text-ink">Moonstream Tech</dd></div>
+        <div><dt class="font-mono text-[11.5px] tracking-[0.08em] text-muted uppercase">Last updated</dt><dd class="mt-1 font-medium text-ink">27 September 2026</dd></div>
+      </dl>
+
+      <div class="mt-10 grid gap-8 lg:grid-cols-12 lg:gap-12">
+        <aside class="lg:col-span-3">
+          <details class="toc-mobile lg:hidden">
+            <summary>In this policy</summary>
+            <nav class="toc" aria-label="Privacy policy sections">
+            <a href="#pp-scope">Scope</a>
+            <a href="#pp-device">Data on your device</a>
+            <a href="#pp-collect">Data we collect</a>
+            <a href="#pp-ads">Advertising and consent</a>
+            <a href="#pp-services">Third-party services</a>
+            <a href="#pp-permissions">Permissions</a>
+            <a href="#pp-retention">Retention and deletion</a>
+            <a href="#pp-rights">Your rights and choices</a>
+            <a href="#pp-children">Children</a>
+            <a href="#pp-changes">Changes</a>
+            <a href="#pp-contact">Contact</a>
+            </nav>
+          </details>
+          <nav class="toc sticky top-36 hidden lg:block" aria-label="Privacy policy sections">
+            <p class="mb-3 font-mono text-[11.5px] font-medium tracking-[0.08em] text-muted uppercase">In this policy</p>
             <a href="#pp-scope">Scope</a>
             <a href="#pp-device">Data on your device</a>
             <a href="#pp-collect">Data we collect</a>
@@ -282,71 +357,79 @@
             <a href="#pp-changes">Changes</a>
             <a href="#pp-contact">Contact</a>
           </nav>
-        </div>
-        <div class="lg:col-span-8">
-          <h2 class="text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">Privacy Policy</h2>
-          <p class="lede mt-7 text-black/65">You can play Ribbo without an account. We only store data on our servers if you sign in with Google for the leaderboard, and you can delete it at any time.</p>
-          <article class="doc mt-8">
-          <h3 id="pp-scope">Scope</h3>
-          <p>This policy explains how <strong>Ribbo: Pond Hopper</strong> for Android, made by Moonstream Tech (“we”, “us”), handles information. It applies only to this game; the general <a href="/privacy.html">Moonstream Tech Privacy Policy</a> covers the studio as a whole.</p>
-          <h3 id="pp-device">Data on your device</h3>
-          <p>Your progress — flies, purchased colors, hats, costumes, tongue upgrades and menu backgrounds, unlocked maps, missions, best scores, the daily free-fly counter and settings such as language, sound, music and the CRT effect — is saved only in the game’s local storage on your phone. It is never sent to us. It is removed when you clear the app’s data or uninstall the game, and it cannot be restored or moved to a new phone by us.</p>
-          <h3 id="pp-collect">Data we collect</h3>
-          <p>You can play Ribbo without an account. We only collect data if you choose <strong>Sign in with Google</strong> to join the leaderboard. In that case we process:</p>
-          <ul>
-            <li><strong>Google account identifier and email address</strong>, received from Google when you sign in, to create and secure your account</li>
-            <li><strong>basic Google profile details</strong> that may be included in the sign-in token, such as your name and profile picture link; we do not show or use them in the game</li>
-            <li><strong>player name</strong>, generated automatically (for example <code>TinyFly84</code>) and shown publicly on the leaderboard; you can re-roll it with <strong>New name</strong></li>
-            <li><strong>best scores</strong> for Classic and Time Attack, with the run length and the date they were set</li>
-            <li><strong>account dates</strong> (created, last updated) and technical sign-in data such as session tokens and the IP address of requests, kept by our backend provider for security</li>
-          </ul>
-          <p>We use this data only to run your account and the leaderboard, to keep them secure and to prevent cheating. The legal basis is the performance of the service you asked for (contract) and our legitimate interest in keeping the leaderboard fair. Your player name and scores are visible to other players; your email address and Google profile details are never shown and never shared.</p>
-          <p>We do not sell your data, do not use it for advertising and do not combine it with data from other sources. Ribbo currently has no in-app purchases, no analytics and no crash reporting.</p>
-          <h3 id="pp-ads">Advertising and consent</h3>
-          <p>Ribbo is free to play and is supported by ads from <strong>Google AdMob</strong>. The game shows a <strong>banner ad</strong> at the bottom of the screen, below the controls, and <strong>rewarded ads</strong> that you choose to watch: to continue after a game over, to double the flies from a run, or for 20 free flies from the main menu (up to five times a day). There are no full-screen ads you have not chosen to watch. You can change your consent choice at any time with <strong>Settings → Privacy options</strong>.</p>
-          <p>When an ad is requested or shown, the Google Mobile Ads SDK may collect and process, on Google’s behalf:</p>
-          <ul>
-            <li>your device’s <strong>advertising ID</strong> and other device identifiers</li>
-            <li>your <strong>IP address</strong>, from which an approximate (coarse) location can be derived</li>
-            <li>device and app information such as model, operating system, language, app version and network type</li>
-            <li><strong>ad interactions</strong> such as impressions, clicks and whether a rewarded ad was completed</li>
-            <li>diagnostic data such as SDK errors and performance information</li>
-          </ul>
-          <p>This data is used to deliver, measure and limit the frequency of ads, to prevent fraud and, where you allow it, to personalise ads. In the European Economic Area, the United Kingdom and Switzerland, the game asks for your choice with Google’s consent form (User Messaging Platform) before personalised ads are shown. If you do not consent, Google may still show non-personalised ads, which use contextual information and limited data for measurement and fraud prevention.</p>
-          <p>The data collected by AdMob is controlled by Google under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. See also: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a>.</p>
-          <h3 id="pp-services">Third-party services</h3>
-          <ul>
-            <li><strong>Supabase</strong> (Supabase Inc.) — hosts the accounts, player names and scores, with row-level security so that each player can only change their own data. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a></li>
-            <li><strong>Google Sign-In</strong> and <strong>Google Play services</strong> (Google LLC) — confirms your identity when you sign in. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-            <li><strong>Google AdMob</strong> and the <strong>User Messaging Platform</strong> (Google LLC / Google Ireland Ltd.) — banner and rewarded ads, and consent.</li>
-            <li><strong>Google Play</strong> — downloads, updates and, if you choose, Play’s own backup of app data.</li>
-          </ul>
-          <p>These providers act on our behalf or as independent controllers under their own policies. Data may be transferred to and stored in countries outside your own, including the United States and the European Union, protected by the providers’ safeguards such as Standard Contractual Clauses. All connections are encrypted with HTTPS.</p>
-          <h3 id="pp-permissions">Permissions</h3>
-          <ul>
-            <li><strong>Internet access</strong> — for the leaderboard, sign-in, ads and the consent form.</li>
-            <li><strong>Advertising ID</strong> (<code>AD_ID</code>) — to deliver and measure ads.</li>
-          </ul>
-          <p>The game does not access your contacts, photos, files, camera, microphone or location.</p>
-          <h3 id="pp-retention">Retention and deletion</h3>
-          <p>Account data is kept for as long as your account exists. When you delete your account in the game it is removed from our database immediately; requests by email are completed within 30 days. Residual copies in our provider’s encrypted backups are overwritten within 30 days. Data on your phone stays until you clear the app’s data or uninstall the game. Google keeps advertising data according to its own retention periods.</p>
-          <h3 id="pp-rights">Your rights and choices</h3>
-          <p>Depending on where you live (for example under the EU/UK GDPR, the Turkish Personal Data Protection Law No. 6698 (KVKK) or US state privacy laws), you may have the right to access, correct, delete or export your personal data, to object to or restrict certain processing, and to withdraw consent at any time. You can also:</p>
-          <ul>
-            <li>play without signing in, or <strong>sign out</strong> at any time in <strong>Settings → Account</strong></li>
-            <li>delete your account and leaderboard data instantly in <strong>Settings → Account → Delete account</strong>, or by email — see <a href="#delete-account">Account and data deletion</a></li>
-            <li>change your ad consent choice in <strong>Settings → Privacy options</strong></li>
-            <li>reset your advertising ID or delete it in your phone’s <strong>Settings → Google → Ads</strong> (or <strong>Settings → Privacy → Ads</strong>)</li>
-            <li>uninstall the game, which removes all data stored on your device</li>
-            <li>email us at <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a> to exercise any of your rights</li>
-          </ul>
-          <p>You also have the right to lodge a complaint with your local data protection authority.</p>
-          <h3 id="pp-children">Children</h3>
-          <p>Ribbo is made for a general audience and is not directed at children under 13 (or the minimum age in your country). We do not knowingly collect personal information from children. If you believe a child has given us personal information, contact us at <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a> and we will delete it.</p>
-          <h3 id="pp-changes">Changes</h3>
-          <p>We may update this policy when the game changes, for example when a feature or service is added. The “Last updated” date will change and, for significant changes, we will let you know in the game or on this page. The <a href="/privacy.html">Moonstream Tech Privacy Policy</a> applies to all our games and complements this policy.</p>
-          <h3 id="pp-contact">Contact</h3>
-          <p>Moonstream Tech · <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a>. We aim to respond within 2–3 business days, and to privacy requests within 30 days at the latest.</p>
+        </aside>
+        <div class="lg:col-span-8 lg:col-start-5">
+          <div class="card max-w-[720px] border-transparent bg-surface p-6 sm:p-7">
+            <p class="h-card">At a glance</p>
+            <ul class="mt-4 space-y-2.5 text-[15.5px] leading-relaxed text-ink-2">
+              <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-brand-ink" aria-hidden="true"></span><span>Playing needs no account</span></li>
+              <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-brand-ink" aria-hidden="true"></span><span>Progress is stored only on your phone</span></li>
+              <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-brand-ink" aria-hidden="true"></span><span>Optional Google sign-in for the leaderboard (stored with Supabase)</span></li>
+              <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-brand-ink" aria-hidden="true"></span><span>Banner and optional rewarded ads by Google AdMob, with a consent form where required</span></li>
+              <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-brand-ink" aria-hidden="true"></span><span>Delete your account in the game at any time</span></li>
+            </ul>
+          </div>
+          <article class="doc mt-12 [&>h3]:mt-14 [&>h3]:scroll-mt-36 [&>h3]:border-t [&>h3]:border-line [&>h3]:pt-10 [&>h3]:text-[22px] [&>h3]:leading-tight [&>h3]:tracking-[-0.025em] sm:[&>h3]:text-[24px] [&>h3:first-child]:mt-0 [&>h3:first-child]:border-0 [&>h3:first-child]:pt-0">
+            <h3 id="pp-scope">Scope</h3>
+            <p>This policy explains how <strong>Ribbo: Pond Hopper</strong> for Android, made by Moonstream Tech (“we”, “us”), handles information. It applies only to this game; the general <a href="/privacy.html">Moonstream Tech Privacy Policy</a> covers the studio as a whole.</p>
+            <h3 id="pp-device">Data on your device</h3>
+            <p>Your progress — flies, purchased colors, hats, costumes, tongue upgrades and menu backgrounds, unlocked maps, missions, best scores, the daily free-fly counter and settings such as language, sound, music and the CRT effect — is saved only in the game’s local storage on your phone. It is never sent to us. It is removed when you clear the app’s data or uninstall the game, and it cannot be restored or moved to a new phone by us.</p>
+            <h3 id="pp-collect">Data we collect</h3>
+            <p>You can play Ribbo without an account. We only collect data if you choose <strong>Sign in with Google</strong> to join the leaderboard. In that case we process:</p>
+            <ul>
+              <li><strong>Google account identifier and email address</strong>, received from Google when you sign in, to create and secure your account</li>
+              <li><strong>basic Google profile details</strong> that may be included in the sign-in token, such as your name and profile picture link; we do not show or use them in the game</li>
+              <li><strong>player name</strong>, generated automatically (for example <code>TinyFly84</code>) and shown publicly on the leaderboard; you can re-roll it with <strong>New name</strong></li>
+              <li><strong>best scores</strong> for Classic and Time Attack, with the run length and the date they were set</li>
+              <li><strong>account dates</strong> (created, last updated) and technical sign-in data such as session tokens and the IP address of requests, kept by our backend provider for security</li>
+            </ul>
+            <p>We use this data only to run your account and the leaderboard, to keep them secure and to prevent cheating. The legal basis is the performance of the service you asked for (contract) and our legitimate interest in keeping the leaderboard fair. Your player name and scores are visible to other players; your email address and Google profile details are never shown and never shared.</p>
+            <p>We do not sell your data, do not use it for advertising and do not combine it with data from other sources. Ribbo currently has no in-app purchases, no analytics and no crash reporting.</p>
+            <h3 id="pp-ads">Advertising and consent</h3>
+            <p>Ribbo is free to play and is supported by ads from <strong>Google AdMob</strong>. The game shows a <strong>banner ad</strong> at the bottom of the screen, below the controls, and <strong>rewarded ads</strong> that you choose to watch: to continue after a game over, to double the flies from a run, or for 20 free flies from the main menu (up to five times a day). There are no full-screen ads you have not chosen to watch. You can change your consent choice at any time with <strong>Settings → Privacy options</strong>.</p>
+            <p>When an ad is requested or shown, the Google Mobile Ads SDK may collect and process, on Google’s behalf:</p>
+            <ul>
+              <li>your device’s <strong>advertising ID</strong> and other device identifiers</li>
+              <li>your <strong>IP address</strong>, from which an approximate (coarse) location can be derived</li>
+              <li>device and app information such as model, operating system, language, app version and network type</li>
+              <li><strong>ad interactions</strong> such as impressions, clicks and whether a rewarded ad was completed</li>
+              <li>diagnostic data such as SDK errors and performance information</li>
+            </ul>
+            <p>This data is used to deliver, measure and limit the frequency of ads, to prevent fraud and, where you allow it, to personalise ads. In the European Economic Area, the United Kingdom and Switzerland, the game asks for your choice with Google’s consent form (User Messaging Platform) before personalised ads are shown. If you do not consent, Google may still show non-personalised ads, which use contextual information and limited data for measurement and fraud prevention.</p>
+            <p>The data collected by AdMob is controlled by Google under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. See also: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a>.</p>
+            <h3 id="pp-services">Third-party services</h3>
+            <ul>
+              <li><strong>Supabase</strong> (Supabase Inc.) — hosts the accounts, player names and scores, with row-level security so that each player can only change their own data. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a></li>
+              <li><strong>Google Sign-In</strong> and <strong>Google Play services</strong> (Google LLC) — confirms your identity when you sign in. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+              <li><strong>Google AdMob</strong> and the <strong>User Messaging Platform</strong> (Google LLC / Google Ireland Ltd.) — banner and rewarded ads, and consent.</li>
+              <li><strong>Google Play</strong> — downloads, updates and, if you choose, Play’s own backup of app data.</li>
+            </ul>
+            <p>These providers act on our behalf or as independent controllers under their own policies. Data may be transferred to and stored in countries outside your own, including the United States and the European Union, protected by the providers’ safeguards such as Standard Contractual Clauses. All connections are encrypted with HTTPS.</p>
+            <h3 id="pp-permissions">Permissions</h3>
+            <ul>
+              <li><strong>Internet access</strong> — for the leaderboard, sign-in, ads and the consent form.</li>
+              <li><strong>Advertising ID</strong> (<code>AD_ID</code>) — to deliver and measure ads.</li>
+            </ul>
+            <p>The game does not access your contacts, photos, files, camera, microphone or location.</p>
+            <h3 id="pp-retention">Retention and deletion</h3>
+            <p>Account data is kept for as long as your account exists. When you delete your account in the game it is removed from our database immediately; requests by email are completed within 30 days. Residual copies in our provider’s encrypted backups are overwritten within 30 days. Data on your phone stays until you clear the app’s data or uninstall the game. Google keeps advertising data according to its own retention periods.</p>
+            <h3 id="pp-rights">Your rights and choices</h3>
+            <p>Depending on where you live (for example under the EU/UK GDPR, the Turkish Personal Data Protection Law No. 6698 (KVKK) or US state privacy laws), you may have the right to access, correct, delete or export your personal data, to object to or restrict certain processing, and to withdraw consent at any time. You can also:</p>
+            <ul>
+              <li>play without signing in, or <strong>sign out</strong> at any time in <strong>Settings → Account</strong></li>
+              <li>delete your account and leaderboard data instantly in <strong>Settings → Account → Delete account</strong>, or by email — see <a href="#delete-account">Account and data deletion</a></li>
+              <li>change your ad consent choice in <strong>Settings → Privacy options</strong></li>
+              <li>reset your advertising ID or delete it in your phone’s <strong>Settings → Google → Ads</strong> (or <strong>Settings → Privacy → Ads</strong>)</li>
+              <li>uninstall the game, which removes all data stored on your device</li>
+              <li>email us at <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a> to exercise any of your rights</li>
+            </ul>
+            <p>You also have the right to lodge a complaint with your local data protection authority.</p>
+            <h3 id="pp-children">Children</h3>
+            <p>Ribbo is made for a general audience and is not directed at children under 13 (or the minimum age in your country). We do not knowingly collect personal information from children. If you believe a child has given us personal information, contact us at <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a> and we will delete it.</p>
+            <h3 id="pp-changes">Changes</h3>
+            <p>We may update this policy when the game changes, for example when a feature or service is added. The “Last updated” date will change and, for significant changes, we will let you know in the game or on this page. The <a href="/privacy.html">Moonstream Tech Privacy Policy</a> applies to all our games and complements this policy.</p>
+            <h3 id="pp-contact">Contact</h3>
+            <p>Moonstream Tech · <a href="mailto:moonstreamtech@gmail.com">moonstreamtech@gmail.com</a>. We aim to respond within 2–3 business days, and to privacy requests within 30 days at the latest.</p>
           </article>
         </div>
       </div>
@@ -354,73 +437,71 @@
   </section>
 
   <!-- Account and data deletion -->
-  <section class="border-t border-black/10 bg-white pb-10 text-black sm:pb-20">
-    <div class="shell pt-10 sm:pt-20">
-      <div id="delete-account" class="grid scroll-mt-24 gap-5 md:gap-8 lg:grid-cols-12">
-        <div class="lg:col-span-4">
-          <p class="eyebrow inline-flex items-center gap-2 text-black/50"><span class="size-2 rounded-full bg-black"></span>Your account</p>
-          <dl class="mt-8 space-y-4 text-[15px]">
-            <div><dt class="text-black/45">App</dt><dd class="mt-0.5 font-medium">Ribbo: Pond Hopper</dd></div>
-            <div><dt class="text-black/45">Developer</dt><dd class="mt-0.5 font-medium">Moonstream Tech</dd></div>
-          </dl>
-        </div>
+  <section id="delete-account" class="section band scroll-mt-28">
+    <div class="wrap">
+      <div class="grid gap-8 lg:grid-cols-12">
         <div class="lg:col-span-8">
-          <h2 class="text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-medium tracking-[-0.045em]">Account and Data Deletion</h2>
-          <p class="lede mt-7 text-black/65">You can play Ribbo: Pond Hopper without an account. An account is created only when you sign in with Google to join the leaderboard. You can delete your account and all data linked to it at any time.</p>
+          <p class="eyebrow">Your account</p>
+          <h2 class="h-section mt-4">Account and Data Deletion</h2>
+          <p class="lead mt-5 max-w-2xl">You can play Ribbo: Pond Hopper without an account. An account is created only when you sign in with Google to join the leaderboard. You can delete your account and all data linked to it at any time.</p>
         </div>
+        <dl class="grid content-end gap-5 text-[15px] lg:col-span-3 lg:col-start-10">
+          <div><dt class="font-mono text-[11.5px] tracking-[0.08em] text-muted uppercase">App</dt><dd class="mt-1 font-medium text-ink">Ribbo: Pond Hopper</dd></div>
+          <div><dt class="font-mono text-[11.5px] tracking-[0.08em] text-muted uppercase">Developer</dt><dd class="mt-1 font-medium text-ink">Moonstream Tech</dd></div>
+        </dl>
       </div>
 
-      <div class="mt-10 grid gap-4 lg:grid-cols-2">
+      <div class="mt-12 grid gap-4 lg:grid-cols-2">
         <!-- 1. In the app -->
-        <div class="flex flex-col rounded-[32px] bg-black p-8 text-white sm:p-10">
+        <div class="card on-dark flex flex-col border-transparent bg-night p-7 text-white sm:p-9">
           <div class="flex items-center justify-between gap-4">
-            <span class="grid size-11 place-items-center rounded-full bg-brand text-[15px] font-medium text-black">1</span>
-            <span class="chip border-brand/40 text-brand">Immediate</span>
+            <span class="grid size-10 place-items-center rounded-full bg-brand font-mono text-[14px] font-medium text-ink">1</span>
+            <span class="badge badge-live">Immediate</span>
           </div>
-          <h3 class="mt-8 text-[26px] leading-tight font-medium tracking-[-0.02em] sm:text-[30px]">Delete in the app (immediate)</h3>
-          <ol class="mt-7 space-y-3 text-[17px] text-white/75">
-            <li class="flex gap-4"><span class="w-5 shrink-0 text-white/40 tabular-nums">1.</span><span>Open the game.</span></li>
-            <li class="flex gap-4"><span class="w-5 shrink-0 text-white/40 tabular-nums">2.</span><span>Go to <strong class="font-medium text-white">Settings → Account</strong>.</span></li>
-            <li class="flex gap-4"><span class="w-5 shrink-0 text-white/40 tabular-nums">3.</span><span>Tap <strong class="font-medium text-white">Delete Account</strong>, then tap it again to confirm.</span></li>
+          <h3 class="mt-8 text-[24px] leading-tight font-semibold tracking-[-0.025em] sm:text-[26px]">Delete in the app (immediate)</h3>
+          <ol class="mt-6 space-y-3 text-[16.5px] leading-relaxed text-white/75">
+            <li class="flex gap-4"><span class="w-5 shrink-0 font-mono text-[0.9em] text-white/45 tabular-nums">1.</span><span>Open the game.</span></li>
+            <li class="flex gap-4"><span class="w-5 shrink-0 font-mono text-[0.9em] text-white/45 tabular-nums">2.</span><span>Go to <strong class="font-semibold text-white">Settings → Account</strong>.</span></li>
+            <li class="flex gap-4"><span class="w-5 shrink-0 font-mono text-[0.9em] text-white/45 tabular-nums">3.</span><span>Tap <strong class="font-semibold text-white">Delete Account</strong>, then tap it again to confirm.</span></li>
           </ol>
-          <div class="mt-auto pt-8"><p class="border-t border-white/15 pt-6 text-[16px] leading-relaxed text-white/60">Your account and the data listed below are deleted from our servers immediately and permanently.</p></div>
+          <div class="mt-auto pt-8"><p class="border-t border-white/15 pt-6 text-[15.5px] leading-relaxed text-white/60">Your account and the data listed below are deleted from our servers immediately and permanently.</p></div>
         </div>
 
         <!-- 2. By email -->
-        <div class="flex flex-col rounded-[32px] bg-black/[0.04] p-8 sm:p-10">
+        <div class="card flex flex-col p-7 sm:p-9">
           <div class="flex items-center justify-between gap-4">
-            <span class="grid size-11 place-items-center rounded-full bg-black text-[15px] font-medium text-white">2</span>
-            <span class="chip text-black/60">Within 30 days</span>
+            <span class="grid size-10 place-items-center rounded-full bg-ink font-mono text-[14px] font-medium text-white">2</span>
+            <span class="badge badge-soon">Within 30 days</span>
           </div>
-          <h3 class="mt-8 text-[26px] leading-tight font-medium tracking-[-0.02em] sm:text-[30px]">Delete without the app (by email)</h3>
-          <p class="mt-4 text-[16px] text-black/60">If the game is no longer installed on your phone:</p>
-          <ol class="mt-5 space-y-3 text-[17px] text-black/75">
-            <li class="flex gap-4"><span class="w-5 shrink-0 text-black/40 tabular-nums">1.</span><span>Email <a class="font-medium text-black underline decoration-black/25 underline-offset-4 hover:decoration-black" href="mailto:moonstreamtech@gmail.com?subject=Ribbo%20account%20deletion">moonstreamtech@gmail.com</a> from the email address of the Google account you signed in with.</span></li>
-            <li class="flex gap-4"><span class="w-5 shrink-0 text-black/40 tabular-nums">2.</span><span>Use the subject <strong class="font-medium text-black">"Ribbo account deletion"</strong>.</span></li>
-            <li class="flex gap-4"><span class="w-5 shrink-0 text-black/40 tabular-nums">3.</span><span>Include your player name if you know it (e.g. <strong class="font-medium text-black">TINYFLY84</strong>). You can find it in the game under <strong class="font-medium text-black">Settings → Account</strong>.</span></li>
+          <h3 class="mt-8 text-[24px] leading-tight font-semibold tracking-[-0.025em] sm:text-[26px]">Delete without the app (by email)</h3>
+          <p class="mt-4 text-[15.5px] text-muted">If the game is no longer installed on your phone:</p>
+          <ol class="mt-5 space-y-3 text-[16.5px] leading-relaxed text-ink-2">
+            <li class="flex gap-4"><span class="w-5 shrink-0 font-mono text-[0.9em] text-muted tabular-nums">1.</span><span>Email <a class="link" href="mailto:moonstreamtech@gmail.com?subject=Ribbo%20account%20deletion">moonstreamtech@gmail.com</a> from the email address of the Google account you signed in with.</span></li>
+            <li class="flex gap-4"><span class="w-5 shrink-0 font-mono text-[0.9em] text-muted tabular-nums">2.</span><span>Use the subject <strong class="font-semibold text-ink">"Ribbo account deletion"</strong>.</span></li>
+            <li class="flex gap-4"><span class="w-5 shrink-0 font-mono text-[0.9em] text-muted tabular-nums">3.</span><span>Include your player name if you know it (e.g. <strong class="font-semibold text-ink">TINYFLY84</strong>). You can find it in the game under <strong class="font-semibold text-ink">Settings → Account</strong>.</span></li>
           </ol>
-          <a href="mailto:moonstreamtech@gmail.com?subject=Ribbo%20account%20deletion" class="btn-dark mt-8 self-start">Email a deletion request</a>
-          <p class="mt-8 border-t border-black/10 pt-6 text-[16px] leading-relaxed text-black/60">To confirm the account is yours, requests are processed only when sent from that same email address. Your account and data are deleted within 30 days, and we will email you once it is done.</p>
+          <a href="mailto:moonstreamtech@gmail.com?subject=Ribbo%20account%20deletion" class="btn btn-primary mt-8 self-start">Email a deletion request</a>
+          <p class="mt-8 border-t border-line pt-6 text-[15.5px] leading-relaxed text-muted">To confirm the account is yours, requests are processed only when sent from that same email address. Your account and data are deleted within 30 days, and we will email you once it is done.</p>
         </div>
       </div>
 
       <div class="mt-4 grid gap-4 lg:grid-cols-2">
-        <div class="rounded-[32px] border border-black/10 p-8 sm:p-10">
-          <h3 class="text-[22px] font-medium tracking-[-0.015em]">Data that is deleted</h3>
-          <ul class="mt-6 space-y-3 text-[16px] text-black/75">
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span>Your Google account ID and email address</li>
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span>Basic Google profile details stored with the sign-in (such as your name and profile picture link)</li>
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span>Your player name</li>
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span>Your leaderboard scores (Classic and Time Attack records)</li>
-            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-black/40"></span>Account creation and last update dates</li>
+        <div class="card p-7 sm:p-9">
+          <h3 class="h-card">Data that is deleted</h3>
+          <ul class="mt-5 space-y-2.5 text-[15.5px] leading-relaxed text-ink-2">
+            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-ink/35" aria-hidden="true"></span>Your Google account ID and email address</li>
+            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-ink/35" aria-hidden="true"></span>Basic Google profile details stored with the sign-in (such as your name and profile picture link)</li>
+            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-ink/35" aria-hidden="true"></span>Your player name</li>
+            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-ink/35" aria-hidden="true"></span>Your leaderboard scores (Classic and Time Attack records)</li>
+            <li class="flex gap-3"><span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-ink/35" aria-hidden="true"></span>Account creation and last update dates</li>
           </ul>
-          <p class="mt-6 border-t border-black/10 pt-6 text-[15px] leading-relaxed text-black/60">This data cannot be recovered after deletion. Any copies left in server backups are fully removed within 30 days.</p>
+          <p class="mt-6 border-t border-line pt-6 text-[15px] leading-relaxed text-muted">This data cannot be recovered after deletion. Any copies left in server backups are fully removed within 30 days.</p>
         </div>
-        <div class="rounded-[32px] border border-black/10 p-8 sm:p-10">
-          <h3 class="text-[22px] font-medium tracking-[-0.015em]">Data we do not store on our servers</h3>
-          <div class="mt-6 space-y-5 text-[16px] leading-relaxed text-black/75">
-            <p><strong class="font-medium text-black">Game progress:</strong> Flies, purchased colors, hats, costumes, maps, missions and settings are stored only on your phone and are never sent to our servers. They are removed when you uninstall the game.</p>
-            <p><strong class="font-medium text-black">Advertising data:</strong> The game shows Google AdMob ads. Data collected by AdMob (such as the advertising ID) is managed by Google. You can reset or delete it in your phone's <strong class="font-medium text-black">Settings → Google → Ads</strong>. Details: <a class="font-medium text-black underline decoration-black/25 underline-offset-4 break-all hover:decoration-black" href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+        <div class="card p-7 sm:p-9">
+          <h3 class="h-card">Data we do not store on our servers</h3>
+          <div class="mt-5 space-y-5 text-[15.5px] leading-relaxed text-ink-2">
+            <p><strong class="font-semibold text-ink">Game progress:</strong> Flies, purchased colors, hats, costumes, maps, missions and settings are stored only on your phone and are never sent to our servers. They are removed when you uninstall the game.</p>
+            <p><strong class="font-semibold text-ink">Advertising data:</strong> The game shows Google AdMob ads. Data collected by AdMob (such as the advertising ID) is managed by Google. You can reset or delete it in your phone's <strong class="font-semibold text-ink">Settings → Google → Ads</strong>. Details: <a class="link break-all" href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
           </div>
         </div>
       </div>
@@ -428,57 +509,58 @@
   </section>
 </main>
 
-<footer class="relative overflow-hidden border-t border-white/10 bg-black pt-8 text-white sm:pt-14">
-  <div class="shell">
+<!-- @footer -->
+<footer class="band-dark on-dark relative overflow-hidden">
+  <div class="wrap pt-14 pb-8 sm:pt-20">
     <div class="grid gap-12 lg:grid-cols-12">
-      <div class="lg:col-span-5">
-        <p class="max-w-sm text-[24px] leading-[1.2] font-medium tracking-[-0.02em]">Games without edges.<br><span class="text-white/40">Built with care by a small, independent studio.</span></p>
+      <div class="lg:col-span-4">
+        <a href="/" class="text-[22px]" aria-label="Moonstream Tech — home"><span class="brand"><span class="brand-core">moonstream</span><span class="brand-mod">tech</span></span></a>
+        <p class="mt-6 max-w-xs text-[17px] leading-snug font-medium tracking-[-0.01em]">Games without edges.<br><span class="text-white/45">Built with care by a small, independent studio.</span></p>
+        <a href="mailto:moonstreamtech@gmail.com" class="footer-link mt-6 inline-block underline decoration-white/25 underline-offset-4">moonstreamtech@gmail.com</a>
       </div>
-      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7">
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-8">
         <div>
-          <p class="text-[13px] font-medium text-white/40">Games &amp; apps</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/">Last Tile</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/">Mozai</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/">Ribbo: Pond Hopper</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/">My Mini BBQ</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/">My Tiny Garden</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MeshChat/">MeshChat</a></li>
+          <p class="footer-head">Games &amp; apps</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/LastTile/">Last Tile</a></li>
+            <li><a class="footer-link" href="/Mozai/">Mozai</a></li>
+            <li><a class="footer-link" href="/Ribbo/">Ribbo: Pond Hopper</a></li>
+            <li><a class="footer-link" href="/MyMiniBBQ/">My Mini BBQ</a></li>
+            <li><a class="footer-link" href="/MyTinyGarden/">My Tiny Garden</a></li>
+            <li><a class="footer-link" href="/MeshChat/">MeshChat</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium text-white/40">Studio</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/">Home</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/#games">Games</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/#studio">About</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
+          <p class="footer-head">Studio</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/">Home</a></li>
+            <li><a class="footer-link" href="/#games">Games</a></li>
+            <li><a class="footer-link" href="/#studio">About</a></li>
+            <li><a class="footer-link" href="mailto:moonstreamtech@gmail.com">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p class="text-[13px] font-medium text-white/40">Help</p>
-          <ul class="mt-4 space-y-3 text-[15px]">
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/support.html">Support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/privacy.html">Privacy Policy</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/LastTile/support/">Last Tile support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Mozai/support/">Mozai support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/Ribbo/#support">Ribbo support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyMiniBBQ/#support">My Mini BBQ support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MyTinyGarden/#support">My Tiny Garden support</a></li>
-            <li><a class="text-white/70 transition-colors hover:text-white" href="/MeshChat/support/">MeshChat support</a></li>
+          <p class="footer-head">Help</p>
+          <ul class="mt-4 space-y-2.5">
+            <li><a class="footer-link" href="/support.html">Support</a></li>
+            <li><a class="footer-link" href="/privacy.html">Privacy Policy</a></li>
+            <li><a class="footer-link" href="/LastTile/support/">Last Tile support</a></li>
+            <li><a class="footer-link" href="/Mozai/support/">Mozai support</a></li>
+            <li><a class="footer-link" href="/Ribbo/#support">Ribbo support</a></li>
+            <li><a class="footer-link" href="/MyMiniBBQ/#support">My Mini BBQ support</a></li>
+            <li><a class="footer-link" href="/MyTinyGarden/#support">My Tiny Garden support</a></li>
+            <li><a class="footer-link" href="/MeshChat/support/">MeshChat support</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
       <p>© 2026 Moonstream Tech. All rights reserved.</p>
       <p class="flex gap-5"><a class="hover:text-white" href="/privacy.html">Privacy Policy</a><a class="hover:text-white" href="/support.html">Support</a></p>
     </div>
   </div>
-  <!-- the signature wordmark -->
-  <div class="pointer-events-none mt-8 -mb-[1.8vw] flex justify-center text-[10.5vw] leading-none text-white select-none sm:mt-10" aria-hidden="true">
-    <span class="brand-core">moonstream</span>
-  </div>
+  <div class="pointer-events-none -mb-[2.2vw] flex justify-center text-[15vw] leading-none text-white/[0.06] select-none" aria-hidden="true"><span class="brand-core">moonstream</span></div>
 </footer>
+<!-- /@footer -->
 </body>
 </html>
