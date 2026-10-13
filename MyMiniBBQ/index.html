@@ -360,7 +360,7 @@
             <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">App</dt><dd class="text-[15px] font-medium break-all text-ink">My Mini BBQ</dd></div>
             <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">Package</dt><dd class="text-[15px] font-medium break-all text-ink">com.moonstreamtech.myminibbq</dd></div>
             <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">Developer</dt><dd class="text-[15px] font-medium break-all text-ink">Moonstream Tech</dd></div>
-            <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">Last updated</dt><dd class="text-[15px] font-medium break-all text-ink">12 October 2026</dd></div>
+            <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">Last updated</dt><dd class="text-[15px] font-medium break-all text-ink">13 October 2026</dd></div>
           </dl>
         </div>
       </div>
@@ -375,6 +375,7 @@
               <a href="#pp-device">Data on your device</a>
               <a href="#pp-collect">Data we collect</a>
               <a href="#pp-ads">Advertising and consent</a>
+              <a href="#pp-analytics">Analytics and crash reports</a>
               <a href="#pp-meta">Ad measurement (Meta)</a>
               <a href="#pp-purchases">In-app purchases</a>
               <a href="#pp-services">Third-party services</a>
@@ -392,7 +393,8 @@
             <a href="#pp-device">Data on your device</a>
             <a href="#pp-collect">Data we collect</a>
             <a href="#pp-ads">Advertising and consent</a>
-            <a href="#pp-meta">Ad measurement (Meta)</a>
+            <a href="#pp-analytics">Analytics and crash reports</a>
+              <a href="#pp-meta">Ad measurement (Meta)</a>
             <a href="#pp-purchases">In-app purchases</a>
             <a href="#pp-services">Third-party services</a>
             <a href="#pp-permissions">Permissions</a>
@@ -421,7 +423,7 @@
           <h3 id="pp-device">Data on your device</h3>
           <p>Your progress — money, shop level, upgrades, crew, stock, menu choices, statistics and settings such as sound and language — is saved only in the game’s local storage on your phone. It is never sent to us, and we cannot see it. It is removed when you reset your progress in the game’s settings, clear the app’s data or uninstall the game. Because it is not backed up by us, it cannot be restored or moved to a new phone.</p>
           <h3 id="pp-collect">Data we collect</h3>
-          <p><strong>None through the game itself.</strong> My Mini BBQ has no accounts, no sign-in, no online leaderboard and no crash reporting. We do not run a server for this game, and the game does not send us any personal data. We do not sell personal data. Data goes only to Google — for advertising and, if you buy something, for in-app purchases — and, where you allow it, to Meta to measure our own advertising, as described below.</p>
+          <p><strong>None through the game itself.</strong> My Mini BBQ has no accounts, no sign-in and no online leaderboard. We do not run a server for this game, and we do not sell personal data. Data goes only to Google — for advertising, for app analytics and crash reports (Firebase) and, if you buy something, for in-app purchases — and, where you allow it, to Meta to measure our own advertising, as described below.</p>
           <h3 id="pp-ads">Advertising and consent</h3>
           <p>My Mini BBQ is free to play and is supported by ads from <strong>Google AdMob</strong>. The game shows a <strong>banner ad</strong>, an optional <strong>rewarded ad</strong> (“FREE $100”) that you choose to watch, and an occasional <strong>full-screen (interstitial) ad</strong> when your shop closes (at most once every two minutes).</p>
           <p>When an ad is requested or shown, the Google Mobile Ads SDK may collect and process, on Google’s behalf:</p>
@@ -434,6 +436,13 @@
           </ul>
           <p>This data is used to deliver, measure and limit the frequency of ads, to prevent fraud and, where you allow it, to personalise ads. In the European Economic Area, the United Kingdom and Switzerland, the game asks for your choice with Google’s consent form (User Messaging Platform) before personalised ads are shown. If you do not consent, Google may still show non-personalised ads, which use contextual information and limited data for measurement and fraud prevention.</p>
           <p>The data collected by AdMob is controlled by Google under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. See also: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a>.</p>
+          <h3 id="pp-analytics">App analytics and crash reports (Firebase)</h3>
+          <p>To understand how the game is played and to fix problems, the game uses <strong>Google Analytics for Firebase</strong> and <strong>Firebase Crashlytics</strong> (Google LLC / Google Ireland Ltd.). They do not identify you by name and we do not use them for advertising to you.</p>
+          <ul>
+            <li><strong>Analytics:</strong> an app instance ID and, where allowed, your advertising ID; device and app information (model, operating system, language, app version, country); app usage such as sessions, first open, how many days you come back, and game events like finishing the tutorial, reaching a new shop level or watching a rewarded ad; in-app purchases reported by Google Play.</li>
+            <li><strong>Crash reports:</strong> when the game crashes or hits an error, technical details such as the error message, the place in the code, device model, operating system and app version.</li>
+          </ul>
+          <p>We use this only to improve the game, its balance and its stability. Firebase data is controlled under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>; Google keeps analytics data for up to 14 months and crash reports for up to 90 days.</p>
           <h3 id="pp-meta">Ad measurement (Meta)</h3>
           <p>We advertise My Mini BBQ on Facebook and Instagram. To find out whether those ads work, the game includes the <strong>Meta SDK</strong> (Facebook App Events) from Meta Platforms. It does not show ads and does not use Facebook Login: you do not need a Facebook account, and the game never reads your Facebook data.</p>
           <p>When it is allowed, the Meta SDK sends Meta:</p>
@@ -462,13 +471,14 @@
           <ul>
             <li><strong>Google AdMob</strong> and the <strong>User Messaging Platform</strong> (Google LLC / Google Ireland Ltd.) — ads and consent. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
             <li><strong>Google Play Billing</strong> (Google LLC / Google Ireland Ltd.) — payments for in-app purchases and the VIP membership. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+            <li><strong>Google Analytics for Firebase</strong> and <strong>Firebase Crashlytics</strong> (Google LLC / Google Ireland Ltd.) — app analytics and crash reports. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a></li>
             <li><strong>Meta SDK / App Events</strong> (Meta Platforms, Inc. / Meta Platforms Ireland Ltd.) — measuring our Facebook and Instagram ads. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy</a></li>
             <li><strong>Google Play</strong> — downloads, updates and, if you choose, Play’s own backup of app data, governed by Google’s policies.</li>
           </ul>
           <p>Data processed by Google and Meta may be transferred to and stored in countries outside your own, including the United States, under the safeguards they provide.</p>
           <h3 id="pp-permissions">Permissions</h3>
           <ul>
-            <li><strong>Internet access</strong> — to load ads and the consent form, to send ad measurement to Meta and to reach Google Play for purchases.</li>
+            <li><strong>Internet access</strong> — to load ads and the consent form, to send analytics, crash reports and ad measurement, and to reach Google Play for purchases.</li>
             <li><strong>Google Play billing</strong> (<code>com.android.vending.BILLING</code>, added by the Google Play Billing Library) — to offer and complete in-app purchases.</li>
             <li><strong>Advertising ID</strong> (<code>AD_ID</code>, added by the Google Mobile Ads SDK and the Meta SDK) — to deliver and measure ads.</li>
           </ul>
