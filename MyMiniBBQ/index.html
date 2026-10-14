@@ -360,7 +360,7 @@
             <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">App</dt><dd class="text-[15px] font-medium break-all text-ink">My Mini BBQ</dd></div>
             <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">Package</dt><dd class="text-[15px] font-medium break-all text-ink">com.moonstreamtech.myminibbq</dd></div>
             <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">Developer</dt><dd class="text-[15px] font-medium break-all text-ink">Moonstream Tech</dd></div>
-            <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">Last updated</dt><dd class="text-[15px] font-medium break-all text-ink">13 October 2026</dd></div>
+            <div class="flex flex-col gap-1 bg-paper px-5 py-4"><dt class="text-[13px] text-muted">Last updated</dt><dd class="text-[15px] font-medium break-all text-ink">14 October 2026</dd></div>
           </dl>
         </div>
       </div>
@@ -443,6 +443,7 @@
             <li><strong>Crash reports:</strong> when the game crashes or hits an error, technical details such as the error message, the place in the code, device model, operating system and app version.</li>
           </ul>
           <p>We use this only to improve the game, its balance and its stability. Firebase data is controlled under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>; Google keeps analytics data for up to 14 months and crash reports for up to 90 days.</p>
+          <p>The game also uses <strong>Firebase Remote Config</strong> to check whether a newer version of the game is available, and the <strong>Firebase Realtime Database</strong> to count how many players are online and on which game version. For the online count the game stores only a random session ID, the app version and the time the session started; this entry is deleted automatically when you close or leave the game. Neither contains your name, account or advertising ID.</p>
           <h3 id="pp-meta">Ad measurement (Meta)</h3>
           <p>We advertise My Mini BBQ on Facebook and Instagram. To find out whether those ads work, the game includes the <strong>Meta SDK</strong> (Facebook App Events) from Meta Platforms. It does not show ads and does not use Facebook Login: you do not need a Facebook account, and the game never reads your Facebook data.</p>
           <p>When it is allowed, the Meta SDK sends Meta:</p>
@@ -471,7 +472,7 @@
           <ul>
             <li><strong>Google AdMob</strong> and the <strong>User Messaging Platform</strong> (Google LLC / Google Ireland Ltd.) — ads and consent. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
             <li><strong>Google Play Billing</strong> (Google LLC / Google Ireland Ltd.) — payments for in-app purchases and the VIP membership. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-            <li><strong>Google Analytics for Firebase</strong> and <strong>Firebase Crashlytics</strong> (Google LLC / Google Ireland Ltd.) — app analytics and crash reports. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a></li>
+            <li><strong>Google Analytics for Firebase</strong> and <strong>Firebase Crashlytics</strong> (Google LLC / Google Ireland Ltd.) — app analytics and crash reports; <strong>Firebase Remote Config</strong> and <strong>Firebase Realtime Database</strong> — update checks and the anonymous online player count. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a></li>
             <li><strong>Meta SDK / App Events</strong> (Meta Platforms, Inc. / Meta Platforms Ireland Ltd.) — measuring our Facebook and Instagram ads. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy</a></li>
             <li><strong>Google Play</strong> — downloads, updates and, if you choose, Play’s own backup of app data, governed by Google’s policies.</li>
           </ul>
